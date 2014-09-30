@@ -1,6 +1,6 @@
 #Mind on Rails
 
-Mind on Rails empowers you to capture all of the things that need to be learned in order to create web applications with Ruby on Rails, and does so in a manner that is conducisve to learning and accessing these morsels of knowledge at anytime.  Enabling you to become memory independent.  
+Mind on Rails empowers you to capture all of the things that need to be learned in order to create web applications with Ruby on Rails, and does so in a manner that is conducisve to learning and accessing these morsels of knowledge at anytime.  It enables you to become memory independent.  
 
 
 This README would normally document whatever steps are necessary to get the

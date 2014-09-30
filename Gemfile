@@ -44,4 +44,4 @@ group :test do
   gem 'factory_girl_rails', '~> 4.0'
 end
 
-
+gem 'bootstrap-sass', '~> 3.2.0'
