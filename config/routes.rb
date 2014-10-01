@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'notes/index'
+
+  get 'notes/new'
+
+  get 'notes/show'
+
   get 'stacks/index'
 
   get 'stacks/new'

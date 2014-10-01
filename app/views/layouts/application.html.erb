@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MoR</title>
+  <title>Mind on Rails</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,6 +9,7 @@
 </head>
 <body>
 
+  <%= link_to 'Create A Note', notes_new_path %>
   <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
 
 <%= yield %>
