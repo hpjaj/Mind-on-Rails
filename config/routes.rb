@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  get 'stacks/index'
+
+  get 'stacks/new'
+
+  get 'stacks/edit'
+
+  get 'stacks/show'
+
+  devise_for :users
   get 'welcome/index'
 
   get 'welcome/about'
