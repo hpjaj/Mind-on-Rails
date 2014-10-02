@@ -1,22 +1,26 @@
 Rails.application.routes.draw do
-  get 'notes/index'
-
-  get 'notes/new'
-
-  get 'notes/show'
-
-  get 'stacks/index'
-
-  get 'stacks/new'
-
-  get 'stacks/edit'
-
-  get 'stacks/show'
-
+  
+  resources :notes, :stacks, :welcome, :users
+  
   devise_for :users
-  get 'welcome/index'
 
-  get 'welcome/about'
+  # get 'notes/index'
+
+  # get 'notes/new'
+
+  # get 'notes/show'
+
+  # get 'stacks/index'
+
+  # get 'stacks/new'
+
+  # get 'stacks/edit'
+
+  # get 'stacks/show'
+
+  # get 'welcome/index'
+
+  # get 'welcome/about'
 
   root 'welcome#index'
 
