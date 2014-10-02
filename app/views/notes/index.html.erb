@@ -1,2 +1,14 @@
 <h1>Notes#index</h1>
 <p>Find me in app/views/notes/index.html.erb</p>
+
+<% n = 0 %>
+<% @notes.each do |note| %>
+  <div>
+    <p style="color: red;">
+      <% n += 1 %>
+      <%= n %>
+      <%= note.title %>
+    </p>
+    <p><%= note.body %></p>
+  </div>
+<% end %>
