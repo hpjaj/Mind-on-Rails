@@ -9,6 +9,9 @@
       <%= n %>
       <%= note.title %>
     </p>
-    <p><%= note.body %></p>
+    <p>
+      <%= note.body %>
+      <%= link_to 'View', note %>
+    </p>
   </div>
 <% end %>
