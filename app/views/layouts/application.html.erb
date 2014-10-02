@@ -9,10 +9,17 @@
 </head>
 <body>
 
-  <%= link_to 'Create A Note', new_note_path %>
-  <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+  <%= render 'layouts/navbar' %>
 
+
+
+
+  <div class='container'>
+<!-- Yield begins here -->
 <%= yield %>
+<!-- Yield ends here -->
+  </div>
+
 
 </body>
 </html>

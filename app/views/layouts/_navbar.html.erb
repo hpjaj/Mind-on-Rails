@@ -1,0 +1,36 @@
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'Mind on Rails', root_path, class: "navbar-brand" %>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <%= content_tag :li, link_to('+ Create A Note', new_note_path), class: "#{css_class_active_for(new_note_path)}" %>
+          <%= content_tag :li, link_to('Stacks', stacks_path), class: "#{css_class_active_for(stacks_path)}" %>
+          <%= content_tag :li, link_to('My Notes', notes_path), class: "#{css_class_active_for(notes_path)}" %>
+          <%= content_tag :li, link_to('Search', "#"), class: "#{css_class_active_for('#')}" %>
+          <% if current_user %>
+            <li class='dropdown <%= "#{css_class_active_for(edit_user_registration_path)}"%>'>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name || current_user.email %> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <%= content_tag :li, link_to('Edit', edit_user_registration_path), class: "#{css_class_active_for(edit_user_registration_path)}" %>
+                <li class='<%="#{css_class_active_for(destroy_user_session_path)}"%>'><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+              </ul>
+            </li>
+          <% end %>
+      </ul>
+
+
+
+    </div>
+
+  </div>
+</nav>
