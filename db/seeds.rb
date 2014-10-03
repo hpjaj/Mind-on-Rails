@@ -20,7 +20,7 @@ member.save!
 16.times do
   stack = Stack.new(
     title: Faker::Lorem.word,
-    description: Faker::Lorem.paragraph
+    description: "Modi aut animi consequuntur qui tempora aspernatur aperiam. Consequuntur minima tenetur iure quae. Voluptas optio consequatur harum. Architecto quaerat similique repellendus consequatur aut quo animi."
     )
   stack.save
 end
