@@ -16,3 +16,18 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background: black;
+}
+
+.black-box {
+  border: 1px solid red;
+  color: rgb(102,102,102);
+  background: rgb(39,40,34);
+  margin: 5px;
+}
+
+.stack-titles {
+  color: rgb(168,124,246)
+}
