@@ -1,93 +1,57 @@
-<h1>Stacks</h1>
+<div class="container">
+  <h1 style="text-align: center">Search Box</h1>
+</div>
 
-<% stacks_1_and_2 = @stacks[0,2] %>
-<% stacks_3_and_4 = @stacks[2,2] %>
-<% stacks_5_and_6 = @stacks[4,2] %>
-<% stacks_7_and_8 = @stacks[6,2] %>
-<% stacks_9_and_10 = @stacks[8,2] %>
-<% stacks_11_and_12 = @stacks[10,2] %>
-<% stacks_13_and_14 = @stacks[12,2] %>
-<% stacks_15_and_16 = @stacks[0,2] %>
+<% stacks_1_to_4 = @stacks[0,4] %>
+<% stacks_5_to_8 = @stacks[4,4] %>
+<% stacks_9_to_12 = @stacks[8,4] %>
+<% stacks_13_to_16 = @stacks[12,4] %>
+
+<div class="container-fluid">
 
 <div class="row">
-  <div class="col-sm-6">
-    <% stacks_1_and_2.each do |stack| %>
-      <div class="col-xs-6">
-        <div class="black-box">
-          <p class="stack-titles"><%= stack.title %></p>
-          <p><%= stack.description %></p>
-        </div>
+  <% stacks_1_to_4.each do |stack| %>
+    <div class="col-sm-3">
+      <div class="black-box">
+        <p class="stack-titles"><%= stack.title %></p>
+        <p class="stack-descriptions"><%= stack.description %></p>
       </div>
-    <% end %>
-  </div>
-
-  <div class="col-sm-6">
-    <% stacks_3_and_4.each do |stack| %>
-      <div class="col-xs-6">
-        <div class="black-box">
-          <p class="stack-titles"><%= stack.title %></p>
-          <p><%= stack.description %></p>
-        </div>
-      </div>
-    <% end %>
-  </div>
-
-  
+    </div>
+  <% end %>
 </div>
 
 <div class="row">
-  <div class="col-sm-3">
-    <% stacks_5_and_6.each do |stack| %>
+  <% stacks_5_to_8.each do |stack| %>
+    <div class="col-sm-3">
       <div class="black-box">
         <p class="stack-titles"><%= stack.title %></p>
-        <p><%= stack.description %></p>
+        <p class="stack-descriptions"><%= stack.description %></p>
       </div>
-    <% end %>
-  </div>
-  <div class="col-sm-3">
-    <% stacks_7_and_8.each do |stack| %>
-      <div class="black-box">
-        <p class="stack-titles"><%= stack.title %></p>
-        <p><%= stack.description %></p>
-      </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
 
 <div class="row">
-  <div class="col-sm-3">
-    <% stacks_9_and_10.each do |stack| %>
+  <% stacks_9_to_12.each do |stack| %>
+    <div class="col-sm-3">
       <div class="black-box">
         <p class="stack-titles"><%= stack.title %></p>
-        <p><%= stack.description %></p>
+        <p class="stack-descriptions"><%= stack.description %></p>
       </div>
-    <% end %>
-  </div>
-  <div class="col-sm-3">
-    <% stacks_11_and_12.each do |stack| %>
-      <div class="black-box">
-        <p class="stack-titles"><%= stack.title %></p>
-        <p><%= stack.description %></p>
-      </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
 
 <div class="row">
-  <div class="col-sm-3">
-    <% stacks_13_and_14.each do |stack| %>
+  <% stacks_13_to_16.each do |stack| %>
+    <div class="col-sm-3">
       <div class="black-box">
         <p class="stack-titles"><%= stack.title %></p>
-        <p><%= stack.description %></p>
+        <p class="stack-descriptions"><%= stack.description %></p>
       </div>
-    <% end %>
-  </div>
-  <div class="col-sm-3">
-    <% stacks_15_and_16.each do |stack| %>
-      <div class="black-box">
-        <p class="stack-titles"><%= stack.title %></p>
-        <p><%= stack.description %></p>
-      </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
+</div>
+
+
 </div>

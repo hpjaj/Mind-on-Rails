@@ -22,12 +22,23 @@ body {
 }
 
 .black-box {
-  border: 1px solid red;
+  // border: 1px solid red;
   color: rgb(102,102,102);
   background: rgb(39,40,34);
-  margin: 5px;
+  margin-bottom: 20px;
+  min-height: 250px;
+  text-align: center;
+  padding: 5% 0;
 }
 
 .stack-titles {
-  color: rgb(168,124,246)
+  color: rgb(168,124,246);
+  text-transform: capitalize;
+  padding-top: 5%;
+  font-size: 20px;
+}
+
+.stack-descriptions {
+  padding: 0 5% 5%;
+  margin: auto 0;
 }
