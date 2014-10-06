@@ -35,13 +35,16 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.1.0'
-  gem 'capybara', '~> 2.3.0'
+
 end
 
 group :test do
+  gem 'rspec-rails', '~> 3.1.0'
+  gem 'capybara', '~> 2.3.0'
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.0'
+  gem 'shoulda-matchers', require: false
+  gem 'poltergeist'
 end
 
 gem 'bootstrap-sass', '~> 3.2.0'
