@@ -11,10 +11,10 @@ describe 'User can create one note' do
   end
 
   it 'Successfully' do
-    visit stacks_index_path
+    visit stacks_path
     click_link 'Create A Note'
-    expect( current_path ).to eq notes_new_path
-    fill_in 'Title', with: "This is the title"
+    expect( current_path ).to eq new_note_path
+    fill_in ':title', with: "This is the title"
   end
 
 end

@@ -13,6 +13,6 @@ describe 'User logs in' do
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
     click_button 'Log in'
-    expect( current_path ).to eq stacks_index_path
+    expect( current_path ).to eq stacks_path
   end
 end

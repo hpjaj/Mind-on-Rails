@@ -6,13 +6,14 @@ describe 'User logs out' do
   Warden.test_mode!
   
   before do
-    user = create(:user)
-    login_as(user, :scope => :user)
+    @user = create(:user)
+    login_as(@user, :scope => :user)
   end
 
   it 'Successfully' do
-    visit stacks_index_path
-    click_link 'Sign out'
+    visit stacks_path
+    click_link @user.name || @user.email
+    click_link 'Sign Out'
     expect( current_path ).to eq '/'
   end
 end
