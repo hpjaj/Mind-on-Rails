@@ -17,9 +17,32 @@
  *= require_self
  */
 
-body {
-  background: black;
+.navbar {
+  border-radius: 0px;
 }
+
+.navbar-inverse {
+  background-color: black;
+  border-color: black;
+  border-bottom: 1px solid rgb(39,40,34);
+}
+
+#body-welcome-index {
+  background-image: image-url("congruent_outline.png");
+}
+
+.body-black {
+  background: rgb(0,0,0);
+}
+
+.body-notes {
+  background: rgb(70,70,67);
+}
+
+.sublime-gray {
+  background: rgb(39,40,34);
+}
+
 
 .black-box {
   // border: 1px solid red;
@@ -45,7 +68,7 @@ body {
 }
 
 .boxy {
-  background-image: image-url("congruent_outline.png");
+  // background-image: image-url("congruent_outline.png");
   color: white;
 }
 
@@ -53,3 +76,70 @@ body {
   padding: 20% 0 ;
   text-align: center;
 }
+
+.note-form-fields {
+  width: 100%;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  border-color: rgba(0,0,0,0);
+}
+
+#note-form-title-field {
+  border-bottom: 1px solid rgb(183,183,183);
+}
+
+#note-form-body-field {
+  height: 100%;
+}
+
+::-webkit-input-placeholder {
+   color: #a87cf6;
+  font-family: Courier New, serif;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #a87cf6;  
+   font-family: Courier New, serif;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #a87cf6;  
+   font-family: Courier New, serif;
+}
+
+:-ms-input-placeholder {  
+   color: #a87cf6;  
+   font-family: Courier New, serif;
+}
+
+.note-previews {
+  margin-bottom: 5px;
+  color: white;
+}
+
+.notes_stacks {
+  color: #a87cf6;
+}
+
+.notes-show-LRpadding {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.note-show-dates {
+  color: rgb(102,102,102);
+}
+
+.note-show-title, .note-show-body {
+  color: white;
+}
+
+.note-show-title {
+  font-size: 18px;
+}
+
+.note-show-body {
+  padding-bottom: 20px;
+}
+
+

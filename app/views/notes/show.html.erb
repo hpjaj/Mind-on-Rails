@@ -1,9 +1,28 @@
-<div class="container">
-  <h1>Notes#show</h1>
-  <p>Find me in app/views/notes/show.html.erb</p>
+<body class="body-notes">
 
-  <%= @note.title %>
-  <%= @note.body %>
-  <%= link_to 'Edit', edit_note_path %>
-
-</div>
+  <div class="container sublime-gray">
+    <h1>Notes#show</h1>
+    <p>Find me in app/views/notes/show.html.erb</p>
+    <div class="row">
+      <p class="notes_stacks notes-show-LRpadding">
+        <% notes_stacks = @note.stacks %>
+        <% notes_stacks.each do |stack| %>
+          <%= stack.title %>
+        <% end %>
+      </p>
+    </div>
+    <div class="row note-show-dates notes-show-LRpadding">
+      <p>Created: <%= @note.created_at %> &nbsp; &nbsp; Updated: <%= @note.updated_at %></p>
+    </div>
+    <hr>
+    <div class="row">
+      <p class="note-show-title notes-show-LRpadding"><%= @note.title %></p>
+    </div>
+    <hr>
+    <div class="row note-show-body notes-show-LRpadding">
+      <%= @note.body %>
+      <%= link_to 'Edit', edit_note_path %>
+    </div>
+  </div>
+  
+</body>

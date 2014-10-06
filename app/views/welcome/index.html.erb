@@ -1,17 +1,19 @@
+<body id="body-welcome-index">
+  <div class="container-fluid boxy">
+    <div class="container">
+      <div class="container welcome-title">
+        <h1>You learn so much through Ruby on Rails.</h1>
+        <h1>We will remember it for you.</h1>
+      </div> 
 
-<div class="container-fluid boxy">
 
-  <div class="container">
-  
-    <h1 class="welcome-title">You learn so much in Ruby on Rails.  We will remember it for you.  
-    </h1>
+      <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-success' %>
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-success' %>
 
-    <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-success' %>
-    <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-success' %>
+      <!-- <%= image_tag "headphones.jpg", :width => 400 %> -->
 
-    <!-- <%= image_tag "headphones.jpg", :width => 400 %> -->
+      
 
-    
-
-  </div> 
-</div>
+    </div> 
+  </div>
+</body>
