@@ -1,14 +1,16 @@
-<%= simple_form_for @note, :html => { :class => 'form-horizontal' } do |f|  %>
+<%= simple_form_for @note do |f|  %>
   <div class="container">
-    <div class="row">
+    <div class="row form">
  
       <div class="col-sm-9 col-sm-push-3 note-padding sublime-gray">
-          <div class="row">
-            <%= f.input :title, label: false, placeholder: ":title", input_html: { id: "note-form-title-field", class: "note-form-fields" } %>
+          <div class="row form-group col-sm-12">
+            <%= f.input :title, label: false, placeholder: ":title", input_html: { id: "note-form-title-field", class: "form-control note-form-fields" } %>
           </div>
-          <hr>
-          <div class="row">
-            <%= f.input :body, label: false, placeholder: ":body", input_html: { id: "note-form-body-field", class: "note-form-fields" } %>
+          <div class="row form-group visible-xs col-sm-12">
+            <%= f.input :body, label: false, placeholder: ":body", input_html: { id: "note-form-body-field", class: "form-control note-form-fields", rows: 7 } %>
+          </div>
+          <div class="row form-group col-sm-12 visible-sm visible-md visible-lg">
+            <%= f.input :body, label: false, placeholder: ":body", input_html: { id: "note-form-body-field", class: "form-control note-form-fields", rows: 19 } %>
           </div>
       </div>
 

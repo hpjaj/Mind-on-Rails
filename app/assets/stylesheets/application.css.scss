@@ -68,6 +68,16 @@
   margin: auto 0;
 }
 
+.stack-show-title {
+  color: rgb(168,124,246);
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.stack-show-description {
+  color: white;
+}
+
 #stacks-form {
   margin-left: 5%;
 }
@@ -99,7 +109,7 @@ font-size: 16px;
 }
 
 .black-box {
-  // border: 1px solid red;
+  // border: 1px solid purple;
   color: rgb(102,102,102);
   background: rgb(39,40,34);
   margin-bottom: 20px;
@@ -113,29 +123,33 @@ font-size: 16px;
   // width: 100%;
   background-color: rgba(0,0,0,0);
   color: white;
-  border-color: rgba(0,0,0,0);
+  border-color: #777;
+}
+
+#note-form-title-field {
+  // border-bottom: 1px solid white;
 }
 
 #note-form-body-field {
   height: 100%;
 }
 
-::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder {
    color: #a87cf6;
   font-family: Courier New, serif;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+.form-control:-moz-placeholder { /* Firefox 18- */
    color: #a87cf6;  
    font-family: Courier New, serif;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+.form-control::-moz-placeholder {  /* Firefox 19+ */
    color: #a87cf6;  
    font-family: Courier New, serif;
 }
 
-:-ms-input-placeholder {  
+.form-control:-ms-input-placeholder {  
    color: #a87cf6;  
    font-family: Courier New, serif;
 }
@@ -171,7 +185,7 @@ font-size: 16px;
 }
 
 .note-padding {
-  border: 1px solid red;
+  // border: 1px solid red;
   padding-right: 5px;
 }
 
