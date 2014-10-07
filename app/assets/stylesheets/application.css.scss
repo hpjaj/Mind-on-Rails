@@ -17,6 +17,9 @@
  *= require_self
  */
 
+
+
+// LAYOUT views
 .navbar {
   border-radius: 0px;
 }
@@ -27,32 +30,30 @@
   border-bottom: 1px solid rgb(39,40,34);
 }
 
+
+
+
+// WELCOME views
 #body-welcome-index {
   background-image: image-url("congruent_outline.png");
 }
 
+.welcome-title {
+  padding: 20% 0 ;
+  text-align: center;
+}
+
+.boxy {
+  // background-image: image-url("congruent_outline.png");
+  color: white;
+}
+
+
+
+
+// STACKS views
 .body-black {
   background: rgb(0,0,0);
-}
-
-.body-notes {
-  background: rgb(70,70,67);
-}
-
-.sublime-gray {
-  background: rgb(39,40,34);
-}
-
-
-.black-box {
-  // border: 1px solid red;
-  color: rgb(102,102,102);
-  background: rgb(39,40,34);
-  margin-bottom: 20px;
-  min-height: 200px;
-  text-align: center;
-  padding: 5% 0;
-  border-radius: 3px;
 }
 
 .stack-titles {
@@ -67,24 +68,53 @@
   margin: auto 0;
 }
 
-.boxy {
-  // background-image: image-url("congruent_outline.png");
-  color: white;
+#stacks-form {
+  margin-left: 5%;
 }
 
-.welcome-title {
-  padding: 20% 0 ;
+#stacks-form label  {
+  font-weight: normal;
+  color: #a87cf6;  // purple #a87cf6 ; gray #666
+  font-family: Courier New, serif;
+  
+}
+
+#stacks-form p {
+color: #b7b7b7;
+margin-left: -8%;
+font-size: 16px;
+}
+
+
+
+// NOTES views
+.body-notes {
+  background: rgb(70,70,67);
+  padding-bottom: 70px;
+}
+
+.sublime-gray {
+  background: rgb(39,40,34);
+  padding: 5%;
+}
+
+.black-box {
+  // border: 1px solid red;
+  color: rgb(102,102,102);
+  background: rgb(39,40,34);
+  margin-bottom: 20px;
+  min-height: 200px;
   text-align: center;
+  padding: 5% 0;
+  border-radius: 3px;
 }
 
 .note-form-fields {
-  width: 100%;
+  // width: 100%;
   background-color: rgba(0,0,0,0);
   color: white;
   border-color: rgba(0,0,0,0);
 }
-
-
 
 #note-form-body-field {
   height: 100%;
@@ -139,5 +169,27 @@
 .note-show-body {
   padding-bottom: 20px;
 }
+
+.note-padding {
+  border: 1px solid red;
+  padding-right: 5px;
+}
+
+.note-bottom-nav-buttons {
+  border: 0px solid rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0);
+  color: #777;
+  padding: 15px 20px;
+}
+
+#note-save-button {
+  color: rgb(166,226,45);
+
+}
+
+#note-cancel-button:hover, .note-bottom-nav-buttons:hover {
+  color: white;
+}
+
 
 
