@@ -8,6 +8,7 @@
   <% stacks_5_to_8 = @stacks[4,4] %>
   <% stacks_9_to_12 = @stacks[8,4] %>
   <% stacks_13_to_16 = @stacks[12,4] %>
+  <% stacks_17_to_20 = @stacks[16,4] %>
 
   <div class="container-fluid">
 
@@ -16,7 +17,7 @@
       <% stacks_1_to_4.each do |stack| %>
         <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="black-box">
-            <p class="stack-titles"><%= stack.title %></p>
+            <p class="stack-titles"><%= link_to stack.title, stack %></p>
             <p class="stack-descriptions"><%= stack.description %></p>
           </div>
         </div>
@@ -29,7 +30,7 @@
       <% stacks_5_to_8.each do |stack| %>
         <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="black-box">
-            <p class="stack-titles"><%= stack.title %></p>
+            <p class="stack-titles"><%= link_to stack.title, stack %></p>
             <p class="stack-descriptions"><%= stack.description %></p>
           </div>
         </div>
@@ -42,7 +43,7 @@
       <% stacks_9_to_12.each do |stack| %>
         <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="black-box">
-            <p class="stack-titles"><%= stack.title %></p>
+            <p class="stack-titles"><%= link_to stack.title, stack %></p>
             <p class="stack-descriptions"><%= stack.description %></p>
           </div>
         </div>
@@ -55,14 +56,26 @@
       <% stacks_13_to_16.each do |stack| %>
         <div class="col-xs-12 col-sm-6 col-md-3">
           <div class="black-box">
-            <p class="stack-titles"><%= stack.title %></p>
+            <p class="stack-titles"><%= link_to stack.title, stack %></p>
             <p class="stack-descriptions"><%= stack.description %></p>
           </div>
         </div>
       <% end %>
     </div>
   <% end %>
-    
+
+  <% if stacks_17_to_20 %>
+    <div class="row">
+      <% stacks_17_to_20.each do |stack| %>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="black-box">
+            <p class="stack-titles"><%= link_to stack.title, stack %></p>
+            <p class="stack-descriptions"><%= stack.description %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 
   </div>
 

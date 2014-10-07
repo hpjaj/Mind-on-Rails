@@ -1,12 +1,17 @@
-<%= form_for @note do |f|  %>
+<%= simple_form_for @note, :html => { :class => 'form-horizontal' } do |f|  %>
   <div class="container">
     <div class="row">
-  <%= f.text_field :title, placeholder: ":title", id: "note-form-title-field", class: "note-form-fields" %>
+      <%= f.input :title, placeholder: ":title", id: "note-form-title-field", class: "note-form-fields" %>
     </div>
     <hr>
     <div class="row">
-  <%= f.text_area :body, placeholder: ":body", id: "note-form-body-field", class: "note-form-fields"  %>
+      <%= f.input :body, placeholder: ":body", id: "note-form-body-field", class: "note-form-fields"  %>
+    </div>
+    <div class="row" style="color: white;">
+      <%= f.association :stacks, as: :check_boxes %>
     </div>
   </div>
-  <%= f.submit "Save" %>
+  <div class="row">
+    <%= f.button :submit %>
+  </div>
 <% end %>
