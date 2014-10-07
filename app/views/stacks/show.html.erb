@@ -1,6 +1,14 @@
-<h1>Stacks#show</h1>
-<p>Find me in app/views/stacks/show.html.erb</p>
+<body class="body-notes">
+  
+  <h1>Stacks#show</h1>
+  <p>Find me in app/views/stacks/show.html.erb</p>
 
-<p><%= @stack.title %></p>
-<p><%= @stack.description %></p>
-<p><%= link_to 'Edit', edit_stack_path %></p>
+  <p><%= @stack.title %></p>
+  <p><%= @stack.description %></p>
+  <p><%= link_to 'Edit', edit_stack_path %></p>
+
+
+  <%= render 'layouts/notes_preview' %>
+
+</body>
+

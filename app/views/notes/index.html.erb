@@ -5,28 +5,7 @@
     <h1>Notes#index</h1>
     <p>Find me in app/views/notes/index.html.erb</p>
 
-    <% @notes.each do |note| %>
-      <div class="container sublime-gray note-previews">
-        <div class="row">
-          <div>
-            <p>
-              <%= note.title %>
-            <p class="notes_stacks">
-              <% notes_stacks = note.stacks %>
-              <% notes_stacks.each do |stack| %>
-                <%= stack.title %>
-              <% end %>
-            </p>
-            </p>
-            <p>
-              <%= truncate( (note.body), length: 150 ) %>
-              <%= link_to 'View', note %>
-            </p>
-          </div>      
-        </div>
-      </div>
-
-    <% end %>
+    <%= render 'layouts/notes_preview' %>
 
 
   </div>

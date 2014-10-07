@@ -1,0 +1,21 @@
+<% @notes.each do |note| %>
+  <div class="container sublime-gray note-previews">
+    <div class="row">
+      <div>
+        <p>
+          <%= note.title %>
+        <p class="notes_stacks">
+          <% notes_stacks = note.stacks %>
+          <% notes_stacks.each do |stack| %>
+            <%= stack.title %>
+          <% end %>
+        </p>
+        </p>
+        <p>
+          <%= truncate( (note.body), length: 150 ) %>
+          <%= link_to 'View', note %>
+        </p>
+      </div>      
+    </div>
+  </div>
+<% end %>

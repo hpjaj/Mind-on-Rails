@@ -31,6 +31,7 @@ class StacksController < ApplicationController
 
   def show
     @stack = Stack.find(params[:id])
+    @notes = @stack.notes
   end
 
   private
