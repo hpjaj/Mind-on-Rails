@@ -38,7 +38,7 @@ class NotesController < ApplicationController
   private
 
   def notes_params
-    params.require(:note).permit(:title, :body, :stack)
+    params.require(:note).permit(:title, :body, stack_ids: [])
   end
 
 end
