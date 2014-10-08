@@ -95,24 +95,6 @@ margin-left: -8%;
 font-size: 16px;
 }
 
-.black-box a {
-  color: #a87cf6;
-  // font-weight: normal;
-}
-
-
-
-// NOTES views
-.body-notes {
-  background: black;  //gray rgb(70,70,67)
-  padding-bottom: 70px;
-}
-
-.sublime-gray {
-  background: rgb(39,40,34);
-  padding: 5%;
-}
-
 .black-box {
   // border: 1px solid purple;
   color: rgb(102,102,102);
@@ -122,6 +104,24 @@ font-size: 16px;
   text-align: center;
   padding: 5% 0;
   border-radius: 3px;
+}
+
+.black-box a {
+  color: #a87cf6;
+  // font-weight: normal;
+}
+
+
+
+// NOTES views
+.body-notes {
+  background: rgb(70,70,67);  //gray rgb(70,70,67)
+  padding-bottom: 70px;
+}
+
+.sublime-gray {
+  background: rgb(39,40,34);
+  padding: 5%;
 }
 
 .note-form-fields {
@@ -189,11 +189,6 @@ font-size: 16px;
   padding-bottom: 20px;
 }
 
-.note-padding {
-  // border: 1px solid red;
-  padding-right: 5px;
-}
-
 #bottom-navbar {
   border-bottom: 0px solid rgb(39,40,34);
   border-top: 1px solid rgb(39,40,34);
@@ -218,4 +213,19 @@ font-size: 16px;
 .help-inline {
   color: red;
 }
+
+.note-form-columns {
+  // border: 1px solid purple;
+  background: rgb(39,40,34);
+  margin-bottom: 20px;
+  min-height: 540px;
+  padding: 20px 40px 15px;  //this narrows or widens them width of the title and body input fields.  Works with .note-padding's padding
+  width: auto;
+}
+
+.note-padding {
+  // border: 1px solid red;
+  padding: 0 5px;  //this narrows or widens them width of the title and body input fields.  Works with .note-form-column's padding
+}
+
 
