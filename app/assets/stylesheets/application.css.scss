@@ -104,7 +104,7 @@ font-size: 16px;
 
 // NOTES views
 .body-notes {
-  background: rgb(70,70,67);
+  background: black;  //gray rgb(70,70,67)
   padding-bottom: 70px;
 }
 
@@ -194,6 +194,11 @@ font-size: 16px;
   padding-right: 5px;
 }
 
+#bottom-navbar {
+  border-bottom: 0px solid rgb(39,40,34);
+  border-top: 1px solid rgb(39,40,34);
+}
+
 .note-bottom-nav-buttons {
   border: 0px solid rgba(0,0,0,0);
   background-color: rgba(0,0,0,0);
@@ -206,7 +211,7 @@ font-size: 16px;
 
 }
 
-#note-cancel-button:hover, .note-bottom-nav-buttons:hover {
+#note-save-button:hover, .note-bottom-nav-buttons:hover {
   color: white;
 }
 
