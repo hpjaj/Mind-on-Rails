@@ -1,14 +1,27 @@
 module ApplicationHelper
 
-  def current_path
-    request.env['PATH_INFO']
+  class HTMLwithPygments < Redcarpet::Render::HTML
+    def block_code(code, language)
+      Pygments.highlight(code, lexer: language)
+    end
   end
 
   def markdown(text)
-    renderer = Redcarpet::Render::HTML.new
-    extensions = {fenced_code_blocks: true}
-    redcarpet = Redcarpet::Markdown.new(renderer, extensions)
-    (redcarpet.render text).html_safe
+    renderer = HTMLwithPygments.new(hard_wrap: true, filter_html: true)
+    extensions = {
+      autolink: true,
+      no_intra_emphasis: true,
+      fenced_code_blocks: true,
+      lax_html_blocks: true,
+      strikethrough: true,
+      superscript: true,
+      prettify: true
+    }
+    Redcarpet::Markdown.new(renderer, extensions).render(text).html_safe
   end  
+
+  def current_path
+    request.env['PATH_INFO']
+  end
 
 end
