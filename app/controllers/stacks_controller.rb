@@ -31,7 +31,7 @@ class StacksController < ApplicationController
 
   def show
     @stack = Stack.find(params[:id])
-    @notes = @stack.notes.paginate(page: params[:page], per_page: 5)
+    @notes = @stack.notes.paginate(page: params[:page], per_page: 5).recently_updated_first
   end
 
   private
