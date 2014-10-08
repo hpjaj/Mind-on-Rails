@@ -20,7 +20,7 @@
     </div>
     <hr>
     <div class="row note-show-body notes-show-LRpadding">
-      <%= @note.body %>
+      <%= markdown @note.body %>
       <%= link_to 'Edit', edit_note_path %>
     </div>
   </div>

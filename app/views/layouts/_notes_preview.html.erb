@@ -12,7 +12,7 @@
         </p>
         </p>
         <p>
-          <%= truncate( (note.body), length: 150 ) %>
+          <%= markdown(truncate( (note.body), length: 150 ).to_s) %>
           <%= link_to 'View', note %>
         </p>
       </div>      

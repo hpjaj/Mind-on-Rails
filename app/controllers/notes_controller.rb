@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
   def index
-    @notes = Note.all.where(user_id: current_user.id)
+    @notes = Note.all.where(user_id: current_user.id).recently_updated_first
   end
 
   def new
