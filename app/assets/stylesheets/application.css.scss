@@ -62,14 +62,17 @@
   height: 45em;
 }
 
-#welcome-row-1 {
-  background-image: image-url("computer_mouse1.png");
-  background-color: red;
+#welcome-row-2 {
+  // background-image: image-url("computer_mouse1.png");
+  background-size: cover;
+  background-color: white;
 }
 
-#welcome-row-2 {
-  background-image: image-url("coding-curr.png");
-  background-color: black;
+#welcome-row-1 {
+  // background-image: image-url("coding-curr.png");
+  background-color: #F1F2F2;
+  background-size: cover;
+
 }
 
 #welcome-row-3 {
@@ -82,7 +85,7 @@
 
 .boxy {
   // background-image: image-url("congruent_outline.png");
-  color: white;
+  color: #313742;
 }
 
 
