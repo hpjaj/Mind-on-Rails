@@ -37,6 +37,6 @@ class StacksController < ApplicationController
   private
 
   def stacks_params
-    params.require(:stack).permit(:title, :description, :note)
+    params.require(:stack).permit(:title, :description, note_ids: [])
   end
 end
