@@ -26,9 +26,17 @@
 }
 
 .navbar-inverse {
-  background-color: black;
-  border-color: black;
-  border-bottom: 1px solid rgb(39,40,34);
+  background-color: #222326;
+  border-color: #222326;
+  border-bottom: 1px solid #393B40;
+}
+
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+  color: #949599;  //949599
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: #2E2F33;
 }
 
 
@@ -54,7 +62,7 @@
 
 // STACKS views
 .body-black {
-  background: rgb(0,0,0);
+  background: rgb(18,19,20);
 }
 
 .stack-titles {
@@ -91,15 +99,15 @@
 }
 
 #stacks-form p {
-color: #b7b7b7;
+color: #949599;  //new gray font #949599  old gray #b7b7b7
 margin-left: -8%;
 font-size: 16px;
 }
 
 .black-box {
   // border: 1px solid purple;
-  color: rgb(102,102,102);
-  background: rgb(39,40,34);
+  color: #949599;  // new gray #949599  old gray rgb(102,102,102)
+  background: #222326;
   margin-bottom: 20px;
   min-height: 200px;
   text-align: center;
@@ -116,12 +124,12 @@ font-size: 16px;
 
 // NOTES views
 .body-notes {
-  background: rgb(70,70,67);  //gray rgb(70,70,67)
+  background: #121314;  //sublime gray rgb(70,70,67)
   padding-bottom: 70px;
 }
 
 .sublime-gray {
-  background: rgb(39,40,34);
+  background: #222326;
   padding: 5%;
 }
 
@@ -129,7 +137,7 @@ font-size: 16px;
   // width: 100%;
   background-color: rgba(0,0,0,0);
   color: white;
-  border-color: #777;
+  border-color: #777;  //old gray #777  thin border gray #393B40  new gray font #949599
 }
 
 #note-form-title-field {
@@ -192,13 +200,13 @@ font-size: 16px;
 
 #bottom-navbar {
   border-bottom: 0px solid rgb(39,40,34);
-  border-top: 1px solid rgb(39,40,34);
+  border-top: 1px solid #393B40;
 }
 
 .note-bottom-nav-buttons {
   border: 0px solid rgba(0,0,0,0);
   background-color: rgba(0,0,0,0);
-  color: #777;
+  color: #949599;
   padding: 15px 20px;
 }
 
@@ -217,7 +225,7 @@ font-size: 16px;
 
 .note-form-columns {
   // border: 1px solid purple;
-  background: rgb(39,40,34);
+  background: #222326;
   margin-bottom: 20px;
   min-height: 540px;
   padding: 20px 40px 15px;  //this narrows or widens them width of the title and body input fields.  Works with .note-padding's padding
@@ -229,4 +237,8 @@ font-size: 16px;
   padding: 0 5px;  //this narrows or widens them width of the title and body input fields.  Works with .note-form-column's padding
 }
 
+pre {
+  background-color: #949599;
+  border: 1px solid #393B40;
+}
 
