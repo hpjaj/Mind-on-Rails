@@ -1,19 +1,32 @@
 <body id="body-welcome-index">
   <div class="container-fluid boxy">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 welcome-title">
-          <h1>You learn so much through Ruby on Rails.</h1>
-          <h1>We will remember it for you.</h1>
-        </div> 
-        <div class="col-sm-4 welcome-title">
+      <div class="row welcome-rows" id="welcome-row-1">
+        <div class="container">
+          <div class="col-sm-8 welcome-title">
+            <h1>You learn so much through Ruby on Rails.</h1>
+            <h1>We will remember it for you.</h1>
+          </div> 
+          <div class="col-sm-4 welcome-title">
 
 
-        <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-success' %>
-        <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-success' %>
-        </div> 
+          <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-default' %>
+          <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-default' %>
+          </div> 
 
-        <!-- <%= image_tag "headphones.jpg", :width => 400 %> -->
+          <!-- <%= image_tag "headphones.jpg", :width => 400 %> -->
+
+      </div>
+    </div>
+
+    <div class="row welcome-rows" id="welcome-row-2">
+      <div class="container welcome-title">
+        <h1>You learn so much through Ruby on Rails.</h1>
+        <h1>We will remember it for you.</h1>
+      </div>
+    </div>
+
+    <div class="row welcome-rows" id="welcome-row-3">
+      <div class="container">
 
       </div>
     </div>
