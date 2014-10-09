@@ -8,4 +8,9 @@ class Note < ActiveRecord::Base
   validates :body, length: { minimum: 15, too_short: "Minimum length of 15 characters" }
   validates :stacks, :presence => { :message => "Choose at least 1 stack" }
 
+  # validate do |note|
+  #   note.errors.add(:base, "Choose at least 1 stack") if stacks.present?
+  # end
+
+
 end
