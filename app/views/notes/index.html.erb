@@ -1,13 +1,15 @@
 <body class="body-notes">
-
   <div class="container">
-
     <h1>Notes#index</h1>
     <p>Find me in app/views/notes/index.html.erb</p>
+  </div>
 
+  <div class="container" id="notes-index">
     <%= render 'layouts/notes_preview' %>
+  </div>
+  
+  <div class="container">
     <%= will_paginate @notes %>
-
   </div>
 
 </body>

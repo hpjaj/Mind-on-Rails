@@ -19,6 +19,12 @@
  */
 
 
+// darkest black  121314
+// lighter black  222326
+// gray font   949599
+// thin gray border   393B40
+// nav bar active state gray  2E2F33
+
 
 // LAYOUT views
 .navbar {
@@ -26,9 +32,17 @@
 }
 
 .navbar-inverse {
-  background-color: black;
-  border-color: black;
-  border-bottom: 1px solid rgb(39,40,34);
+  background-color: #222326;
+  border-color: #222326;
+  border-bottom: 1px solid #393B40;
+}
+
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+  color: #949599;  //949599
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: #2E2F33;
 }
 
 
@@ -36,9 +50,34 @@
 
 // WELCOME views
 #body-welcome-index {
-  background-image: image-url("congruent_outline.png");
+  // background-image: image-url("congruent_outline.png");
+  background-color: #121314;
 }
 
+#body-welcome-index > .navbar {
+  margin-bottom: 0px;
+}
+
+.welcome-rows {
+  height: 45em;
+}
+
+#welcome-row-2 {
+  // background-image: image-url("computer_mouse1.png");
+  background-size: cover;
+  background-color: white;
+}
+
+#welcome-row-1 {
+  // background-image: image-url("coding-curr.png");
+  background-color: #F1F2F2;
+  background-size: cover;
+
+}
+
+#welcome-row-3 {
+  background-color: #121314;
+}
 .welcome-title {
   padding: 8% 0;
   text-align: center;
@@ -46,7 +85,7 @@
 
 .boxy {
   // background-image: image-url("congruent_outline.png");
-  color: white;
+  color: #313742;
 }
 
 
@@ -54,7 +93,7 @@
 
 // STACKS views
 .body-black {
-  background: rgb(0,0,0);
+  background: rgb(18,19,20);
 }
 
 .stack-titles {
@@ -91,15 +130,15 @@
 }
 
 #stacks-form p {
-color: #b7b7b7;
+color: #949599;  //new gray font #949599  old gray #b7b7b7
 margin-left: -8%;
 font-size: 16px;
 }
 
 .black-box {
   // border: 1px solid purple;
-  color: rgb(102,102,102);
-  background: rgb(39,40,34);
+  color: #949599;  // new gray #949599  old gray rgb(102,102,102)
+  background: #222326;
   margin-bottom: 20px;
   min-height: 200px;
   text-align: center;
@@ -116,12 +155,12 @@ font-size: 16px;
 
 // NOTES views
 .body-notes {
-  background: rgb(70,70,67);  //gray rgb(70,70,67)
+  background: #121314;  //sublime gray rgb(70,70,67)
   padding-bottom: 70px;
 }
 
 .sublime-gray {
-  background: rgb(39,40,34);
+  background: #222326;
   padding: 5%;
 }
 
@@ -129,7 +168,7 @@ font-size: 16px;
   // width: 100%;
   background-color: rgba(0,0,0,0);
   color: white;
-  border-color: #777;
+  border-color: #777;  //old gray #777  thin border gray #393B40  new gray font #949599
 }
 
 #note-form-title-field {
@@ -192,13 +231,13 @@ font-size: 16px;
 
 #bottom-navbar {
   border-bottom: 0px solid rgb(39,40,34);
-  border-top: 1px solid rgb(39,40,34);
+  border-top: 1px solid #393B40;
 }
 
 .note-bottom-nav-buttons {
   border: 0px solid rgba(0,0,0,0);
   background-color: rgba(0,0,0,0);
-  color: #777;
+  color: #949599;
   padding: 15px 20px;
 }
 
@@ -217,7 +256,7 @@ font-size: 16px;
 
 .note-form-columns {
   // border: 1px solid purple;
-  background: rgb(39,40,34);
+  background: #222326;
   margin-bottom: 20px;
   min-height: 540px;
   padding: 20px 40px 15px;  //this narrows or widens them width of the title and body input fields.  Works with .note-padding's padding
@@ -229,4 +268,46 @@ font-size: 16px;
   padding: 0 5px;  //this narrows or widens them width of the title and body input fields.  Works with .note-form-column's padding
 }
 
+pre {
+  background-color: black;
+  border: 1px solid #393B40;
+}
 
+#notes-index {
+  max-height: 45em;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+// SCROLL BAR HIGHLIGHTING OPTIONS
+// #notes-index::-webkit-scrollbar-track {
+//     scrollbar-track-color: black;
+//     border-radius: 5px;
+// }
+
+// ::-webkit-scrollbar {
+//       width: 10px;
+// }
+// ::-webkit-scrollbar-track {
+//     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+//     border-radius: 10px;
+// } /* the new scrollbar will have a flat appearance with the set background color */
+ 
+// ::-webkit-scrollbar-thumb {
+//     border-radius: 10px;
+//     background-color: #2E2F33;
+//     // -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.2);
+// } /* this will style the thumb, ignoring the track */
+
+// ::-webkit-scrollbar-thumb:hover {
+//     border-radius: 10px;
+//     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+// }
+ 
+// ::-webkit-scrollbar-thumb:window-inactive {
+//    /* Select the thumb when the browser window isn't in focus */
+// }
+// ::-webkit-scrollbar-button:horizontal:decrement:hover {
+//    /* Select the down or left scroll button when it's being hovered by the mouse */
+// }
