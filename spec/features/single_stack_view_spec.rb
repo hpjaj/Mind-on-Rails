@@ -7,6 +7,7 @@ describe 'A single stack view' do
     stack_2 = create(:stack, :title => "CSS Styling", :description => "This is all about the look and feel", id: 2)
     note = create(:note)
     note_2 = create(:note, :title => "This is the second note", stack_ids: [1])
+    # note_2 = create(:note, :title => "This is the second note", stacks: [stack])
     note_3 = create(:note, :title => "This is the third note", stack_ids: [2])
     visit stacks_path
   end
