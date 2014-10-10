@@ -273,3 +273,41 @@ pre {
   border: 1px solid #393B40;
 }
 
+#notes-index {
+  max-height: 45em;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+// SCROLL BAR HIGHLIGHTING OPTIONS
+// #notes-index::-webkit-scrollbar-track {
+//     scrollbar-track-color: black;
+//     border-radius: 5px;
+// }
+
+// ::-webkit-scrollbar {
+//       width: 10px;
+// }
+// ::-webkit-scrollbar-track {
+//     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+//     border-radius: 10px;
+// } /* the new scrollbar will have a flat appearance with the set background color */
+ 
+// ::-webkit-scrollbar-thumb {
+//     border-radius: 10px;
+//     background-color: #2E2F33;
+//     // -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.2);
+// } /* this will style the thumb, ignoring the track */
+
+// ::-webkit-scrollbar-thumb:hover {
+//     border-radius: 10px;
+//     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+// }
+ 
+// ::-webkit-scrollbar-thumb:window-inactive {
+//    /* Select the thumb when the browser window isn't in focus */
+// }
+// ::-webkit-scrollbar-button:horizontal:decrement:hover {
+//    /* Select the down or left scroll button when it's being hovered by the mouse */
+// }
