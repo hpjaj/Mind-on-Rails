@@ -11,8 +11,12 @@
           <span class="icon-bar"></span>
         </button>
       <% end %>
+      <% if current_user %>
+        <%= link_to 'Mind on Rails', stacks_path, class: "navbar-brand" %>
+      <% else %>
+        <%= link_to 'Mind on Rails', root_path, class: "navbar-brand" %>
+      <% end %>
 
-      <%= link_to 'Mind on Rails', root_path, class: "navbar-brand" %>
     </div>
 
     <div class="navbar-collapse collapse">
