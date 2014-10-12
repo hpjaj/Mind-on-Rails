@@ -1,0 +1,15 @@
+<div class="container" id="search-window">
+  <div class="row">
+    <div>
+      <%= form_tag notes_path, method: :get do %>
+        <div class="input-group input-group-lg">
+          <%= text_field_tag :query, params[:query], placeholder: "Pick your brain", class: "form-control input-lg" %>
+          <span class="input-group-btn">
+          <%= content_tag :button, submit_tag("Search", name: nil), class: "btn input", id: "search-button" %>
+          </span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

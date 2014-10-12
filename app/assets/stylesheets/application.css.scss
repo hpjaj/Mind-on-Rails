@@ -45,6 +45,27 @@
   background-color: #2E2F33;
 }
 
+#search-window {
+  margin: 5% 0 10%;
+}
+
+#search-button input {
+  border: 0px solid white;
+  background-color: rgba(0,0,0,0);
+  padding: 0;
+}
+
+#search-button {
+  background-color: #222326;
+  color: white;
+  border-color: #222326;
+}
+#search-button:hover {
+  background-color: #2E2F33;
+  color: white;
+  border-color: #2E2F33;
+
+}
 
 
 
@@ -179,22 +200,22 @@ font-size: 16px;
   height: 100%;
 }
 
-.form-control::-webkit-input-placeholder {
+.placeholder-text .form-control::-webkit-input-placeholder {
    color: #a87cf6;
   font-family: Courier New, serif;
 }
 
-.form-control:-moz-placeholder { /* Firefox 18- */
+.placeholder-text .form-control:-moz-placeholder { /* Firefox 18- */
    color: #a87cf6;  
    font-family: Courier New, serif;
 }
 
-.form-control::-moz-placeholder {  /* Firefox 19+ */
+.placeholder-text .form-control::-moz-placeholder {  /* Firefox 19+ */
    color: #a87cf6;  
    font-family: Courier New, serif;
 }
 
-.form-control:-ms-input-placeholder {  
+.placeholder-text .form-control:-ms-input-placeholder {  
    color: #a87cf6;  
    font-family: Courier New, serif;
 }

@@ -1,13 +1,6 @@
 <body class="body-notes">
   <div class="container">
-
-  <%= form_tag notes_path, method: :get do %>
-    <p>
-      <%= text_field_tag :query, params[:query] %>
-      <%= submit_tag "Search", name: nil %>
-    </p>
-  <% end %>
-
+    <%= render 'layouts/search_window' %>
   </div>
 
   <div class="container" id="notes-index">
@@ -15,7 +8,7 @@
   </div>
   
   <div class="container">
-    <%= will_paginate @notes %>
+    <%= will_paginate $notes %>
   </div>
 
 </body>
