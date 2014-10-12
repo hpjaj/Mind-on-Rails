@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
   def index
-    @notes = Note.paginate(page: params[:page], per_page: 5).where(user_id: current_user.id).recently_updated_first
+    @notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).where(user_id: current_user.id).recently_updated_first
   end
 
   def new
