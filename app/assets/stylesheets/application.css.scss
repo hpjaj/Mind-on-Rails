@@ -71,6 +71,14 @@
   color: #949599;
 }
 
+.glyphicon-font-color:hover {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus > span {
+  color: white;
+}
+
 .glyphicon-background-color {
   background-color: #2E2F33;
 }
