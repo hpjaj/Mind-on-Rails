@@ -56,14 +56,14 @@
 }
 
 #search-button {
-  background-color: #222326;
-  color: white;
-  border-color: #222326;
+  background-color: #A6E22D; 
+  color: #222326;
+  border-color: #A6E22D;
 }
 #search-button:hover {
-  background-color: #2E2F33;
-  color: white;
-  border-color: #2E2F33;
+  background-color: rgb(180,246,49);
+  color: #121314;
+  border-color: rgb(180,246,49);
   border-left: 0px solid #2E2F33;
 }
 
@@ -291,14 +291,14 @@ font-size: 16px;
 
 pre {
   background-color: black;
-  border: 1px solid #393B40;
+  border: 1px solid black;  // was #393B40
 }
 
-#notes-index {
-  max-height: 45em;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
+// #notes-index {
+//   max-height: 45em;
+//   overflow-y: auto;
+//   overflow-x: hidden;
+// }
 
 
 // SCROLL BAR HIGHLIGHTING OPTIONS
