@@ -8,4 +8,17 @@ class Note < ActiveRecord::Base
   validates :body, length: { minimum: 15, too_short: "Minimum length of 15 characters" }
   validates :stacks, :presence => { :message => "Choose at least 1 stack" }
 
+  include PgSearch
+  pg_search_scope :search, against: [:title, :body],
+    using: {tsearch: {dictionary: "english"}},
+    associated_against: {stacks: [:title]}
+
+  def self.text_search(query)
+    if query.present?
+      search(query)
+    else
+      scoped
+    end
+  end
+
 end

@@ -10,7 +10,7 @@ group :production do
 end
 
 group :development do
-  gem 'sqlite3'
+  gem 'pg'
 end
 
 # Use SCSS for stylesheets
@@ -53,3 +53,4 @@ gem 'simple_form'
 gem 'redcarpet'
 gem 'will_paginate', '~> 3.0.5'
 gem 'pygments.rb'
+gem 'pg_search'

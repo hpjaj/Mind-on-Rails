@@ -1,7 +1,13 @@
 <body class="body-notes">
   <div class="container">
-    <h1>Notes#index</h1>
-    <p>Find me in app/views/notes/index.html.erb</p>
+
+  <%= form_tag notes_path, method: :get do %>
+    <p>
+      <%= text_field_tag :query, params[:query] %>
+      <%= submit_tag "Search", name: nil %>
+    </p>
+  <% end %>
+
   </div>
 
   <div class="container" id="notes-index">
