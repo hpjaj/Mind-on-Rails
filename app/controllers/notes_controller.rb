@@ -5,11 +5,13 @@ class NotesController < ApplicationController
 
   def new
     @note = Note.new
+    authorize @note
   end
 
   def create
     @note = Note.new(notes_params)
     @note.user = current_user
+    authorize @note
     if @note.save
       redirect_to notes_path
     else
@@ -19,10 +21,12 @@ class NotesController < ApplicationController
 
   def edit
     @note = Note.find(params[:id])
+    authorize @note
   end
 
   def update
     @note = Note.find(params[:id])
+    authorize @note
     if @note.update_attributes(notes_params)
       redirect_to note_path
     else

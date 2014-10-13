@@ -19,7 +19,9 @@
     <hr>
     <div class="row note-show-body notes-show-LRpadding">
       <%= markdown @note.body %>
-      <%= link_to 'Edit', edit_note_path %>
+      <% if policy(@note).edit? %>
+        <%= link_to 'Edit', edit_note_path %>
+      <% end %>
     </div>
   </div>
   
