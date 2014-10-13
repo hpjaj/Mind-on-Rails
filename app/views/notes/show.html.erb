@@ -21,6 +21,9 @@
       <%= markdown @note.body %>
       <% if policy(@note).edit? %>
         <%= link_to 'Edit', edit_note_path %>
+      <% end %>      
+      <% if policy(@note).destroy? %>
+        <%= link_to 'Delete', @note, method: :delete, data: { confirm: 'Delete this note?' } %>
       <% end %>
     </div>
   </div>

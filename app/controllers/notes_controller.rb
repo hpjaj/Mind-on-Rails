@@ -43,6 +43,16 @@ class NotesController < ApplicationController
     @notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).where(user_id: current_user.id).recently_updated_first
   end
 
+  def destroy
+    @note = Note.find(params[:id])
+    authorize @note
+    if @note.destroy
+      redirect_to notes_path
+    else
+      render :show
+    end
+  end
+
   private
 
   def notes_params

@@ -2,7 +2,7 @@
   <div class="container">
   <% if @note.errors.any? %>
     <div class="alert alert-danger">
-      <h4>There is/are <%= pluralize(@note.errors.count, "error") %></h4>
+      <h4>There are <%= pluralize(@note.errors.count, "error") %></h4>
       <ul>
         <% @note.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
