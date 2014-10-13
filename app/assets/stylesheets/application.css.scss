@@ -71,6 +71,13 @@
   color: #949599;  
 }
 
+@media all and (min-width: 768px) {
+   button .glyphicon-search {
+    padding: 0 25px;
+  }
+}
+
+
 
 
 
