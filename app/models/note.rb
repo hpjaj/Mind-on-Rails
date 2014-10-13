@@ -4,9 +4,9 @@ class Note < ActiveRecord::Base
 
   scope :recently_updated_first, lambda { order("notes.updated_at DESC")}
 
-  validates :title, length: { minimum: 5, too_short: "Minimum length of 5 characters" }
-  validates :body, length: { minimum: 15, too_short: "Minimum length of 15 characters" }
-  validates :stacks, :presence => { :message => "Choose at least 1 stack" }
+  validates :title, length: { minimum: 5, too_short: " - Minimum length of 5 characters" }
+  validates :body, length: { minimum: 5, too_short: " - Minimum length of 5 characters" }
+  validates :stacks, :presence => { :message => " - Choose at least 1 stack" }
 
   include PgSearch
   pg_search_scope :search, against: [:title, :body],

@@ -24,4 +24,10 @@ module ApplicationHelper
     request.env['PATH_INFO']
   end
 
+  def adds_error_class_if_present(errors)
+    if errors.any?
+      ' has-error'
+    end
+  end
+
 end

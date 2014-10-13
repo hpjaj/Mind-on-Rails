@@ -1,23 +1,34 @@
 <%= simple_form_for @note do |f|  %>
   <div class="container">
+  <% if @note.errors.any? %>
+    <div class="alert alert-danger">
+      <h4>There is/are <%= pluralize(@note.errors.count, "error") %></h4>
+      <ul>
+        <% @note.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
     <div class="row form placeholder-text">
  
       <div class="col-sm-9 col-sm-push-3 note-padding">
         <div class="note-form-columns">
-          <div class="row form-group ">
-            <%= f.input :title, label: false, placeholder: ":title", input_html: { id: "note-form-title-field", class: "form-control note-form-fields" } %>
+          <div class='row form-group <%= "#{adds_error_class_if_present(@note.errors[:title])}" %>'>
+            <%= f.input :title, label: false, placeholder: ":title", error: false, input_html: { id: "note-form-title-field", class: "form-control note-form-fields" } %>
           </div>
-          <div class="row form-group ">
-            <%= f.input :body, label: false, placeholder: ":body", input_html: { id: "note-form-body-field", class: "form-control note-form-fields", rows: 21 } %>
+          <div class='row form-group <%= "#{adds_error_class_if_present(@note.errors[:body])}" %>'>
+            <%= f.input :body, label: false, error: false, placeholder: ":body", input_html: { id: "note-form-body-field", class: "form-control note-form-fields", rows: 21 } %>
           </div>
         </div>
       </div>
 
       <div class="col-sm-3 col-sm-pull-9 note-padding">
         <div class="note-form-columns">
-          <div class="row" id="stacks-form">
+          <div class='row <%= "#{adds_error_class_if_present(@note.errors[:stacks])}" %>' id="stacks-form">
             <p>Choose all that apply</p>
-            <%= f.association :stacks, as: :check_boxes, label: false %>
+            <%= f.association :stacks, as: :check_boxes, label: false, error: false %>
           </div>
         </div>
       </div>
