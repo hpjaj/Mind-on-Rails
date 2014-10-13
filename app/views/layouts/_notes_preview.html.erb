@@ -1,4 +1,4 @@
-<% $notes.each do |note| %>
+<% @notes.each do |note| %>
   <div class="container sublime-gray note-previews">
     <div class="row">
       <div class="controls">
@@ -12,7 +12,7 @@
         </p>
         </p>
         <p>
-          <%= markdown(truncate( (note.body), length: 150, escape: false )) %>
+          <%= (truncate( (note.body), length: 150, escape: false )) %>
           <%= link_to 'View', note %>
         </p>
       </div>      
