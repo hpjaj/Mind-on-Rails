@@ -1,0 +1,15 @@
+<body class="body-notes">
+  <div class="container">
+    <%= render 'layouts/search_window' %>
+  </div> 
+
+
+  <% if :query.length >= 0 %>
+    <div class="container">
+      <% @notes = $notes %>
+      <%= render 'layouts/notes_preview' %>
+      <%= will_paginate @notes %>
+    </div>
+  <% end %>
+
+</body>

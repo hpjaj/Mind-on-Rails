@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # get 'users/show'
 
   resources :users, only: [:update, :index]
+  
+  get 'search' => 'notes#search'
+
 
   resources :notes, :stacks
   
@@ -25,6 +28,7 @@ Rails.application.routes.draw do
   # get 'stacks/show'
 
   # get 'welcome/index'
+
 
   get 'about' => 'welcome#about'
 

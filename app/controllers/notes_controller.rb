@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
   def index
-    $notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).where(user_id: current_user.id).recently_updated_first
+    @notes = Note.paginate(page: params[:page], per_page: 5).where(user_id: current_user.id).recently_updated_first
   end
 
   def new
@@ -33,6 +33,10 @@ class NotesController < ApplicationController
 
   def show
     @note = Note.find(params[:id])
+  end
+
+  def search
+    $notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).where(user_id: current_user.id).recently_updated_first
   end
 
   private
