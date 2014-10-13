@@ -98,6 +98,8 @@ GEM
       websocket-driver (>= 0.2.0)
     polyglot (0.3.5)
     posix-spawn (0.3.9)
+    pundit (0.3.0)
+      activesupport (>= 3.0.0)
     pygments.rb (0.6.0)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
@@ -209,6 +211,7 @@ DEPENDENCIES
   pg
   pg_search
   poltergeist
+  pundit
   pygments.rb
   rails (= 4.1.1)
   rails_12factor

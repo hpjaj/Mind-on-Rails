@@ -13,6 +13,7 @@ member = User.new(
   name:       'Member User',
   email:      'member@example.com',
   password:   'password',
+  role:       'member'
   )
 member.skip_confirmation!
 member.save!
@@ -53,6 +54,17 @@ notes = Note.all
     n.save
   end
 end
+
+
+# Create an admin user
+admin = User.new(
+  name:       'Admin User',
+  email:      'admin@example.com',
+  password:   'password',
+  role:       'admin'
+  )
+admin.skip_confirmation!
+admin.save!
 
 
 
