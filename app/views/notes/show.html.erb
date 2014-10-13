@@ -12,7 +12,7 @@
       </p>
     </div>
     <div class="row note-show-dates notes-show-LRpadding">
-      <p>Created: <%= @note.created_at %> &nbsp; &nbsp; Updated: <%= @note.updated_at %></p>
+      <p>Created: <%= @note.created_at.strftime("%b %d, %Y") %> &nbsp; &nbsp; Updated: <%= @note.updated_at.strftime("%b %d, %Y") %></p>
     </div>
     <hr>
     <div class="row">

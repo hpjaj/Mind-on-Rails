@@ -5,6 +5,7 @@
         <p>
           <%= note.title %>
         <p class="notes_stacks">
+          <%= note.updated_at.strftime("%m/%d/%y") %>&nbsp;
           <% notes_stacks = note.stacks %>
           <% notes_stacks.each do |stack| %>
             <%= stack.title %>
