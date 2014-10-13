@@ -12,8 +12,7 @@ require 'faker'
 member = User.new(
   name:       'Member User',
   email:      'member@example.com',
-  password:   'password',
-  role:       'member'
+  password:   'password'
   )
 member.skip_confirmation!
 member.save!
