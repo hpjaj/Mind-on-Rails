@@ -4,12 +4,16 @@
   </div> 
 
 
-  <% if :query.length >= 0 %>
-    <div class="container">
-      <% @notes = $notes %>
-      <%= render 'layouts/notes_preview' %>
-      <%= will_paginate @notes %>
-    </div>
+  <% if params[:query].present? %>
+    
+    <% if @notes.empty?  %>
+      <p>I am empty</p>
+    <% else %>
+      <div class="container">
+        <%= render 'layouts/notes_preview' %>
+        <%= will_paginate @notes %>
+      </div>
+    <% end %>
   <% end %>
 
 </body>
