@@ -23,7 +23,7 @@
         <%= link_to 'Edit', edit_note_path %>
       <% end %>      
       <% if policy(@note).destroy? %>
-        <%= link_to 'Delete', @note, method: :delete, data: { confirm: 'Delete this note?' } %>
+        <%= link_to 'Delete', @note, method: :delete, class: 'pull-right', data: { confirm: 'Delete this note?' } %>
       <% end %>
     </div>
   </div>
