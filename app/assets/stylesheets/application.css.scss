@@ -28,6 +28,10 @@
 
 
 // LAYOUT views
+
+html body {
+  // font-family: Verdana;
+}
 .navbar {
   border-radius: 0px;
 }
@@ -61,6 +65,7 @@
   color: #222326;
   border-color: #A6E22D;
 }
+
 .search-button:hover {
   background-color: rgb(180,246,49);
   color: #121314;
@@ -147,6 +152,22 @@ button .glyphicon-font-color {
   text-transform: capitalize;
   padding-top: 5%;
   font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.stack-titles a {
+  color: #A6E22D;
+  text-decoration: none;
+  -webkit-transition: color .2s ease-out;
+  -moz-transition: color .2s ease-out;
+  -o-transition: color .2s ease-out;
+  transition: color .2s ease-out; 
+}
+
+
+.stack-titles a:hover {
+  color: #A6E22D;
+  text-decoration: none;
 }
 
 .stack-descriptions {
@@ -358,6 +379,10 @@ li .navbar-form {
 
 .note-preview-title-links a, .pagination a, .note-show-body a {
   color: white;
+  -webkit-transition: color .2s ease-out;
+  -moz-transition: color .2s ease-out;
+  -o-transition: color .2s ease-out;
+  transition: color .2s ease-out; 
 }
 
 .note-preview-title-links a:hover, .note-show-body a:hover, .pagination a:hover {
