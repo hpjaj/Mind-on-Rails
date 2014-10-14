@@ -24,6 +24,7 @@
 // gray font   949599
 // thin gray border   393B40
 // nav bar active state gray  2E2F33
+// search green  A6E22D
 
 
 // LAYOUT views
@@ -82,6 +83,11 @@ button .glyphicon-font-color {
   }
 }
 
+@media all and (max-width: 767px) {
+   .note-preview-container {
+    padding: 0 15px;
+  }
+}
 
 
 
@@ -199,6 +205,10 @@ font-size: 16px;
   padding-bottom: 70px;
 }
 
+.body-notes label {
+  font-weight: normal;
+}
+
 .sublime-gray {
   background: #222326;
   padding: 5%;
@@ -312,6 +322,52 @@ pre {
   background-color: black;
   border: 1px solid black;  // was #393B40
 }
+
+li .navbar-form {
+  margin: 0;
+}
+
+#visible-to-public-checkbox {
+  padding-left: 13%;
+}
+
+.radio, .checkbox  {
+  margin-top: 15px;
+}
+
+.public-note-indicator {
+  color: #F92772;
+}
+
+//Create a note - public note checkbox
+.checkbox {
+  color: #F92772;
+}
+
+.note-preview-body {
+  color: #949599;
+}
+
+.note-preview-title-links a {
+  font-size: 17px;
+}
+
+.note-show-body a {
+  text-transform: uppercase;
+}
+
+.note-preview-title-links a, .pagination a, .note-show-body a {
+  color: white;
+}
+
+.note-preview-title-links a:hover, .note-show-body a:hover, .pagination a:hover {
+  color: #A6E22D;
+  text-decoration: none; 
+}
+
+
+
+
 
 // #notes-index {
 //   max-height: 45em;

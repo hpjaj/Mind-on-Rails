@@ -39,14 +39,10 @@
       <div class="container">
         <ul class="nav nav-pills">
           <li ><%= button_to 'Cancel', :back, class: "note-bottom-nav-buttons" %></li>
-          <li>
-            <form class="navbar-form">
-              <div class="form-group">
-                <%= f.input :public, label: false, inline_label: "Visible to public", class: "form-control" %>
-              </div>
-            </form>
+          <li id="visible-to-public-checkbox">
+                <%= f.input :public, label: false, inline_label: "Public Note" %>
+                
           </li>
-          <!-- <li><%= button_to 'Preview', '#', class: "note-bottom-nav-buttons" %></li> -->
           <li class="pull-right"><%= f.button :submit, 'Save', class: "note-bottom-nav-buttons", id: "note-save-button" %></li>
         </ul>
       </div>

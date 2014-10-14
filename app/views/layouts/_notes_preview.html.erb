@@ -1,20 +1,23 @@
 <% @notes.each do |note| %>
   <div class="container sublime-gray note-previews">
     <div class="row">
-      <div class="controls">
+      <div class="controls note-preview-container">
         <p>
-          <%= note.title %>
+          <%= content_tag :span, link_to(note.title, note), class: "note-preview-title-links" %>
+
         <p class="notes_stacks">
           <%= note.updated_at.strftime("%m/%d/%y") %>&nbsp;
+          <% if note.public %>
+            <%= content_tag :span, "Public", class: "public-note-indicator" %>
+          <% end %>
           <% notes_stacks = note.stacks %>
           <% notes_stacks.each do |stack| %>
             <%= stack.title %>
           <% end %>
         </p>
         </p>
-        <p>
+        <p class="note-preview-body">
           <%= (truncate( (note.body), length: 150, escape: false )) %>
-          <%= link_to 'View', note %>
         </p>
       </div>      
     </div>
