@@ -1,6 +1,13 @@
+$state-danger-text: white;
+$state-danger-bg: rgba(255,255,255,.2);
+
+$state-success-text: #797979;
+$state-success-bg: white;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "pygments";
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -25,6 +32,7 @@
 // thin gray border   393B40
 // nav bar active state gray  2E2F33
 // search green  A6E22D
+// public dark pink  F92772
 
 
 // LAYOUT views
@@ -48,6 +56,23 @@ html body {
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
   background-color: #2E2F33;
+}
+
+.alert {
+  // border-radius: 0;
+  margin: 15px 0;
+  border: 0px solid #909193;
+  max-width: 400px;
+}
+
+button.close {
+  // background: rgba(0,0,0,0);
+  text-shadow: 0 0px rgba(0,0,0,0);
+}
+
+.close {
+  color: #AEDEF4;
+  opacity: 1;
 }
 
 #search-window {
@@ -152,7 +177,6 @@ button .glyphicon-font-color {
   text-transform: capitalize;
   padding-top: 5%;
   font-size: 20px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .stack-titles a {
