@@ -1,8 +1,4 @@
 $state-danger-text: white;
-$state-danger-bg: rgba(255,255,255,.2);
-
-$state-success-text: #797979;
-$state-success-bg: white;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -59,20 +55,31 @@ html body {
 }
 
 .alert {
-  // border-radius: 0;
+  border: 3px solid rgba(255,255,255,.7);
+  border-radius: 6px;
+  background-color: rgba(255,255,255,0);
+  color: white;
   margin: 15px 0;
-  border: 0px solid #909193;
   max-width: 400px;
 }
 
-button.close {
-  // background: rgba(0,0,0,0);
-  text-shadow: 0 0px rgba(0,0,0,0);
+.alert-success {
+  // border: 3px solid rgba(255,255,255,.7);
+  // border-radius: 6px;
+  // background-color: rgba(255,255,255,0);
+  // color: white;
+  font-size: 25px;
 }
 
-.close {
+button.close {
+  text-shadow: 0 0px rgba(0,0,0,0);
   color: #AEDEF4;
   opacity: 1;
+  font-size: 31px;
+}
+
+button.close:hover {
+  color: red;
 }
 
 #search-window {
@@ -403,10 +410,6 @@ li .navbar-form {
 
 .note-preview-title-links a, .pagination a, .note-show-body a {
   color: white;
-  -webkit-transition: color .2s ease-out;
-  -moz-transition: color .2s ease-out;
-  -o-transition: color .2s ease-out;
-  transition: color .2s ease-out; 
 }
 
 .note-preview-title-links a:hover, .note-show-body a:hover, .pagination a:hover {

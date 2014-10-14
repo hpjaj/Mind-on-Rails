@@ -27,7 +27,7 @@
       <div class="col-sm-3 col-sm-pull-9 note-padding">
         <div class="note-form-columns">
           <div class='row <%= "#{adds_error_class_if_present(@note.errors[:stacks])}" %>' id="stacks-form">
-            <p>Choose all that apply</p>
+            <p>Choose all stacks that apply</p>
             <%= f.association :stacks, as: :check_boxes, label: false, error: false %>
           </div>
         </div>
