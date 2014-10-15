@@ -42,6 +42,11 @@
             </ul>
           </li>
         <% end %>
+        
+        <% if !current_user %>
+          <%= content_tag :li, link_to('Log In', new_user_session_path), class: "#{css_class_active_for(new_user_session_path)}" %>
+        <% end %>
+
 
       </ul>
     </div>

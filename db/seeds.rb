@@ -21,14 +21,24 @@ member = User.new(
 member.skip_confirmation!
 member.save!
 
-16.times do
-  stack = Stack.new(
-    title: Faker::Lorem.word,
-    description: "Modi aut animi consequuntur qui tempora aspernatur aperiam. Consequuntur minima tenetur iure quae. Voluptas optio consequatur harum. Architecto quaerat similique repellendus consequatur aut quo animi."
-    )
+CuratedStates = ["Rails Errors","Command Line","Shortcuts","Database","Online Resources","Cheat Sheets","Rails General","Git","Workflows","Tricks","Troubleshooting","Testing / Tdd","Ruby General","Gems","Other Languages","Needs Answering"]
+
+CuratedStates.each do |f|
+  stack = Stack.new
+  stack.title = f
+  stack.description = "Modi aut animi consequuntur qui tempora aspernatur aperiam. Consequuntur minima tenetur iure quae. Voluptas optio consequatur harum. Architecto quaerat similique repellendus consequatur aut quo animi."
   stack.save
 end
 stacks = Stack.all
+
+# 16.times do
+#   stack = Stack.new(
+#     title: Faker::Lorem.word,
+#     description: "Modi aut animi consequuntur qui tempora aspernatur aperiam. Consequuntur minima tenetur iure quae. Voluptas optio consequatur harum. Architecto quaerat similique repellendus consequatur aut quo animi."
+#     )
+#   stack.save
+# end
+# stacks = Stack.all
 
 5.times do 
   user = User.new(
