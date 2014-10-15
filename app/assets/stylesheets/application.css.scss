@@ -34,6 +34,7 @@ $state-danger-text: white;
 // LAYOUT views
 
 html body {
+  background-color: #121314;
   // font-family: Verdana;
 }
 .navbar {
@@ -60,14 +61,10 @@ html body {
   background-color: rgba(255,255,255,0);
   color: white;
   margin: 15px 0;
-  max-width: 400px;
+  max-width: 410px;
 }
 
-.alert-success {
-  // border: 3px solid rgba(255,255,255,.7);
-  // border-radius: 6px;
-  // background-color: rgba(255,255,255,0);
-  // color: white;
+.alert-success, .alert-warning {
   font-size: 25px;
 }
 
@@ -102,7 +99,6 @@ button.close:hover {
   background-color: rgb(180,246,49);
   color: #121314;
   border-color: rgb(180,246,49);
-  border-left: 0px solid #2E2F33;
 }
 
 .glyphicon-font-color {
@@ -126,8 +122,13 @@ button .glyphicon-font-color {
   }
 }
 
+.sign-in-checkbox .checkbox, .user-sign-in-up-edit, .user-sign-in-up-edit label, i {
+  color: #949599;
+}
 
-
+.sign-in-titles {
+  color: white;
+}
 
 
 
@@ -408,11 +409,11 @@ li .navbar-form {
   text-transform: uppercase;
 }
 
-.note-preview-title-links a, .pagination a, .note-show-body a {
+.note-preview-title-links a, .pagination a, .note-show-body a, .user-sign-in-up-edit a {
   color: white;
 }
 
-.note-preview-title-links a:hover, .note-show-body a:hover, .pagination a:hover {
+.note-preview-title-links a:hover, .note-show-body a:hover, .pagination a:hover, .user-sign-in-up-edit a:hover {
   color: #A6E22D;
   text-decoration: none; 
 }
