@@ -40,8 +40,26 @@ class NotesController < ApplicationController
   end
 
   def search
-    @notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).where(user_id: current_user.id).recently_updated_first
+    notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).recently_updated_first
+    if current_user
+      @notes = notes.where(user_id: current_user.id)
+    else
+      @notes = notes.where(public: true)
+    end
   end
+
+
+#   def search
+#     notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).recently_updated_first
+#     users_notes = notes.where(user_id: current_user.id)
+#     public_notes = notes.where(public: true)
+
+#     if current_user
+#       @notes = users_notes + public_notes
+#     else
+#       @notes = public_notes
+#     end
+#   end
 
   def destroy
     @note = Note.find(params[:id])
@@ -60,3 +78,35 @@ class NotesController < ApplicationController
   end
 
 end
+
+
+
+# I have an app where users create public and private notes.  For a guest, I want the note set to contain only public notes. 
+
+# For a user, I want the note set to contain all public notes **plus** all the user's notes.
+
+# Here is my code from the `notes_controller`:
+
+# ```ruby
+#   def search
+#     notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).recently_updated_first
+#     users_notes = notes.where(user_id: current_user.id)
+#     public_notes = notes.where(public: true)
+
+#     if current_user
+#       @notes = users_notes + public_notes
+#     else
+#       @notes = public_notes
+#     end
+#   end```
+# 
+# I am getting this error:
+
+# ```bash
+# NoMethodError in Notes#search
+# Showing /Users/harrylevine/Documents/Coding_Files/MoR/app/views/notes/search.html.erb where line #16 raised:
+
+# undefined method `total_pages' for #<Array:0x007fa4e2374c20>
+# ```
+
+# Background info, all the search functionality and pagination was working before I tried to differentiate public and private.  Thanks.
