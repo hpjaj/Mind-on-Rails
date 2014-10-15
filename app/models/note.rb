@@ -1,4 +1,7 @@
 class Note < ActiveRecord::Base
+
+  include PgSearch
+  
   belongs_to :user
   has_and_belongs_to_many :stacks
 
@@ -8,7 +11,6 @@ class Note < ActiveRecord::Base
   validates :body, length: { minimum: 5, too_short: " - Minimum length of 5 characters" }
   validates :stacks, :presence => { :message => " - Choose at least 1 stack" }
 
-  include PgSearch
   pg_search_scope :search, against: [:title, :body],
     using: {tsearch: {dictionary: "english"}},
     associated_against: {stacks: [:title]}
