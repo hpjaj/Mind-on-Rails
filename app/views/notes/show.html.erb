@@ -7,11 +7,13 @@
   <div class="row">
     <p class="notes_stacks notes-show-LRpadding">
       <% if @note.public %>
-        <%= content_tag :span, "Public", class: "public-note-indicator" %>
+        <%= content_tag :span, "Public", class: "public-note-indicator" %>&nbsp;
+      <% else %>
+          <%= content_tag :span, "Private", class: "private-note-indicator" %>&nbsp;  
       <% end %>
       <% notes_stacks = @note.stacks %>
       <% notes_stacks.each do |stack| %>
-        <%= stack.title %>
+        <%= stack.title.capitalize %>
       <% end %>
     </p>
   </div>
