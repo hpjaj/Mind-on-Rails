@@ -139,7 +139,7 @@ button .glyphicon-font-color {
 }
 
 .body-welcome-index  .navbar {
-  // margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .welcome-rows {
@@ -152,7 +152,7 @@ button .glyphicon-font-color {
   background-color: white;
 }
 
-#welcome-row-1 {
+.welcome-row-1 {
   // background-image: image-url("coding-curr.png");
   background-color: #F1F2F2;
   background-size: cover;
@@ -170,6 +170,10 @@ button .glyphicon-font-color {
 .boxy {
   // background-image: image-url("congruent_outline.png");
   color: #313742;
+}
+
+.about-page-text {
+  padding: 15px 0;
 }
 
 

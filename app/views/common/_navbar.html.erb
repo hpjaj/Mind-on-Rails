@@ -19,6 +19,7 @@
 
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
+        <%= content_tag :li, link_to('About', about_path), class: "#{css_class_active_for(about_path)}" %>
         <% if current_user %>
           <%= content_tag :li, link_to('+ Create A Note', new_note_path), class: "#{css_class_active_for(new_note_path)}" %>
         <% end %>
