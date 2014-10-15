@@ -40,7 +40,12 @@ class NotesController < ApplicationController
   end
 
   def search
-    @notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).where(user_id: current_user.id).recently_updated_first
+    notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).recently_updated_first
+    if current_user
+      @notes = notes.where(user_id: current_user.id)
+    else
+      @notes = notes.where(public: true)
+    end
   end
 
   def destroy
