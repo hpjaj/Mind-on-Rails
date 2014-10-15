@@ -40,8 +40,26 @@ class NotesController < ApplicationController
   end
 
   def search
-    @notes = policy_scope(Note).text_search(params[:query]).paginate(page: params[:page], per_page: 5).recently_updated_first
+    notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).recently_updated_first
+    if current_user
+      @notes = notes.where(user_id: current_user.id)
+    else
+      @notes = notes.where(public: true)
+    end
   end
+
+
+#   def search
+#     notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).recently_updated_first
+#     users_notes = notes.where(user_id: current_user.id)
+#     public_notes = notes.where(public: true)
+
+#     if current_user
+#       @notes = users_notes + public_notes
+#     else
+#       @notes = public_notes
+#     end
+#   end
 
   def destroy
     @note = Note.find(params[:id])
