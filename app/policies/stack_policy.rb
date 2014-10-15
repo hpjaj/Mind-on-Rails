@@ -1,4 +1,4 @@
-class NotePolicy < ApplicationPolicy
+class StackPolicy < ApplicationPolicy
   class Scope
     attr_reader :user, :scope
 
