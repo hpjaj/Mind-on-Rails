@@ -3,7 +3,7 @@
 
 
 <div class="container">
-  <%= render 'layouts/search_window' %>
+  <%= render 'common/search_window' %>
 </div> 
 
 
@@ -13,7 +13,7 @@
     <p>I am empty</p>
   <% else %>
     <div class="container">
-      <%= render 'layouts/notes_preview' %>
+      <%= render 'common/notes_preview' %>
       <%= will_paginate @notes %>
     </div>
   <% end %>
