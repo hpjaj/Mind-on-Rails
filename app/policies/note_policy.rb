@@ -1,7 +1,7 @@
 class NotePolicy < ApplicationPolicy
   
   def create?
-    puts "#{user.present?} #{record.user} #{user}"
+    puts "#{user.present?} #{record.user.inspect} #{user}"
     user.present? && (record.user == user || user.admin?)
   end
 
