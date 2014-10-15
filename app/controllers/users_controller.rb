@@ -5,9 +5,6 @@ class UsersController < ApplicationController
   def index
   end
 
-  def show
-  end
-
   def update
     if current_user.update_attributes(user_params)
       flash[:notice] = "User information updated"
