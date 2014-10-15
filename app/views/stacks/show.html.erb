@@ -1,21 +1,20 @@
 <% @browser_tab_title = @stack.title  %>
 <% @browser_tab_subtitle = '- Stacks' %>
+<% @body_background_color = "body-notes" %>
 
-<body class="body-notes">
 
-  <div class="container sublime-gray">
-    <h1>Stacks#show</h1>
-    <p>Find me in app/views/stacks/show.html.erb</p>
+<div class="container sublime-gray">
+  <h1>Stacks#show</h1>
+  <p>Find me in app/views/stacks/show.html.erb</p>
 
-    <p class="stack-show-title"><%= @stack.title %></p>
-    <p class="stack-show-description"><%= @stack.description %></p>
-    <p><%= link_to 'Edit', edit_stack_path %></p>
-  </div>
-  
-  <div class="container">
-    <%= render 'layouts/notes_preview' %>
-    <%= will_paginate @notes %>
-  </div>
+  <p class="stack-show-title"><%= @stack.title %></p>
+  <p class="stack-show-description"><%= @stack.description %></p>
+  <p><%= link_to 'Edit', edit_stack_path %></p>
+</div>
 
-</body>
+<div class="container">
+  <%= render 'layouts/notes_preview' %>
+  <%= will_paginate @notes %>
+</div>
+
 

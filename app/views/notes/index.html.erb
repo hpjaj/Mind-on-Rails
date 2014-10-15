@@ -1,14 +1,13 @@
 <% @browser_tab_title = 'My Notes'  %>
 <% @browser_tab_subtitle = '- Notes' %>
+<% @body_background_color = "body-notes" %>
 
-<body class="body-notes">
 
-  <div class="container" id="notes-index">
-    <%= render 'layouts/notes_preview' %>
-  </div>
-  
-  <div class="container">
-    <%= will_paginate @notes %>
-  </div>
+<div class="container" id="notes-index">
+  <%= render 'layouts/notes_preview' %>
+</div>
 
-</body>
+<div class="container">
+  <%= will_paginate @notes %>
+</div>
+

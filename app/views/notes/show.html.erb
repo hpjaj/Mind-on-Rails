@@ -1,37 +1,36 @@
 <% @browser_tab_title = @note.title %>
 <% @browser_tab_subtitle = '- Notes' %>
+<% @body_background_color = "body-notes" %>
 
-<body class="body-notes">
 
-  <div class="container sublime-gray">
-    <div class="row">
-      <p class="notes_stacks notes-show-LRpadding">
-        <% if @note.public %>
-          <%= content_tag :span, "Public", class: "public-note-indicator" %>
-        <% end %>
-        <% notes_stacks = @note.stacks %>
-        <% notes_stacks.each do |stack| %>
-          <%= stack.title %>
-        <% end %>
-      </p>
-    </div>
-    <div class="row note-show-dates notes-show-LRpadding">
-      <p>Created: <%= @note.created_at.strftime("%b %d, %Y") %> &nbsp; &nbsp; Updated: <%= @note.updated_at.strftime("%b %d, %Y") %></p>
-    </div>
-    <hr>
-    <div class="row">
-      <p class="note-show-title notes-show-LRpadding"><%= @note.title %></p>
-    </div>
-    <hr>
-    <div class="row note-show-body notes-show-LRpadding">
-      <%= markdown @note.body %>
-      <% if policy(@note).edit? %>
-        <%= link_to 'Edit', edit_note_path %>
-      <% end %>      
-      <% if policy(@note).destroy? %>
-        <%= link_to 'Delete', @note, method: :delete, class: 'pull-right', data: { confirm: 'Delete this note?' } %>
+<div class="container sublime-gray">
+  <div class="row">
+    <p class="notes_stacks notes-show-LRpadding">
+      <% if @note.public %>
+        <%= content_tag :span, "Public", class: "public-note-indicator" %>
       <% end %>
-    </div>
+      <% notes_stacks = @note.stacks %>
+      <% notes_stacks.each do |stack| %>
+        <%= stack.title %>
+      <% end %>
+    </p>
   </div>
+  <div class="row note-show-dates notes-show-LRpadding">
+    <p>Created: <%= @note.created_at.strftime("%b %d, %Y") %> &nbsp; &nbsp; Updated: <%= @note.updated_at.strftime("%b %d, %Y") %></p>
+  </div>
+  <hr>
+  <div class="row">
+    <p class="note-show-title notes-show-LRpadding"><%= @note.title %></p>
+  </div>
+  <hr>
+  <div class="row note-show-body notes-show-LRpadding">
+    <%= markdown @note.body %>
+    <% if policy(@note).edit? %>
+      <%= link_to 'Edit', edit_note_path %>
+    <% end %>      
+    <% if policy(@note).destroy? %>
+      <%= link_to 'Delete', @note, method: :delete, class: 'pull-right', data: { confirm: 'Delete this note?' } %>
+    <% end %>
+  </div>
+</div>
   
-</body>

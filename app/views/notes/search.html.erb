@@ -1,21 +1,21 @@
 <% @browser_tab_title = 'Search'  %>
-
-<body class="body-notes">
-  <div class="container">
-    <%= render 'layouts/search_window' %>
-  </div> 
+<% @body_background_color = "body-notes" %>
 
 
-  <% if params[:query].present? %>
-    
-    <% if @notes.empty?  %>
-      <p>I am empty</p>
-    <% else %>
-      <div class="container">
-        <%= render 'layouts/notes_preview' %>
-        <%= will_paginate @notes %>
-      </div>
-    <% end %>
+<div class="container">
+  <%= render 'layouts/search_window' %>
+</div> 
+
+
+<% if params[:query].present? %>
+  
+  <% if @notes.empty?  %>
+    <p>I am empty</p>
+  <% else %>
+    <div class="container">
+      <%= render 'layouts/notes_preview' %>
+      <%= will_paginate @notes %>
+    </div>
   <% end %>
+<% end %>
 
-</body>
