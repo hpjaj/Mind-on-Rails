@@ -6,6 +6,7 @@ class Note < ActiveRecord::Base
   has_and_belongs_to_many :stacks
 
   scope :recently_updated_first, lambda { order("notes.updated_at DESC")}
+  scope :only_this_users_notes, -> (user) { where(user_id: user.id) }
 
   validates :title, length: { minimum: 5, too_short: " - Minimum length of 5 characters" }
   validates :body, length: { minimum: 5, too_short: " - Minimum length of 5 characters" }
