@@ -1,6 +1,6 @@
 class NotePolicy < ApplicationPolicy
   
-  def index
+  def index?
     user.present?
   end
 

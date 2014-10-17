@@ -14,13 +14,27 @@ RSpec.describe NotesController, :type => :controller do
 
     context "when anonymous user" do
 
-      it "redirects to login page", focus: true do
+      it "redirects to login page" do
         get :index
         expect(response).to redirect_to root_path
         expect(flash[:alert]).to eq "You are not authorized to perform this action."
       end
 
     end
+
+    context "when logged in as a standard user", focus: true do
+    
+      it "shows all my notes" do
+      end
+
+      it "orderded by most recently updated first" do
+      end
+
+      it "paginated with 5 notes per page" do
+      end
+
+    end
+  
 
   end
 
