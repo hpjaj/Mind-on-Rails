@@ -18,9 +18,9 @@ describe 'User creates a new note', :js => true  do
     fill_in ':body', with: "This is the body section"
     expect( page ).to have_content("Tricks")
     check("note_stack_ids_1")
+    expect( page ).to have_content("Public")
     click_button 'Save'
     expect( current_path ).to eq notes_path
-    expect( page ).to have_content("Public")
   end
 
   it 'Unsuccessfully when title, body or stack validation is not met' do
