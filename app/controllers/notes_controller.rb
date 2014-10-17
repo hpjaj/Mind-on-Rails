@@ -37,7 +37,13 @@ class NotesController < ApplicationController
   end
 
   def show
-    @note = Note.find(params[:id])
+    if current_user
+      @note = Note.find(params[:id])
+    elsif Note.find(params[:id]).public
+        @note = Note.find(params[:id])
+    else
+      redirect_to stacks_path
+    end
   end
 
   def search

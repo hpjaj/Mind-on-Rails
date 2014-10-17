@@ -29,7 +29,7 @@ $state-danger-text: white;
 // nav bar active state gray  2E2F33
 // search green  A6E22D
 // public dark pink  F92772
-
+$note_font_color: #D7D7D7;    //C5C8C6
 
 // LAYOUT views
 
@@ -215,10 +215,11 @@ button .glyphicon-font-color {
   color: rgb(168,124,246);
   text-transform: uppercase;
   font-size: 20px;
+  text-align: center;
 }
 
 .stack-show-description {
-  color: white;
+  color: #EFEFEF;
 }
 
 #stacks-form {
@@ -274,7 +275,7 @@ font-size: 16px;
 .note-form-fields {
   // width: 100%;
   background-color: rgba(0,0,0,0);
-  color: white;
+  color: $note_font_color;
   border-color: #777;  //old gray #777  thin border gray #393B40  new gray font #949599
 }
 
@@ -325,7 +326,7 @@ font-size: 16px;
 }
 
 .note-show-title, .note-show-body {
-  color: white;
+  color: $note_font_color;
 }
 
 .note-show-title {
