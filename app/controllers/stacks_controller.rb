@@ -1,14 +1,17 @@
 class StacksController < ApplicationController
   def index
     @stacks = Stack.all
+    # authorize @stacks
   end
 
   def new
     @stack = Stack.new
+    authorize @stack
   end
 
   def create
     @stack = Stack.new(stacks_params)
+    authorize @stack
     if @stack.save
       redirect_to stacks_path
     else
@@ -18,10 +21,12 @@ class StacksController < ApplicationController
 
   def edit
     @stack = Stack.find(params[:id])
+    authorize @stack
   end
 
   def update
     @stack = Stack.find(params[:id])
+    authorize @stack
     if @stack.update_attributes(stacks_params)
       redirect_to stacks_path
     else
@@ -31,11 +36,22 @@ class StacksController < ApplicationController
 
   def show
     @stack = Stack.find(params[:id])
+    authorize @stack
     viewable_notes = @stack.notes.paginate(page: params[:page], per_page: 5).recently_updated_first
     if current_user
       @notes = viewable_notes.where(user_id: current_user.id)
     else
       @notes = viewable_notes.where(public: true)
+    end
+  end
+
+  def destroy
+    @stack = Stack.find(params[:id])
+    authorize @stack
+    if @stack.destroy
+      redirect_to stacks_path
+    else
+      render :show
     end
   end
 

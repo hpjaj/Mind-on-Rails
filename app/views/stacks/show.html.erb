@@ -6,7 +6,16 @@
 <div class="container">
   <p class="stack-show-title"><%= @stack.title.upcase %></p>
   <p class="stack-show-description"><%= @stack.description %></p>
-  <p><%= link_to 'Edit', edit_stack_path %></p>
+
+  <div class="row note-show-body notes-show-LRpadding">
+    <% if policy(@stack).edit? %>
+      <%= link_to 'Edit', edit_stack_path %>
+    <% end %>      
+    <% if policy(@stack).destroy? %>
+      <%= link_to 'Delete', @stack, method: :delete, class: 'pull-right', data: { confirm: 'Delete this note?' } %>
+    <% end %>
+  </div>
+
 </div>
 
 <div class="container">

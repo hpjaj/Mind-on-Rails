@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
   def index
     @notes = Note.paginate(page: params[:page], per_page: 5).only_this_users_notes(current_user).recently_updated_first
+    # authorize @notes
   end
 
   def new
