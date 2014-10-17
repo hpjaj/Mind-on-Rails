@@ -2,7 +2,9 @@ class NotesController < ApplicationController
 
   def index
     authorize Note
-    @notes = Note.paginate(page: params[:page], per_page: 5).only_this_users_notes(current_user).recently_updated_first
+    # @notes = Note.paginate(page: params[:page], per_page: 5).only_this_users_notes(current_user).recently_updated_first
+    # @notes = current_user.notes.recently_updated_first.paginate(page: params[:page], per_page: 5)
+    @notes = Note.perform_search(page: params[:page], user: current_user, only_user_owned_notes: true)
   end
 
   def new
@@ -48,12 +50,12 @@ class NotesController < ApplicationController
   end
 
   def search
-    notes = Note.text_search(params[:query]).paginate(page: params[:page], per_page: 5).recently_updated_first
-    if current_user
-      @notes = notes.where(user_id: current_user.id)
-    else
-      @notes = notes.where(public: true)
-    end
+    search_options = {
+      query: params[:query], 
+      page: params[:page], 
+      user: current_user
+    }
+    @notes = Note.perform_search(search_options)
   end
 
   def destroy
