@@ -329,12 +329,25 @@ font-size: 16px;
   color: $note_font_color;
 }
 
+.note-show-body strong {
+  color: rgb(252,252,252);
+}
+
 .note-show-title {
   font-size: 18px;
 }
 
 .note-show-body {
   padding-bottom: 20px;
+}
+
+.note-show-body a {
+  color: #66D9EF;
+}
+
+.note-show-body a:hover {
+  text-decoration: none;
+  color: #A6E22D;
 }
 
 #bottom-navbar {
@@ -414,15 +427,15 @@ li .navbar-form {
   font-size: 17px;
 }
 
-.note-show-body a {
+#note-show-edit-delete-links a {
   text-transform: uppercase;
 }
 
-.note-preview-title-links a, .pagination a, .note-show-body a, .user-sign-in-up-edit a {
+.note-preview-title-links a, .pagination a, #note-show-edit-delete-links a, .user-sign-in-up-edit a {
   color: white;
 }
 
-.note-preview-title-links a:hover, .note-show-body a:hover, .pagination a:hover, .user-sign-in-up-edit a:hover {
+.note-preview-title-links a:hover, #note-show-edit-delete-links a:hover, .pagination a:hover, .user-sign-in-up-edit a:hover {
   color: #A6E22D;
   text-decoration: none; 
 }
