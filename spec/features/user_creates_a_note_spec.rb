@@ -7,9 +7,9 @@ describe 'User creates a new note', :js => true  do
 
   it 'That defaults to Publicly viewable' do
     sign_in_and_opens_a_new_note
-    expect( page ).to have_content("Public Note")
-    public_note_checkbox = find('#note_public')
-    expect( public_note_checkbox ).to be_checked
+    expect( page ).to have_content("Private Note")
+    private_note_checkbox = find('#note_private')
+    expect( private_note_checkbox ).to_not be_checked
   end
 
   it 'Successfully when all validations are met' do
@@ -18,7 +18,7 @@ describe 'User creates a new note', :js => true  do
     fill_in ':body', with: "This is the body section"
     expect( page ).to have_content("Tricks")
     check("note_stack_ids_1")
-    expect( page ).to have_content("Public")
+    expect( page ).to have_content("Private")
     click_button 'Save'
     expect( current_path ).to eq notes_path
   end

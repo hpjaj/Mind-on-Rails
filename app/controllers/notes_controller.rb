@@ -42,7 +42,7 @@ class NotesController < ApplicationController
   def show
     if current_user
       @note = Note.find(params[:id])
-    elsif Note.find(params[:id]).public
+    elsif Note.find(params[:id]).private == false
         @note = Note.find(params[:id])
     else
       redirect_to stacks_path
@@ -71,7 +71,7 @@ class NotesController < ApplicationController
   private
 
   def notes_params
-    params.require(:note).permit(:title, :body, :public, stack_ids: [])
+    params.require(:note).permit(:title, :body, :private, stack_ids: [])
   end
 
 end

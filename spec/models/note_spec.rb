@@ -20,8 +20,8 @@ RSpec.describe Note, :type => :model do
       expect(Note.new).to ensure_length_of(:title).is_at_least(5).with_message(/ - Minimum length of 5 characters/)
     end
 
-    it "ensures body is at least 15 characters" do
-      expect(Note.new).to ensure_length_of(:body).is_at_least(15).with_message(/ - Minimum length of 5 characters/)
+    it "ensures body is at least 5 characters" do
+      expect(Note.new).to ensure_length_of(:body).is_at_least(5).with_message(/ - Minimum length of 5 characters/)
     end
 
     it "ensures presence of at least one stack" do

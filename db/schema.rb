@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20141013223606) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.boolean  "public",     default: true
+    t.boolean  "private",    default: false
   end
 
   add_index "notes", ["user_id"], name: "index_notes_on_user_id", using: :btree

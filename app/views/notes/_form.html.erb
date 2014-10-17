@@ -40,7 +40,7 @@
         <ul class="nav nav-pills">
           <li ><%= button_to 'Cancel', :back, class: "note-bottom-nav-buttons" %></li>
           <li id="visible-to-public-checkbox">
-                <%= f.input :public, label: false, inline_label: "Public Note" %>
+                <%= f.input :private, label: false, inline_label: "Private Note" %>
                 
           </li>
           <li class="pull-right"><%= f.button :submit, 'Save', class: "note-bottom-nav-buttons", id: "note-save-button" %></li>

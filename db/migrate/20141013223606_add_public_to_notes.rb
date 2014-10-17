@@ -1,5 +1,5 @@
 class AddPublicToNotes < ActiveRecord::Migration
   def change
-    add_column :notes, :public, :boolean, default: true
+    add_column :notes, :private, :boolean, default: false
   end
 end
