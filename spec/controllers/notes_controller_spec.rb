@@ -22,32 +22,20 @@ RSpec.describe NotesController, :type => :controller do
 
     end
 
-    context "when logged in as a standard user", focus: true do
-
-      # before do
-      #   user = create(:user)
-      #   stack = create(:stack)
-      #   3.times do
-      #     create(:note)
-      #   end
-
-      #   3.times do
-      #     create(:note, public: false)
-      #   end
-      # end
+    context "when logged in as a standard user" do
     
-      it "shows all my public and private notes, only", focus: true do
+      it "shows all my public and private notes, only" do
         # create user1 and user 2
         user1 = create(:user)
         user2 = create(:user)
         # create a stack
         stack = create(:stack)
         # create 1 public and 1 private note for user 1
-        note1 = create(:note, user: user1, private: true)
-        note2 = create(:note, user: user1, private: false)
+        note1 = create(:note, user: user1, public: true)
+        note2 = create(:note, user: user1, public: false)
         # create 1 public and 1 private note for user 2
-        note3 = create(:note, user: user2, private: true)
-        note4 = create(:note, user: user2, private: false)
+        note3 = create(:note, user: user2, public: true)
+        note4 = create(:note, user: user2, public: false)
         # sign in user 1
         sign_in user1
         # expect @notes to eq user 1s two notes only
@@ -83,22 +71,29 @@ RSpec.describe NotesController, :type => :controller do
   end
 
 
-  describe "GET new" do
+  describe "GET new", focus: true do
     context "when anonymous user" do
       it "redirects to login page" do
+        get :new
+        expect( response ).to redirect_to root_path
+        expect(flash[:alert]).to eq "You are not authorized to perform this action."
       end
     end
 
     context "when logged in as a standard user" do
       it "assigns @note to a newly instantiated Note object" do
+        user = create(:user)
+        sign_in user
+        get :new
+        expect(assigns(:note)).to eq([@note])
       end
     end
   end
 
 
   describe "POST create" do
-    context "when anonymous user" do
-      it "redirects to login page" do
+    context "when anonymous user" do  #not applicable ?
+      xit "redirects to login page" do
       end
     end
 
