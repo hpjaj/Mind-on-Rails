@@ -24,9 +24,12 @@ class Note < ActiveRecord::Base
     end
   end
 
+  PER_PAGE_DEFAULT = 5
+
   def self.perform_search(options)
     query = options[:query]
     page = options[:page]
+    per_page = options[:per_page] || PER_PAGE_DEFAULT
     user = options[:user]
     stack = options[:stack]
     only_user_owned_notes = options[:only_user_owned_notes]
@@ -43,7 +46,7 @@ class Note < ActiveRecord::Base
       notes = notes.text_search(query)
     end
 
-    notes = notes.paginate(page: page, per_page: 5).recently_updated_first
+    notes = notes.paginate(page: page, per_page: per_page).recently_updated_first
 
     if user
       if only_user_owned_notes

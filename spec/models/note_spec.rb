@@ -36,6 +36,61 @@ RSpec.describe Note, :type => :model do
     end
   end
 
+  describe ".perform_search" do
+    context "with query" do
+
+      it "returns no results when there are no matches on title" do
+        # create note with content x
+        note = create(:note_with_stack, title: "Rails migrations")
+        # search for note with content y
+        results = Note.perform_search(query: "Ruby")
+        # yields no results
+        expect( results ).to be_empty
+      end
+
+      it "returns no results when there are no matches on body" do
+        note = create(:note_with_stack, body: "Rails migrations")
+        results = Note.perform_search(query: "Ruby")
+        expect( results ).to be_empty
+      end
+
+      it "returns a match on title" do
+        note = create(:note_with_stack, title: "Rails migrations")
+        results = Note.perform_search(query: "Rails")
+        expect( results ).to eq([note])
+      end
+
+      it "returns a match on body" do
+        note = create(:note_with_stack, body: "Rails migrations")
+        results = Note.perform_search(query: "Rails")
+        expect( results ).to eq([note])
+      end
+
+    end
+
+    context "pagination" do
+
+      it "returns the first page" do
+        create(:stack)
+        create_list(:note, 3)
+        results = Note.perform_search(per_page: 1, page: 1)
+        expect(results.current_page.to_i).to eq(1)
+        expect(results.per_page).to eq(1)
+        expect(results.total_pages).to eq(3)
+      end
+
+      it "returns the last page" do
+        create(:stack)
+        create_list(:note, 3)
+        results = Note.perform_search(per_page: 1, page: 3)
+        expect(results.current_page.to_i).to eq(3)
+        expect(results.per_page).to eq(1)
+        expect(results.total_pages).to eq(3)
+      end
+
+    end
+  end
+
   
 
 end
