@@ -17,6 +17,9 @@ describe 'User clicks My Notes and sees' do
     note_3 = create(:note, :user => user_2, :title => "This is the third note", stack_ids: [2])
   end
 
+  xit "create tests for what links you see in nav when logged in vs not logged in" do
+  end
+  
   it 'Only their notes' do
     visit notes_path
     expect( page ).to_not have_content("This is a note")

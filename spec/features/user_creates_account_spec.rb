@@ -10,4 +10,8 @@ describe 'User creates an account' do
     fill_in 'Password confirmation', with: 'password'
     click_button 'Sign up'
   end
+
+  xit "create an email spec for the above test" do
+  end
+  
 end

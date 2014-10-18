@@ -9,15 +9,7 @@
   </div>
   <div class="row">
     <p class="notes_stacks notes-show-LRpadding notes-head-TBpadding">
-      <% if @note.private %>
-        <%= content_tag :span, "Private,", class: "private-note-indicator" %>&nbsp;
-      <% else %>
-          <%= content_tag :span, "Public,", class: "public-note-indicator" %>&nbsp;  
-      <% end %>
-      <% notes_stacks = @note.stacks %>
-      <% notes_stacks.each do |stack| %>
-        <%= stack.title %>, 
-      <% end %>
+      <%= render partial: "/common/stacks_header_list", locals: { note: @note } %>
     </p>
     <p class="note-preview-username notes-show-LRpadding notes-head-TBpadding"><%= @note.user.name %></p>
   </div>

@@ -12,6 +12,9 @@ describe 'A single stack view' do
     visit stacks_path
   end
 
+  xit "create context for anonymous and user" do
+  end
+  
   it "Contains all notes with that Stack's ID" do
     click_link 'Tricks'
     expect( current_path ).to eq stack_path(@stack)
