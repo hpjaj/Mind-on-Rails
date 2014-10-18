@@ -47,15 +47,15 @@ RSpec.describe NotesController, :type => :controller do
         expect(assigns(:notes)).to_not include(note4)
       end
 
-      xit "orderded by most recently updated first" do
-        # create stack
-        # create user
-        # create note1, setting created at -5 days, updated at -4 days
-        # create note2, setting create at -5 days, updated at now
-        # How do you isolate the first displayed note?? it should be note2
-        notes = assigns(:notes)
-        expect(notes.first).to eq(note2)
-      end
+      # it "orderded by most recently updated first" do
+      #   # create stack
+      #   # create user
+      #   # create note1, setting created at -5 days, updated at -4 days
+      #   # create note2, setting create at -5 days, updated at now
+      #   # How do you isolate the first displayed note?? it should be note2
+      #   # notes = assigns(:notes)
+      #   # expect(notes.first).to eq(note2)
+      # end
 
       it "paginated with 5 notes per page" do
         user = create(:user)
@@ -93,7 +93,7 @@ RSpec.describe NotesController, :type => :controller do
 
   describe "POST create" do
     context "when anonymous user" do  #not applicable ?
-      xit "redirects to login page" do
+      it "redirects to login page" do
       end
     end
 
