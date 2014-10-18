@@ -22,7 +22,7 @@ RSpec.describe NotesController, :type => :controller do
 
     end
 
-    context "when logged in as a standard user", focus: true do
+    context "when logged in as a standard user" do
     
       it "shows all my public and private notes, only" do
         # create user1 and user 2
@@ -71,7 +71,7 @@ RSpec.describe NotesController, :type => :controller do
   end
 
 
-  describe "GET new" do
+  describe "GET new", focus: true do
     context "when anonymous user" do
       it "redirects to login page" do
         get :new
@@ -81,11 +81,11 @@ RSpec.describe NotesController, :type => :controller do
     end
 
     context "when logged in as a standard user" do
-      it "assigns @note to a newly instantiated Note object" do
+      it "assigns new note" do  #assigns newly instantiated Note object to @note
         user = create(:user)
         sign_in user
         get :new
-        expect(assigns(:note)).to eq([@note])
+        expect(assigns(:note)).to be_a_new(Note)
       end
     end
   end
