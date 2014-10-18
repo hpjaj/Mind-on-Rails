@@ -3,7 +3,7 @@ $state-danger-text: white;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "pygments";
-
+@import url(https://fonts.googleapis.com/css?family=Oxygen:300|Open+Sans:400,300,700);
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -29,13 +29,15 @@ $state-danger-text: white;
 // nav bar active state gray  2E2F33
 // search green  A6E22D
 // public dark pink  F92772
-$note_font_color: #D7D7D7;    //C5C8C6
+$note_font_color: #D7D7D7;    //D7D7D7   C5C8C6  F8F8F2
 
 // LAYOUT views
 
 html body {
   background-color: #121314;
   // font-family: Verdana;
+  font-family: 'Open Sans', sans-serif;
+  // letter-spacing: .9px;
 }
 .navbar {
   border-radius: 0px;
@@ -120,6 +122,7 @@ button .glyphicon-font-color {
    .note-preview-container {
     padding: 0 15px;
   }
+
 }
 
 .sign-in-checkbox .checkbox, .user-sign-in-up-edit, .user-sign-in-up-edit label, i {
@@ -316,6 +319,18 @@ font-size: 16px;
   color: #a87cf6;
 }
 
+.notes_stacks, .note-preview-username, .note-show-dates {
+  font-size: 12px;
+} 
+
+.notes-head-TBpadding {
+  margin-bottom: 0px;
+}
+
+#notes-show-horizontal-ruler {
+  margin-top: 0px;
+}
+
 .notes-show-LRpadding {
   padding-left: 15px;
   padding-right: 15px;
@@ -334,7 +349,10 @@ font-size: 16px;
 }
 
 .note-show-title {
-  font-size: 18px;
+  font-size: 22px;
+  font-family: 'Oxygen', sans-serif;
+  // font-weight: lighter;
+  letter-spacing: 1px;
 }
 
 .note-show-body {
@@ -421,6 +439,10 @@ li .navbar-form {
 
 .note-preview-body {
   color: #949599;
+}
+
+.note-preview-username {
+  color: $note_font_color;
 }
 
 .note-preview-title-links a {

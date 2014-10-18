@@ -8,18 +8,21 @@
         <p class="notes_stacks">
           <%= note.updated_at.strftime("%m/%d/%y") %>&nbsp;
           <% if note.private %>
-            <%= content_tag :span, "Private", class: "private-note-indicator" %>&nbsp; 
+            <%= content_tag :span, "Private,", class: "private-note-indicator" %>&nbsp; 
           <% else %>
-            <%= content_tag :span, "Public", class: "public-note-indicator" %>&nbsp; 
+            <%= content_tag :span, "Public,", class: "public-note-indicator" %>&nbsp; 
           <% end %>
           <% notes_stacks = note.stacks %>
           <% notes_stacks.each do |stack| %>
-            <%= stack.title %>&nbsp;   
+            <%= stack.title %>,   
           <% end %>
         </p>
         </p>
         <p class="note-preview-body">
           <%= (truncate( (note.body), length: 150, escape: false )) %>
+        </p>
+        <p class="note-preview-username pull-right">
+          - <%= note.user.name %>
         </p>
       </div>      
     </div>

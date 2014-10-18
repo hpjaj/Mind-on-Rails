@@ -21,7 +21,7 @@ member = User.new(
 member.skip_confirmation!
 member.save!
 
-CuratedStates = ["Rails Errors","Command Line","Shortcuts","Database","Online Resources","Cheat Sheets","Rails General","Git","Workflows","Tricks","Troubleshooting","Testing / Tdd","Ruby General","Gems","Other Languages","Needs Answering"]
+CuratedStates = ["Rails Errors","Command Line","Shortcuts","Database","Online Resources","Cheat Sheets","Rails General","Git","Workflows","Tricks","Troubleshooting","Testing / Tdd","Ruby General","Gems","Other Languages","Needs Answering"].sort
 
 CuratedStates.each do |f|
   stack = Stack.new
