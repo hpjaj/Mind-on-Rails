@@ -28,7 +28,7 @@
           <%= content_tag :li, link_to('My Notes', notes_path), class: "#{css_class_active_for(notes_path)}" %>
         <% end %>
         <li class='glyphicon-font-color <%="#{css_class_active_for(search_path)}" %>' >
-          <%= link_to search_path do %>
+          <%= link_to search_path, id: "search-icon" do %>
             <span class="glyphicon glyphicon-search "></span>
             <% end %>
         </li>

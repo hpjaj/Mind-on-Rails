@@ -71,7 +71,7 @@ RSpec.describe NotesController, :type => :controller do
   end
 
 
-  describe "GET new", focus: true do
+  describe "GET new" do
     context "when anonymous user" do
       it "redirects to login page" do
         get :new
