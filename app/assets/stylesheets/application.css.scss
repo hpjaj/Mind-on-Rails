@@ -455,11 +455,11 @@ li .navbar-form {
   text-transform: uppercase;
 }
 
-.note-preview-title-links a, .pagination a, #note-show-edit-delete-links a, .user-sign-in-up-edit a {
+.note-preview-title-links a, .pagination a, #note-show-edit-delete-links a, .user-sign-in-up-edit a, .note-preview-voting-arrows a {
   color: white;
 }
 
-.note-preview-title-links a:hover, #note-show-edit-delete-links a:hover, .pagination a:hover, .user-sign-in-up-edit a:hover {
+.note-preview-title-links a:hover, #note-show-edit-delete-links a:hover, .pagination a:hover, .user-sign-in-up-edit a:hover, .note-preview-voting-arrows a:hover {
   color: #A6E22D;
   text-decoration: none; 
 }
@@ -483,6 +483,19 @@ li .navbar-form {
   color: #A6E22D;
 }
 
+.note-preview-voting-arrows {
+  padding-left: 2px;
+  font-size: 12px;
+}
+
+#vote-points {
+  padding: 0 3px;
+  color: $note_font_color;
+}
+
+.vote-arrows-padding {
+  padding-right: 85px;
+}
 
 
 

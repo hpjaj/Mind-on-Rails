@@ -4,6 +4,7 @@ class Note < ActiveRecord::Base
   
   belongs_to :user
   has_and_belongs_to_many :stacks
+  has_many :votes, dependent: :destroy
 
   scope :recently_updated_first, lambda { order("notes.updated_at DESC")}
   scope :only_this_users_notes, -> (user) { where(user_id: user.id) }
@@ -59,6 +60,25 @@ class Note < ActiveRecord::Base
       notes = notes.where(private: false)
     end
     notes
+  end
+
+  def up_votes
+    votes.where(value: 1).count
+  end
+
+  def down_votes
+    votes.where(value: -1).count
+  end
+
+  def points
+    votes.sum(:value)
+  end
+
+  def update_rank
+    age = (created_at - Time.new(1970,1,1)) / (60 * 60 * 24) # 1 day in seconds
+    new_rank = points + age
+
+    update_attribute(:rank, new_rank)
   end
 
 end

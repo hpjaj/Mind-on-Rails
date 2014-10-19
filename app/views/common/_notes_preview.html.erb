@@ -11,11 +11,17 @@
         </p>
         </p>
         <p class="note-preview-body">
-          <%= (truncate( (note.body), length: 150, escape: false )) %>
+          <%= (truncate( (note.body), length: 250, escape: false )) %>
         </p>
-        <p class="note-preview-username pull-right">
-          - <%= note.user.name %>
-        </p>
+        <div>
+          <p>
+            <% if note.private == false %>
+              <span class="note-preview-voting-arrows"><%= render partial: "/votes/voter", locals: { note: note } %></span>
+            <% end %>  
+            <span class="note-preview-username pull-right">
+            - <%= note.user.name %></span>
+          </p>
+        </div>
       </div>      
     </div>
   </div>

@@ -1,0 +1,3 @@
+<% if policy(Vote.new).create? %>
+  <%= link_to " ", note_up_vote_path(note), class: 'glyphicon glyphicon-chevron-up', name: 'up vote', method: :post %> <span id="vote-points"><%= note.points %></span> <%= link_to " ", note_down_vote_path(note), class: 'glyphicon glyphicon-chevron-down', name: 'down vote', method: :post %>
+<% end %>

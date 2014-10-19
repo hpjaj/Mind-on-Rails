@@ -11,7 +11,10 @@
     <p class="notes_stacks notes-show-LRpadding notes-head-TBpadding">
       <%= render partial: "/common/stacks_header_list", locals: { note: @note } %>
     </p>
-    <p class="note-preview-username notes-show-LRpadding notes-head-TBpadding"><%= @note.user.name %></p>
+    <p class="note-preview-username notes-show-LRpadding notes-head-TBpadding">
+      <%= @note.user.name %>
+
+    </p>
   </div>
   <div class="row note-show-dates notes-show-LRpadding notes-head-TBpadding">
     <p>Created: <%= @note.created_at.strftime("%b %d, %Y") %> &nbsp; &nbsp; Updated: <%= @note.updated_at.strftime("%b %d, %Y") %></p>
@@ -23,8 +26,13 @@
   </div>
   <div id="note-show-edit-delete-links"class="row note-show-body notes-show-LRpadding">
     <% if policy(@note).edit? %>
-      <%= link_to 'Edit', edit_note_path %>
-    <% end %>      
+      <%= link_to 'Edit', edit_note_path, class: 'vote-arrows-padding' %>
+    <% end %>
+    <% if @note.private == false %>
+      <span class="note-preview-voting-arrows">
+        <%= render partial: "/votes/voter", locals: { note: @note } %>
+      </span>
+    <% end %>
     <% if policy(@note).destroy? %>
       <%= link_to 'Delete', @note, method: :delete, class: 'pull-right', data: { confirm: 'Delete this note?' } %>
     <% end %>

@@ -91,6 +91,47 @@ RSpec.describe Note, :type => :model do
     end
   end
 
-  
+  describe "vote methods" do
+
+    before do
+      @stack = create(:stack)
+      @note = create(:note)
+      3.times { @note.votes.create(value: 1) }
+      2.times { @note.votes.create(value: -1) }
+    end
+
+    describe '#up_votes' do
+      it "counts the number of votes with value = 1" do
+        expect( @note.up_votes ).to eq(3)
+      end
+    end
+
+    describe '#down_votes' do
+      it "counts the number of votes with value = -1" do
+        expect( @note.down_votes ).to eq(2)
+      end
+    end
+
+    describe '#points' do
+      it "returns the sum of all down and up votes" do
+        expect( @note.points ).to eq(1)
+      end
+    end
+  end
 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

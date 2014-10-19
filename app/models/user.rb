@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_many :notes, dependent: :destroy
+  has_many :votes, dependent: :destroy
 
   def admin?
     role == 'admin'
