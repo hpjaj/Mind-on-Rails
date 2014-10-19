@@ -31,7 +31,7 @@ $state-danger-text: white;
 // public dark pink  F92772
 $note_font_color: #D7D7D7;    //D7D7D7   C5C8C6  F8F8F2
 
-// LAYOUT views
+// COMMON views
 
 html body {
   background-color: #121314;
@@ -239,7 +239,7 @@ button .glyphicon-font-color {
 #stacks-form p {
 color: #949599;  //new gray font #949599  old gray #b7b7b7
 margin-left: -8%;
-font-size: 16px;
+font-size: 14px;
 }
 
 .black-box {
@@ -397,7 +397,7 @@ font-size: 16px;
   // border: 1px solid purple;
   background: #222326;
   margin-bottom: 20px;
-  min-height: 540px;
+  min-height: 560px;
   padding: 20px 40px 15px;  //this narrows or widens them width of the title and body input fields.  Works with .note-padding's padding
   width: auto;
 }
@@ -461,6 +461,27 @@ li .navbar-form {
   color: #A6E22D;
   text-decoration: none; 
 }
+
+#markdown-disclaimer {
+  color: #949599;
+  text-align: center;
+  font-size: 12px;
+}
+
+#markdown-disclaimer a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: color .2s ease-out;
+  -moz-transition: color .2s ease-out;
+  -o-transition: color .2s ease-out;
+  transition: color .2s ease-out; 
+}
+
+#markdown-disclaimer a:hover {
+  color: #A6E22D;
+}
+
+
 
 
 
