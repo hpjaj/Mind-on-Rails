@@ -190,8 +190,10 @@ button .glyphicon-font-color {
 .stack-titles {
   color: rgb(168,124,246);
   text-transform: capitalize;
+  letter-spacing: 1.1px;
   padding-top: 5%;
   font-size: 20px;
+  font-weight: lighter;
 }
 
 .stack-titles a {
@@ -464,12 +466,12 @@ li .navbar-form {
 
 #markdown-disclaimer {
   color: #949599;
-  text-align: center;
+  text-align: right;
   font-size: 12px;
 }
 
 #markdown-disclaimer a {
-  color: white;
+  color: #A6E22D;
   text-decoration: none;
   -webkit-transition: color .2s ease-out;
   -moz-transition: color .2s ease-out;
@@ -478,7 +480,7 @@ li .navbar-form {
 }
 
 #markdown-disclaimer a:hover {
-  color: #A6E22D;
+  color: white;
 }
 
 
