@@ -16,7 +16,7 @@
       <div class="col-sm-9 col-sm-push-3 note-padding">
         <div class="note-form-columns">
           <div class='row form-group <%= "#{adds_error_class_if_present(@note.errors[:title])}" %>'>
-            <p id="markdown-disclaimer">Notes can be formatted with <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown</a></p>
+            <p id="markdown-disclaimer">Notes can be formatted with <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Markdown</a></p>
             <%= f.input :title, label: false, placeholder: ":title", error: false, input_html: { id: "note-form-title-field", class: "form-control note-form-fields" } %>
           </div>
           <div class='row form-group <%= "#{adds_error_class_if_present(@note.errors[:body])}" %>'>
