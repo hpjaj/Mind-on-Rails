@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'A single stack view', focus: true do
+describe 'A single stack view' do
 
   include Warden::Test::Helpers
   Warden.test_mode!

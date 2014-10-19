@@ -72,15 +72,3 @@ describe "searching for notes" do
   end
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
