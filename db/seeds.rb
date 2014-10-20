@@ -22,9 +22,9 @@ member = User.new(
 member.skip_confirmation!
 member.save!
 
-CuratedStates = ["Rails Errors","Command Line","Shortcuts","Database","Online Resources","Cheat Sheets","Rails General","Git","Workflows","Tricks","Troubleshooting","Testing / Tdd","Ruby General","Gems","Other Languages","Needs Answering"].sort
+CuratedStacks = ["Rails Errors","Command Line","Shortcuts","Database","Online Resources","Cheat Sheets","Rails General","Git","Workflows","Tricks","Troubleshooting","Testing / Tdd","Ruby General","Gems","Other Languages","Needs Answering"].sort
 
-CuratedStates.each do |f|
+CuratedStacks.each do |f|
   stack = Stack.new
   stack.title = f
   stack.description = "Modi aut animi consequuntur qui tempora aspernatur aperiam. Consequuntur minima tenetur iure quae. Voluptas optio consequatur harum. Architecto quaerat similique repellendus consequatur aut quo animi."
@@ -32,14 +32,20 @@ CuratedStates.each do |f|
 end
 stacks = Stack.all
 
-# 16.times do
-#   stack = Stack.new(
-#     title: Faker::Lorem.word,
-#     description: "Modi aut animi consequuntur qui tempora aspernatur aperiam. Consequuntur minima tenetur iure quae. Voluptas optio consequatur harum. Architecto quaerat similique repellendus consequatur aut quo animi."
-#     )
-#   stack.save
+# stack_title = "Rails Errors"
+
+# if !Stack.exists?(title: stack_title)
+#   Stack.create!(
+#     title: stack_title,
+#     description: "All about Rails Errors"
+#   )
 # end
-# stacks = Stack.all
+
+# [
+#   { title: "Rails Errors", description: "All about ..."},
+#   { title: "Rails Errors", description: "All about ..."}
+# ]
+
 
 5.times do 
   user = User.new(
