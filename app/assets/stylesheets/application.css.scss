@@ -31,7 +31,7 @@ $state-danger-text: white;
 // public dark pink  F92772
 $note_font_color: #D7D7D7;    //D7D7D7   C5C8C6  F8F8F2
 $flash_card_font_color: #E6DB74;
-
+$search_button_green: #A6E22D;
 
 
 
@@ -96,9 +96,9 @@ button.close:hover {
 }
 
 .search-button {
-  background-color: #A6E22D; 
+  background-color: $search_button_green; 
   color: #222326;
-  border-color: #A6E22D;
+  border-color: $search_button_green;
 }
 
 .search-button:hover {
@@ -201,7 +201,7 @@ button .glyphicon-font-color {
 }
 
 .stack-titles a {
-  color: #A6E22D;
+  color: $search_button_green;
   text-decoration: none;
   -webkit-transition: color .2s ease-out;
   -moz-transition: color .2s ease-out;
@@ -211,7 +211,7 @@ button .glyphicon-font-color {
 
 
 .stack-titles a:hover {
-  color: #A6E22D;
+  color: $search_button_green;
   text-decoration: none;
 }
 
@@ -372,7 +372,7 @@ font-size: 14px;
 
 .note-show-body a:hover {
   text-decoration: none;
-  color: #A6E22D;
+  color: $search_button_green;
 }
 
 #bottom-navbar {
@@ -383,8 +383,17 @@ font-size: 14px;
 .note-bottom-nav-buttons {
   border: 0px solid rgba(0,0,0,0);
   background-color: rgba(0,0,0,0);
-  color: #949599;
   padding: 15px 20px;
+}
+
+#note-bottom-cancel-button {
+  color: white;
+  padding: 15px 20px;
+}
+
+#note-bottom-cancel-button:hover {
+  background-color: rgba(0,0,0,0);
+  color: $search_button_green;
 }
 
 #note-save-button {
@@ -392,7 +401,7 @@ font-size: 14px;
 
 }
 
-#note-save-button:hover, .note-bottom-nav-buttons:hover {
+#note-save-button:hover {
   color: white;
 }
 
@@ -432,7 +441,7 @@ li .navbar-form {
 }
 
 .public-note-indicator {
-  color: #A6E22D; 
+  color: $search_button_green; 
 }
 
 .private-note-indicator {
@@ -465,7 +474,7 @@ li .navbar-form {
 }
 
 .note-preview-title-links a:hover, #note-show-edit-delete-links a:hover, .pagination a:hover, .user-sign-in-up-edit a:hover, .note-preview-voting-arrows a:hover {
-  color: #A6E22D;
+  color: $search_button_green;
   text-decoration: none; 
 }
 
@@ -485,7 +494,7 @@ li .navbar-form {
 }
 
 #markdown-disclaimer a:hover {
-  color: #A6E22D;
+  color: $search_button_green;
 }
 
 .note-preview-voting-arrows {

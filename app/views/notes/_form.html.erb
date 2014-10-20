@@ -39,7 +39,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-bottom" id="bottom-navbar" role="navigation">
       <div class="container">
         <ul class="nav nav-pills">
-          <li ><%= button_to 'Cancel', (:back), class: "note-bottom-nav-buttons" %></li>
+          <li ><%= link_to 'Cancel', :back, class: "note-bottom-nav-buttons", id: "note-bottom-cancel-button" %></li>
           <li id="visible-to-public-checkbox">
                 <%= f.input :private, label: false, inline_label: "Private Note" %>
                 
