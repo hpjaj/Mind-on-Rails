@@ -68,6 +68,7 @@ users = User.all
     )
   note.update_attributes(created_at: rand(10.minutes .. 1.year).ago)
   note.update_rank
+  note.create_vote
   note.save(validate: false)
 end
 notes = Note.all

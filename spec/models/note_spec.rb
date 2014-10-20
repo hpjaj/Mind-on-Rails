@@ -117,21 +117,16 @@ RSpec.describe Note, :type => :model do
         expect( @note.points ).to eq(1)
       end
     end
+
+    describe '#create_vote' do
+      it "generates an up-vote when explicity called" do
+        note = create(:note)
+        expect( note.up_votes ).to eq(0)
+        note.create_vote
+        expect( note.up_votes ).to eq(1)
+      end
+    end
+
   end
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
