@@ -30,6 +30,10 @@ $state-danger-text: white;
 // search green  A6E22D
 // public dark pink  F92772
 $note_font_color: #D7D7D7;    //D7D7D7   C5C8C6  F8F8F2
+$flash_card_font_color: #E6DB74;
+
+
+
 
 // COMMON views
 
@@ -502,6 +506,12 @@ li .navbar-form {
   font-size: 12px;
   color: $note_font_color;
 }
+
+#form-flash-card-label label, .note-flash-card-indicator {
+  color: $flash_card_font_color;
+}
+
+
 
 
 

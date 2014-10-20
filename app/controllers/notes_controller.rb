@@ -75,7 +75,7 @@ class NotesController < ApplicationController
   private
 
   def notes_params
-    params.require(:note).permit(:title, :body, :private, stack_ids: [])
+    params.require(:note).permit(:title, :body, :flash_card, :private, stack_ids: [])
   end
 
 end
