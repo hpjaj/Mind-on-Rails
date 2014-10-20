@@ -17,6 +17,9 @@
           <p>
             <% if note.private == false %>
               <span class="note-preview-voting-arrows"><%= render partial: "/votes/voter", locals: { note: note } %></span>
+            <% end %>
+            <% if !current_user %>
+              <span class="note-points-guest-view"><%= pluralize(note.points, 'vote') %></span>
             <% end %>  
             <span class="note-preview-username pull-right">
             - <%= note.user.name %></span>
