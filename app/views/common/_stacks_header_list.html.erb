@@ -3,11 +3,5 @@
 <% else %>
   <%= content_tag :span, "Public,", class: "public-note-indicator" %> 
 <% end %>
-<% if current_user %>
-  <% if note.flash_card %>
-    <%= content_tag :span, "Flash Card,", class: "note-flash-card-indicator" %> 
-  <% end %>
-<% end %>
-  
 <%#= note.stacks.map(&:title).join(", ") %>
 <%= note.stacks.map { |stack| stack.title }.join(", ") %>

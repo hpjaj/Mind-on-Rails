@@ -30,7 +30,6 @@
           <div class='row <%= "#{adds_error_class_if_present(@note.errors[:stacks])}" %>' id="stacks-form">
             <p>Choose all stacks that apply</p>
             <%= f.association :stacks, as: :check_boxes, label: false, error: false %>
-            <span id="form-flash-card-label"><%= f.input :flash_card, label: false, inline_label: "Flash Card" %></span>
           </div>
         </div>
       </div>
