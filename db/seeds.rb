@@ -43,6 +43,7 @@ stacks = Stack.all
 5.times do 
   user = User.new(
     name:       Faker::Name.name,
+    username:   Faker::Internet.user_name,
     email:      Faker::Internet.email,
     password:   Faker::Lorem.characters(10)
     )
