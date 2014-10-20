@@ -74,6 +74,18 @@ html body {
   font-size: 25px;
 }
 
+#error_explanation {
+  padding: 0px 20px 5px;
+}
+
+#error_explanation h2, #error_explanation h3 {
+  font-size: 18px;
+}
+
+#error_explanation li {
+  font-size: 14px;
+}
+
 button.close {
   text-shadow: 0 0px rgba(0,0,0,0);
   color: #AEDEF4;
