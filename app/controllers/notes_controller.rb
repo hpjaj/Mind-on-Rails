@@ -59,7 +59,7 @@ class NotesController < ApplicationController
   end
 
   def trending
-    @notes = Note.all.where(private: false).recently_updated_first.paginate(page: params[:page], per_page: 10)
+    @notes = Note.all.where(private: false).rank_by_vote_count.paginate(page: params[:page], per_page: 10)
   end
 
   def destroy

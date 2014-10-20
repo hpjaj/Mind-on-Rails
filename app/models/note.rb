@@ -9,6 +9,8 @@ class Note < ActiveRecord::Base
   scope :recently_updated_first, lambda { order("notes.updated_at DESC")}
   scope :only_this_users_notes, -> (user) { where(user_id: user.id) }
 
+  scope :rank_by_vote_count, lambda { order('rank DESC') }
+
   validates :title, length: { minimum: 5, too_short: " - Minimum length of 5 characters" }
   validates :body, length: { minimum: 5, too_short: " - Minimum length of 5 characters" }
   validates :stacks, :presence => { :message => " - Choose at least 1 stack" }
