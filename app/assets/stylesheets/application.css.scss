@@ -61,7 +61,7 @@ html body {
   background-color: #2E2F33;
 }
 
-.alert {
+.alert, #error_explanation {
   border: 3px solid rgba(255,255,255,.7);
   border-radius: 6px;
   background-color: rgba(255,255,255,0);
@@ -70,7 +70,7 @@ html body {
   max-width: 410px;
 }
 
-.alert-success, .alert-warning {
+.alert-success, .alert-warning, #error_explanation {
   font-size: 25px;
 }
 

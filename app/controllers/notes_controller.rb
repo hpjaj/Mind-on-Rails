@@ -17,6 +17,7 @@ class NotesController < ApplicationController
     @note.user = current_user
     authorize @note
     if @note.save
+      @note.create_vote
       redirect_to notes_path
     else
       render :new

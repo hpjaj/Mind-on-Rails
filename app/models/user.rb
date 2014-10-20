@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :notes, dependent: :destroy
   has_many :votes, dependent: :destroy
 
+  validates :username, uniqueness: {message: "- This username has already been taken"}
+
   def admin?
     role == 'admin'
   end

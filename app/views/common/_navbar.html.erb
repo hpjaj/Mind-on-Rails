@@ -36,7 +36,7 @@
 
         <% if current_user %>
           <li class='dropdown <%= "#{css_class_active_for(edit_user_registration_path)}"%>'>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.username || current_user.name %> <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.username %> <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <%= content_tag :li, link_to('Edit', edit_user_registration_path), class: "#{css_class_active_for(edit_user_registration_path)}" %>
               <li class='<%="#{css_class_active_for(destroy_user_session_path)}"%>'><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>

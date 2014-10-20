@@ -57,7 +57,7 @@ describe "Top navbar links" do
       expect( current_path ).to eq new_note_path
       click_link "My Notes"
       expect( current_path ).to eq notes_path
-      click_link @user.name
+      click_link @user.username
       click_link 'Edit'
       expect( current_path ).to eq edit_user_registration_path
     end

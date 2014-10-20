@@ -39,6 +39,7 @@ group :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'shoulda-matchers', require: false
   gem 'poltergeist'
+  gem 'email_spec'
 end
 
 gem 'bootstrap-sass', '~> 3.2.0'

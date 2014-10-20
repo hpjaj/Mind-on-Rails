@@ -83,6 +83,10 @@ class Note < ActiveRecord::Base
     update_attribute(:rank, new_rank)
   end
 
+  def create_vote
+    user.votes.create(value: 1, note: self)
+  end
+
   def to_param
     "#{id}-#{title.parameterize}"
   end

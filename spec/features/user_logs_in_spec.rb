@@ -14,6 +14,6 @@ describe 'User logs in' do
     fill_in 'Password', with: @user.password
     click_button 'Log in'
     expect( current_path ).to eq stacks_path
-    expect( page ).to have_content("John Smith")
+    expect( page ).to have_content(@user.username)
   end
 end
