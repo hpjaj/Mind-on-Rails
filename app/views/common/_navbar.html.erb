@@ -27,6 +27,7 @@
         <% if current_user %>
           <%= content_tag :li, link_to('My Notes', notes_path), class: "#{css_class_active_for(notes_path)}" %>
         <% end %>
+        <%= content_tag :li, link_to('Trending', trending_path), class: "#{css_class_active_for(trending_path)}" %>
         <li class='glyphicon-font-color <%="#{css_class_active_for(search_path)}" %>' >
           <%= link_to search_path, id: "search-icon" do %>
             <span class="glyphicon glyphicon-search "></span>

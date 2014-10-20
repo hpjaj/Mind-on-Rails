@@ -58,6 +58,10 @@ class NotesController < ApplicationController
     @notes = Note.perform_search(search_options)
   end
 
+  def trending
+    @notes = Note.all.where(private: false).recently_updated_first.paginate(page: params[:page], per_page: 10)
+  end
+
   def destroy
     @note = Note.find(params[:id])
     authorize @note

@@ -1,0 +1,10 @@
+<% @browser_tab_title = 'Trending'  %>
+<% @body_background_color = "body-notes" %>
+
+
+<div class="container">
+  <%= render 'common/notes_preview' %>
+</div> 
+<div class="container">
+  <%= will_paginate @notes %>
+</div>
