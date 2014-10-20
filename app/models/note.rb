@@ -83,4 +83,8 @@ class Note < ActiveRecord::Base
     update_attribute(:rank, new_rank)
   end
 
+  def to_param
+    "#{id}-#{title.parameterize}"
+  end
+
 end
