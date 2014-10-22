@@ -15,6 +15,7 @@ module ApplicationHelper
       lax_html_blocks: true,
       strikethrough: true,
       superscript: true,
+      hard_wrap: true,
       prettify: true
     }
     Redcarpet::Markdown.new(renderer, extensions).render(text).html_safe

@@ -11,7 +11,7 @@
         </p>
         </p>
         <p class="note-preview-body">
-          <%= (truncate( (note.body), length: 250, escape: false )) %>
+          <%= markdown(truncate( (note.body), length: 250, escape: false )) %>
         </p>
         <div>
           <p>

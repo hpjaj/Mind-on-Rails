@@ -27,6 +27,7 @@ CuratedStacks = ["Rails Errors","Command Line","Shortcuts","Database","Online Re
 CuratedStacks.each do |f|
   stack = Stack.new
   stack.title = f
+  stack.headline = Faker::Lorem.sentence
   stack.description = "Modi aut animi consequuntur qui tempora aspernatur aperiam. Consequuntur minima tenetur iure quae. Voluptas optio consequatur harum. Architecto quaerat similique repellendus consequatur aut quo animi."
   stack.save
 end
@@ -84,6 +85,7 @@ end
 # Create an admin user
 admin = User.new(
   name:       'Admin User',
+  username:   'Admin'
   email:      'admin@example.com',
   password:   'password',
   role:       'admin'

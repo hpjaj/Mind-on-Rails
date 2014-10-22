@@ -5,6 +5,9 @@
 
 <div class="container" id="notes-index">
   <%= render 'common/notes_preview' %>
+  <% if @notes.empty? %>
+    <%= content_tag :h2, link_to('Create your first note', new_note_path), id: "create-first-note-link" %>
+  <% end %>
 </div>
 
 <div class="container">

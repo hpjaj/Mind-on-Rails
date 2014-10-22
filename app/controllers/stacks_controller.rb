@@ -1,6 +1,6 @@
 class StacksController < ApplicationController
   def index
-    @stacks = Stack.all
+    @stacks = Stack.all.sort
     # authorize @stacks
   end
 
@@ -63,6 +63,6 @@ class StacksController < ApplicationController
   private
 
   def stacks_params
-    params.require(:stack).permit(:title, :description, note_ids: [])
+    params.require(:stack).permit(:title, :headline, :description, note_ids: [])
   end
 end
