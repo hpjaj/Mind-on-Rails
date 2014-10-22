@@ -4,13 +4,6 @@ User.destroy_all
 Stack.destroy_all
 Note.destroy_all
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Create a member
 member = User.new(
@@ -22,30 +15,47 @@ member = User.new(
 member.skip_confirmation!
 member.save!
 
-CuratedStacks = ["Rails Errors","Command Line","Shortcuts","Database","Online Resources","Cheat Sheets","Rails General","Git","Workflows","Tricks","Troubleshooting","Testing / Tdd","Ruby General","Gems","Other Languages","Needs Answering"].sort
 
-CuratedStacks.each do |f|
-  stack = Stack.new
-  stack.title = f
-  stack.headline = Faker::Lorem.sentence
-  stack.description = "Modi aut animi consequuntur qui tempora aspernatur aperiam. Consequuntur minima tenetur iure quae. Voluptas optio consequatur harum. Architecto quaerat similique repellendus consequatur aut quo animi."
-  stack.save
-end
-stacks = Stack.all
+# CuratedStacks = ["Rails Errors","Command Line","Shortcuts","Database","Online Resources","Cheat Sheets","Rails General","Git","Workflows","Tricks","Troubleshooting","Testing / Tdd","Ruby General","Gems","Other Languages","Needs Answering"].sort
 
-# stack_title = "Rails Errors"
-
-# if !Stack.exists?(title: stack_title)
-#   Stack.create!(
-#     title: stack_title,
-#     description: "All about Rails Errors"
-#   )
+# CuratedStacks.each do |f|
+#   stack = Stack.new
+#   stack.title = f
+#   stack.headline = Faker::Lorem.sentence
+#   stack.description = "Modi aut animi consequuntur qui tempora aspernatur aperiam. Consequuntur minima tenetur iure quae. Voluptas optio consequatur harum. Architecto quaerat similique repellendus consequatur aut quo animi."
+#   stack.save
 # end
+# stacks = Stack.all
+
 
 # [
 #   { title: "Rails Errors", description: "All about ..."},
 #   { title: "Rails Errors", description: "All about ..."}
 # ]
+
+
+
+stack_title = "Rails Errors"
+if !Stack.exists?(title: stack_title)
+  Stack.create!(
+    title:        stack_title,
+    headline:     "Rails error pages are FANTASTIC…when you understand them.",
+    description:  "This stack is for interpreting Rails error pages.  We learn from our mistakes.  This will likely not be the last time you see this particular flavor of error.  When you get an error page, and something clicks in your mind, capture it.  Translate what the error is really telling you.  When looking at a Rails error with a mentor or senior developer, ask them to explain what they see in the error.  What are the cues, the key terms and phrases, and how do they leverage this information to resolve the issue.   ",
+    id:           1
+  )
+end
+
+stack_title = "Command Line"
+if !Stack.exists?(title: stack_title)
+  Stack.create!(
+    title:        stack_title,
+    headline:     "The command line opens the door to a whole new world.  I just hope I don’t screw up my computer.",
+    description:  "This stack is for interacting with this new interface called the command line.  How do you navigate?  What are the valuable commands you are learning?  What do you want to remember about bash profiles?  What about IRB and simple prompt?  Accessing and using the consoles and editors?  What about the terminal, and iTerm2, and Vagrant?  How can you customize the experience to fit your tastes?  ",
+    id:           2
+  )
+end
+
+stacks = Stack.all
 
 
 5.times do 
@@ -74,7 +84,7 @@ users = User.all
 end
 notes = Note.all
 
-4.times do
+2.times do
   notes.each do |n|
     n.stacks << stacks.sample
     n.save

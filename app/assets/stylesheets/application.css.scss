@@ -39,8 +39,11 @@ $search_button_green: #A6E22D;
 
 html body {
   background-color: #121314;
-  // font-family: Verdana;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+
+  font-size: 16px;
+  line-height: 150%;
   // letter-spacing: .9px;
 }
 .navbar {
@@ -141,6 +144,7 @@ button .glyphicon-font-color {
 
 }
 
+
 .sign-in-checkbox .checkbox, .user-sign-in-up-edit, , #stack-edit-form label, .user-sign-in-up-edit label, i {
   color: #949599;
 }
@@ -235,37 +239,63 @@ button .glyphicon-font-color {
 }
 
 .stack-headlines {
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   padding-right: 7px;
 }
 
-#stack-show-top-container{
+//Non-mobile views for stack show page - start
+#stack-show-top-container-non-mobile{
   padding: 15px 42px 0;
   margin: 35px 0 80px;
-
-  // background: #F1F2F2;
 }
 
-.stack-show-title {
+.stack-show-title-non-mobile {
   color: rgb(168,124,246);
-  // text-transform: uppercase;
-  font-size: 36px;
+  font-size: 3em;  //48px
+  text-align: center;
+  font-family: Courier New, serif;
+  padding-bottom: 25px;
+}
+
+#stack-show-description-non-mobile {
+  font-size: 18px;
+  color: #949599;
+}
+
+.stack-show-headlines-non-mobile {
+  font-size: 22px;
+  color: white;
+  padding-right: 7px;
+}
+//end
+
+//Mobile only views for stack show page - start
+#stack-show-top-container-mobile-only{
+  padding: 15px 5px 0;
+  margin: 15px 0 30px;
+}
+
+.stack-show-title-mobile-only {
+  color: rgb(168,124,246);
+  font-size: 28px;
   text-align: center;
   font-family: Courier New, serif;
   padding-bottom: 15px;
 }
 
-.stack-show-description {
-  font-size: 16px;
+.stack-show-description-mobile-only {
+  font-size: 18px;
   color: #949599;
 }
 
-.stack-show-headlines {
-  font-size: 18px;
+.stack-show-headlines-mobile-only {
+  font-size: 20px;
   color: white;
   padding-right: 7px;
 }
+//end
+
 
 #stacks-form {
   margin-left: 5%;
@@ -289,9 +319,9 @@ font-size: 14px;
   color: #949599;  // new gray #949599  old gray rgb(102,102,102)
   background: #222326;
   margin-bottom: 20px;
-  min-height: 250px;
+  min-height: 290px;
   // text-align: center;
-  padding: 5% 0;
+  padding: 7% 0;
   border-radius: 3px;
 }
 
@@ -501,7 +531,7 @@ li .navbar-form {
 }
 
 .note-preview-title-links a {
-  font-size: 17px;
+  font-size: 19px;
 }
 
 #note-show-edit-delete-links a {

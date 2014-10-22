@@ -2,15 +2,13 @@
 <% @browser_tab_subtitle = '- Stacks' %>
 <% @body_background_color = "body-notes" %>
 
-
-<div class="container">
-  <div class="container" id="stack-show-top-container">
-    <p class="stack-show-title"><%= @stack.title %></p>
-    <p class="stack-show-description">
-      <span class="stack-show-headlines"><%= @stack.headline %></span> <span><%= @stack.description %></span>
-    </p>
-    <!-- <p class="stack-show-description"><%= @stack.description %></p> -->
-
+<!-- Visible at small, medium and large screen sizes; not extra-small -->
+<div class="container hidden-xs">
+  <div class="container" id="stack-show-top-container-non-mobile">
+      <p class="stack-show-title-non-mobile"><%= @stack.title %></p>
+      <p>
+        <span class="stack-show-headlines-non-mobile"><%= @stack.headline %></span> </p>
+        <div id="stack-show-description-non-mobile"><%= markdown @stack.description %></div>
     <div class="row note-show-body notes-show-LRpadding">
       <% if policy(@stack).edit? %>
         <%= link_to 'Edit', edit_stack_path %>
@@ -22,6 +20,27 @@
   </div>
 </div>
 
+
+<!-- Visible at extra-small screen sizes only -->
+<div class="container visible-xs">
+  <div class="container" id="stack-show-top-container-mobile-only">
+      <p class="stack-show-title-mobile-only"><%= @stack.title %></p>
+      <p class="stack-show-description-mobile-only">
+        <span class="stack-show-headlines-mobile-only"><%= @stack.headline %></span> <span><%= @stack.description %></span>
+      </p>
+    <div class="row note-show-body notes-show-LRpadding">
+      <% if policy(@stack).edit? %>
+        <%= link_to 'Edit', edit_stack_path %>
+      <% end %>      
+      <% if policy(@stack).destroy? %>
+        <%= link_to 'Delete', @stack, method: :delete, class: 'pull-right', data: { confirm: 'Delete this note?' } %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<!-- Visible at all sizes -->
 <div class="container">
   <%= render 'common/notes_preview' %>
   <%= will_paginate @notes %>

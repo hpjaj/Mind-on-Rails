@@ -17,10 +17,10 @@ describe 'A single stack view' do
 
   after(:each) do
       expect( current_path ).to eq stack_path(@stack)
-      expect( page ).to have_content("TRICKS")
+      expect( page ).to have_content("Tricks")
       expect( page ).to have_content("This is the second note")
       expect( page ).to have_content("This stack is for tricks in Ruby on Rails")
-      expect( page ).to_not have_content("CSS STYLING")
+      expect( page ).to_not have_content("CSS Styling")
       expect( page ).to_not have_content("This is the first note")
       expect( page ).to_not have_content("This is the third note")
     end
