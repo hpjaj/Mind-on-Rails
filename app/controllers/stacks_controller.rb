@@ -1,6 +1,6 @@
 class StacksController < ApplicationController
   def index
-    @stacks = Stack.all.sort
+    @stacks = Stack.all.sort_by_id
     # authorize @stacks
   end
 
