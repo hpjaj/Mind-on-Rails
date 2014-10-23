@@ -491,7 +491,7 @@ font-size: 14px;
   // border: 1px solid purple;
   background: #222326;
   margin-bottom: 20px;
-  min-height: 560px;
+  min-height: 568px;
   padding: 20px 40px 15px;  //this narrows or widens them width of the title and body input fields.  Works with .note-padding's padding
   width: auto;
 }
@@ -545,6 +545,10 @@ li .navbar-form {
 
 #note-show-edit-delete-links a {
   text-transform: uppercase;
+}
+
+.form-control {
+  font-size: 16px;
 }
 
 .note-preview-title-links a, .pagination a, #note-show-edit-delete-links a, .user-sign-in-up-edit a, .note-preview-voting-arrows a {
