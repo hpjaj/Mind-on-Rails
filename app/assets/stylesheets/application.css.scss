@@ -232,16 +232,25 @@ button .glyphicon-font-color {
   text-decoration: none;
 }
 
-.stack-descriptions {
-  padding: 0 5% 5%;
+.stack-bodies {
+  padding: 7px 5% 0;
   margin: auto 0;
   text-align: left;
+  // font-size: 14px; 
 }
 
 .stack-headlines {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   padding-right: 7px;
+}
+
+.stack-descriptions {
+  // padding: 0 5% 5%;
+  // margin: auto 0;
+  // text-align: left;
+  font-size: 14px; 
+  color: #949599;
 }
 
 //Non-mobile views for stack show page - start
@@ -321,7 +330,7 @@ font-size: 14px;
   margin-bottom: 20px;
   min-height: 290px;
   // text-align: center;
-  padding: 7% 0;
+  padding: 4% 0;
   border-radius: 3px;
 }
 
