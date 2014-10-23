@@ -20,7 +20,7 @@
             <%= f.input :title, label: false, placeholder: ":title", error: false, input_html: { id: "note-form-title-field", class: "form-control note-form-fields" } %>
           </div>
           <div class='row form-group <%= "#{adds_error_class_if_present(@note.errors[:body])}" %>'>
-            <%= f.input :body, label: false, error: false, placeholder: ":body", input_html: { id: "note-form-body-field", class: "form-control note-form-fields", rows: 21 } %>
+            <%= f.input :body, label: false, error: false, placeholder: ":body", input_html: { id: "note-form-body-field", class: "form-control note-form-fields", rows: 19 } %>
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@
         <ul class="nav nav-pills">
           <li ><%= link_to 'Cancel', :back, class: "note-bottom-nav-buttons", id: "note-bottom-cancel-button" %></li>
           <li id="visible-to-public-checkbox">
-                <%= f.input :private, label: false, inline_label: "Private Note" %>
+                <%= f.input :private, label: false, inline_label: "Private" %>
                 
           </li>
           <li class="pull-right"><%= f.button :submit, 'Save', class: "note-bottom-nav-buttons", id: "note-save-button" %></li>
