@@ -31,11 +31,11 @@ RSpec.describe NotesController, :type => :controller do
         # create a stack
         stack = create(:stack)
         # create 1 public and 1 private note for user 1
-        note1 = create(:note, user: user1, private: true)
-        note2 = create(:note, user: user1, private: false)
+        note1 = create(:note, user: user1, public: false)
+        note2 = create(:note, user: user1, public: true)
         # create 1 public and 1 private note for user 2
-        note3 = create(:note, user: user2, private: true)
-        note4 = create(:note, user: user2, private: false)
+        note3 = create(:note, user: user2, public: false)
+        note4 = create(:note, user: user2, public: true)
         # sign in user 1
         sign_in user1
         # expect @notes to eq user 1s two notes only

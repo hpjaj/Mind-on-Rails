@@ -9,9 +9,9 @@ describe 'A single stack view' do
     @user  = create(:user)
     @stack = create(:stack, :title => "Tricks",      :description => "This stack is for tricks in Ruby on Rails", id: 1)
     stack2 = create(:stack, :title => "CSS Styling", :description => "This is all about the look and feel",       id: 2)
-    @note  = create(:note, private: true,  :title => "This is the first note",  stack_ids: [1])
-    note2  = create(:note, private: false, :title => "This is the second note", stack_ids: [1])
-    note3  = create(:note, private: false, :title => "This is the third note",  stack_ids: [2])
+    @note  = create(:note, public: false,  :title => "This is the first note",  stack_ids: [1])
+    note2  = create(:note, public: true, :title => "This is the second note", stack_ids: [1])
+    note3  = create(:note, public: true, :title => "This is the third note",  stack_ids: [2])
     # note_2 = create(:note, :title => "This is the second note", stacks: [stack]) 
   end
 

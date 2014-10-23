@@ -29,7 +29,7 @@
     <% if policy(@note).edit? %>
       <%= link_to 'Edit', edit_note_path, class: 'vote-arrows-padding' %>
     <% end %>
-    <% if @note.private == false %>
+    <% if @note.public %>
       <span class="note-preview-voting-arrows">
         <%= render partial: "/votes/voter", locals: { note: @note } %>
       </span>

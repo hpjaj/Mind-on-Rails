@@ -43,7 +43,7 @@ class NotesController < ApplicationController
   def show
     if current_user
       @note = Note.find(params[:id])
-    elsif Note.find(params[:id]).private == false
+    elsif Note.find(params[:id]).public
         @note = Note.find(params[:id])
     else
       redirect_to stacks_path
@@ -60,7 +60,7 @@ class NotesController < ApplicationController
   end
 
   def trending
-    @notes = Note.all.where(private: false).rank_by_vote_count.paginate(page: params[:page], per_page: 10)
+    @notes = Note.all.where(public: true).rank_by_vote_count.paginate(page: params[:page], per_page: 10)
   end
 
   def destroy
@@ -76,7 +76,7 @@ class NotesController < ApplicationController
   private
 
   def notes_params
-    params.require(:note).permit(:title, :body, :private, stack_ids: [])
+    params.require(:note).permit(:title, :body, :public, stack_ids: [])
   end
 
 end

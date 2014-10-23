@@ -55,11 +55,11 @@ class Note < ActiveRecord::Base
       if only_user_owned_notes
         notes = notes.where(user: user)
       else  
-        notes = notes.where("user_id = ? OR private = ?", user.id, false)
+        notes = notes.where("user_id = ? OR public = ?", user.id, true)
         # notes = notes.where(user_id: user.id)
       end
     else
-      notes = notes.where(private: false)
+      notes = notes.where(public: true)
     end
     notes
   end

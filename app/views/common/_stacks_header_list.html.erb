@@ -1,7 +1,7 @@
-<% if note.private %>
-  <%= content_tag :span, "Private,", class: "private-note-indicator" %> 
-<% else %>
+<% if note.public  %>
   <%= content_tag :span, "Public,", class: "public-note-indicator" %> 
+<% else %>
+  <%= content_tag :span, "Private,", class: "private-note-indicator" %> 
 <% end %>
 <%#= note.stacks.map(&:title).join(", ") %>
 <%= note.stacks.map { |stack| stack.title }.join(", ") %>

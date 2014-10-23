@@ -9,10 +9,10 @@ describe "searching for notes" do
     @user1 = create(:user)
     @user2 = create(:user)
     stack = create(:stack)
-    note1 = create(:note, user: @user1, private: true,  title: 'CSS info',     body: 'Thinks about all things')
-    note3 = create(:note, user: @user2, private: true,  title: 'CSS way',      body: 'Thinks about all worlds')
-    note2 = create(:note, user: @user1, private: false, title: 'CSS styling',  body: 'Thinks about all people')
-    note4 = create(:note, user: @user2, private: false, title: 'CSS trickery', body: 'Thinks about all personas')
+    note1 = create(:note, user: @user1, public: false,  title: 'CSS info',     body: 'Thinks about all things')
+    note3 = create(:note, user: @user2, public: false,  title: 'CSS way',      body: 'Thinks about all worlds')
+    note2 = create(:note, user: @user1, public: true, title: 'CSS styling',  body: 'Thinks about all people')
+    note4 = create(:note, user: @user2, public: true, title: 'CSS trickery', body: 'Thinks about all personas')
   end
 
   context "as an anonymous guest" do

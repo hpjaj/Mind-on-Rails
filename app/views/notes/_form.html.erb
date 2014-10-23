@@ -41,7 +41,7 @@
         <ul class="nav nav-pills">
           <li ><%= link_to 'Cancel', :back, class: "note-bottom-nav-buttons", id: "note-bottom-cancel-button" %></li>
           <li id="visible-to-public-checkbox">
-                <%= f.input :private, label: false, inline_label: "Private" %>
+                <%= f.input :public, label: false, inline_label: "Public" %>
                 
           </li>
           <li class="pull-right"><%= f.button :submit, 'Save', class: "note-bottom-nav-buttons", id: "note-save-button" %></li>
