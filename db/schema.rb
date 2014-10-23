@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20141021160906) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.boolean  "private",    default: false
+    t.boolean  "public",     default: false
     t.float    "rank"
   end
 
