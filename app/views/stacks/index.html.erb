@@ -19,10 +19,11 @@
     <% stacks_1_to_4.each do |stack| %>
       <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="black-box">
-          <p class="stack-titles"><%= link_to stack.title, stack %>
-          <p class="stack-descriptions">
-            <span class="stack-headlines"><%= stack.headline %></span> <span><%= truncate( (stack.description), length: 90 ) %></span>
-          </p>
+          <p class="stack-titles"><%= link_to stack.title, stack %></p>
+          <div class="stack-bodies">
+            <div class="stack-headlines"><%= markdown stack.headline %></div> 
+            <div class="stack-descriptions"><%= truncate( (stack.description), length: 100 ) %></div>
+          </div>
         </div>
       </div>
     <% end %>
@@ -35,9 +36,10 @@
       <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="black-box">
           <p class="stack-titles"><%= link_to stack.title, stack %></p>
-          <p class="stack-descriptions">
-            <span class="stack-headlines"><%= stack.headline %></span> <span><%= truncate( (stack.description), length: 90 ) %></span>
-          </p>
+          <div class="stack-bodies">
+            <div class="stack-headlines"><%= markdown stack.headline %></div> 
+            <div class="stack-descriptions"><%= truncate( (stack.description), length: 100 ) %></div>
+          </div>
         </div>
       </div>
     <% end %>
@@ -50,9 +52,10 @@
       <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="black-box">
           <p class="stack-titles"><%= link_to stack.title, stack %></p>
-          <p class="stack-descriptions">
-            <span class="stack-headlines"><%= stack.headline %></span> <span><%= truncate( (stack.description), length: 90 ) %></span>
-          </p>
+          <div class="stack-bodies">
+            <div class="stack-headlines"><%= markdown stack.headline %></div> 
+            <div class="stack-descriptions"><%= truncate( (stack.description), length: 100 ) %></div>
+          </div>
         </div>
       </div>
     <% end %>
@@ -65,9 +68,10 @@
       <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="black-box">
           <p class="stack-titles"><%= link_to stack.title, stack %></p>
-          <p class="stack-descriptions">
-            <span class="stack-headlines"><%= stack.headline %></span> <span><%= truncate( (stack.description), length: 90 ) %></span>
-          </p>
+          <div class="stack-bodies">
+            <div class="stack-headlines"><%= markdown stack.headline %></div> 
+            <div class="stack-descriptions"><%= truncate( (stack.description), length: 100 ) %></div>
+          </div>
         </div>
       </div>
     <% end %>
@@ -80,9 +84,10 @@
       <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="black-box">
           <p class="stack-titles"><%= link_to stack.title, stack %></p>
-          <p class="stack-descriptions">
-            <span class="stack-headlines"><%= stack.headline %></span> <span><%= truncate( (stack.description), length: 90 ) %></span>
-          </p>
+          <div class="stack-bodies">
+            <div class="stack-headlines"><%= markdown stack.headline %></div> 
+            <div class="stack-descriptions"><%= truncate( (stack.description), length: 100 ) %></div>
+          </div>
         </div>
       </div>
     <% end %>
