@@ -10,7 +10,8 @@ class User < ActiveRecord::Base
   validates :username, 
       uniqueness: {message: "- This username has already been taken", case_sensitive: false }, 
       presence: true, 
-      length: { minimum: 3, maximum: 25 }
+      length: { minimum: 3, maximum: 25 },
+      format: { with: /\A[a-zA-Z0-9]+\Z/ }
 
   def admin?
     role == 'admin'
