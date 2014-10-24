@@ -3,24 +3,22 @@
 <% @blank = ' ' %>
 <% @body_background_color = "body-welcome-index" %>
 
-
+<div id="welcome-container">
 <div class="container-fluid boxy">
+        <%= image_tag "macbook-pro-desk-laptops.jpg", :width => '100%', id: "dapic" %>
     <div class="row welcome-rows welcome-row-1" >
-      <div class="container">
-        <div class="col-sm-8 welcome-title">
+        <div class="col-sm-8 welcome-title" id="welcome-page-title">
           <h1>You learn so much through Ruby on Rails.</h1>
           <h1>We will remember it for you.</h1>
         </div> 
-        <div class="col-sm-4 welcome-title">
+        <div class="col-sm-4 welcome-sign-up">
 
 
-        <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-default' %>
-        <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-default' %>
+        <%= link_to 'Sign In', new_user_session_path, class: 'sign-in-and-up-buttons', id: 'sign-in-button' %>
+        <%= link_to "Sign Up", new_user_registration_path, class: 'sign-in-and-up-buttons', id: 'sign-up-button' %>
         </div> 
 
-        <!-- <%= image_tag "headphones.jpg", :width => 400 %> -->
 
-    </div>
   </div>
 
   <div class="row welcome-rows" id="welcome-row-2">
@@ -35,4 +33,5 @@
     </div>
   </div>
 
+</div>
 </div>

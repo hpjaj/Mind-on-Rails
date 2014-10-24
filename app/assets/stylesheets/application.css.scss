@@ -172,21 +172,28 @@ button .glyphicon-font-color {
 #welcome-row-2 {
   // background-image: image-url("computer_mouse1.png");
   background-size: cover;
-  background-color: white;
+  background-color: #F1F2F2;
 }
 
 .welcome-row-1 {
   // background-image: image-url("coding-curr.png");
   background-color: #F1F2F2;
   background-size: cover;
+  color: black;
 }
 
 #welcome-row-3 {
   background-color: #121314;
 }
 .welcome-title {
-  padding: 8% 0;
-  text-align: center;
+  margin-top: 3%;
+  padding: 5px 60px 10px 60px;
+  // text-align: center;
+  // font-weight: 300;
+}
+
+.welcome-sign-up {
+  padding: 8% 0px 8% 80px;
 }
 
 .boxy {
@@ -196,6 +203,69 @@ button .glyphicon-font-color {
 
 .about-page-text {
   padding: 15px 0;
+}
+
+#topside {
+  position: relative;
+  top: 20px;
+}
+
+#dapic {
+  position: absolute;
+}
+
+#welcome-container .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#welcome-page-title {
+  background-color: rgba(34,35,38,.4);
+}
+
+#welcome-page-title h1 {
+  color: white; 
+  font-weight: 300;
+  text-align: center;
+}
+
+.sign-in-and-up-buttons {
+  padding: 10px 15px;
+  margin: 0 10px;
+  text-decoration: none;
+  -webkit-transition: color .2s ease-out;
+  -moz-transition: color .2s ease-out;
+  -o-transition: color .2s ease-out;
+  transition: color .2s ease-out;
+  font-weight: 400;
+}
+
+#sign-in-button {
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+}
+
+#sign-in-button:hover {
+  background-color: rgba(34,35,38,.3);
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+
+#sign-up-button {
+  border: 1px solid #66D9EF;
+  background-color: #66D9EF;
+  color: black;
+}
+
+#sign-up-button:hover  {
+  background-color: rgba(34,35,38,.3);
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
 }
 
 
