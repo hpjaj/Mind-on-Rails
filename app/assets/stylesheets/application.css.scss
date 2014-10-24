@@ -32,6 +32,7 @@ $state-danger-text: white;
 $note_font_color: #D7D7D7;    //D7D7D7   C5C8C6  F8F8F2
 $flash_card_font_color: #E6DB74;
 $search_button_green: #A6E22D;
+$sublime_purple: #a87cf6;
 
 
 
@@ -164,30 +165,54 @@ button .glyphicon-font-color {
 .body-welcome-index  .navbar {
   margin-bottom: 0px;
 }
+#main-image-container {
+  min-height: 100%;
+  background: image-url("macbook-pro-desk-laptops-1200.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#main-image-container-mobile {
+  min-height: 100%;
+  background: image-url("macbook-pro-desk-laptops-mobile.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#main-image-text {
+  z-index: 10;
+  height: 100%;
+}
 
 .welcome-rows {
-  height: 45em;
+  height: 51em;
 }
 
 #welcome-row-2 {
   // background-image: image-url("computer_mouse1.png");
-  background-size: cover;
-  background-color: #F1F2F2;
+  // background-size: cover;
+  background-color: #121314;
+  color: white;
+  font-weight: 300;
 }
 
 .welcome-row-1 {
   // background-image: image-url("coding-curr.png");
-  background-color: #F1F2F2;
-  background-size: cover;
+  // background-color: red;
+  // background-size: cover;
   color: black;
 }
 
 #welcome-row-3 {
-  background-color: #121314;
+  background-color: #66D9EF;
 }
 .welcome-title {
-  margin-top: 3%;
-  padding: 5px 60px 10px 60px;
+  margin-top: 1%;
+  padding: 5px 60px 10px 10%;
   // text-align: center;
   // font-weight: 300;
 }
@@ -205,13 +230,16 @@ button .glyphicon-font-color {
   padding: 15px 0;
 }
 
-#topside {
-  position: relative;
-  top: 20px;
+.main-image-container > .row {
+  margin-right: 0;
 }
-
 #dapic {
   position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  float: left;
 }
 
 #welcome-container .container-fluid {
@@ -219,14 +247,36 @@ button .glyphicon-font-color {
   padding-right: 0;
 }
 
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 #welcome-page-title {
   background-color: rgba(34,35,38,.4);
+  max-width: 600px;
+  padding: 8px 10px 10px 35px;
 }
 
 #welcome-page-title h1 {
   color: white; 
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+#welcome-page-title h3 {
+  color: white; 
   font-weight: 300;
-  text-align: center;
+  text-align: left;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+#welcome-page-title h3 span {
+  font-style: italic;
 }
 
 .sign-in-and-up-buttons {
@@ -385,7 +435,7 @@ button .glyphicon-font-color {
 
 #stacks-form label  {
   font-weight: normal;
-  color: #a87cf6;  // purple #a87cf6 ; gray #666
+  color: $sublime_purple;  // purple #a87cf6 ; gray #666
   font-family: Courier New, serif;
   
 }
@@ -408,7 +458,7 @@ font-size: 14px;
 }
 
 .black-box a {
-  color: #a87cf6;
+  color: $sublime_purple;
   // font-weight: normal;
 }
 
@@ -448,22 +498,22 @@ font-size: 14px;
 }
 
 .placeholder-text .form-control::-webkit-input-placeholder {
-   color: #a87cf6;
+   color: $sublime_purple;
   font-family: Courier New, serif;
 }
 
 .placeholder-text .form-control:-moz-placeholder { /* Firefox 18- */
-   color: #a87cf6;  
+   color: $sublime_purple;  
    font-family: Courier New, serif;
 }
 
 .placeholder-text .form-control::-moz-placeholder {  /* Firefox 19+ */
-   color: #a87cf6;  
+   color: $sublime_purple;  
    font-family: Courier New, serif;
 }
 
 .placeholder-text .form-control:-ms-input-placeholder {  
-   color: #a87cf6;  
+   color: $sublime_purple;  
    font-family: Courier New, serif;
 }
 
@@ -474,7 +524,7 @@ font-size: 14px;
 }
 
 .notes_stacks {
-  color: #a87cf6;
+  color: $sublime_purple;
 }
 
 .notes_stacks, .note-preview-username, .note-show-dates {

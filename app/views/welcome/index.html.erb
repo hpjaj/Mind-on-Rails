@@ -4,34 +4,73 @@
 <% @body_background_color = "body-welcome-index" %>
 
 <div id="welcome-container">
-<div class="container-fluid boxy">
-        <%= image_tag "macbook-pro-desk-laptops.jpg", :width => '100%', id: "dapic" %>
-    <div class="row welcome-rows welcome-row-1" >
-        <div class="col-sm-8 welcome-title" id="welcome-page-title">
-          <h1>You learn so much through Ruby on Rails.</h1>
-          <h1>We will remember it for you.</h1>
-        </div> 
-        <div class="col-sm-4 welcome-sign-up">
-
-
+  <div class="container-fluid boxy">
+    <div class="hidden-xs row welcome-rows welcome-row-1" id="main-image-container">
+      <%#= image_tag "macbook-pro-desk-laptops.jpg", id: "dapic" %>
+      <div class="col-sm-8 welcome-title" >
+        <article id="welcome-page-title">
+          <h1>Free your mind</h1>
+          <h3>As you learn Ruby on Rails, we help you <span>remember</span> it.</h3>
+        </article>
+      </div> 
+      <div class="col-sm-4 welcome-sign-up">
         <%= link_to 'Sign In', new_user_session_path, class: 'sign-in-and-up-buttons', id: 'sign-in-button' %>
         <%= link_to "Sign Up", new_user_registration_path, class: 'sign-in-and-up-buttons', id: 'sign-up-button' %>
+      </div> 
+    </div>
+
+    <div class="visible-xs row welcome-rows welcome-row-1" id="main-image-container-mobile">
+      <%#= image_tag "macbook-pro-desk-laptops.jpg", id: "dapic" %>
+      <div class="col-sm-8 welcome-title" id="welcome-page-title">
+        <h1>You learn so much through Ruby on Rails.</h1>
+        <h1>We will remember it for you.</h1>
+      </div> 
+      <div class="col-sm-4 welcome-sign-up">
+        <%= link_to 'Sign In', new_user_session_path, class: 'sign-in-and-up-buttons', id: 'sign-in-button' %>
+        <%= link_to "Sign Up", new_user_registration_path, class: 'sign-in-and-up-buttons', id: 'sign-up-button' %>
+      </div> 
+    </div>
+
+    <div class="row welcome-rows" id="welcome-row-2">
+      <div class="container welcome-title">
+        <div class="row" >
+          <div class="col-sm-6" >
+            <%= image_tag "pen-and-paper.png" %>
+          </div> 
+          <div class="col-sm-6" >
+            <h2>Create notes for what you need to remember.</h2>
+            <p>Mind on Rails captures everything you need to remember around Ruby on Rails, with powerful, searchable, fingertip access 24/7.</p>
+          </div> 
+        </div> 
+
+        <div class="row" >
+          <div class="col-sm-6" >
+            <h2>Jumpstart your Ruby on Rails learning curve.</h2>
+            <p>All of your notes are  associated with our learning stacks.  These stacks are educationally designed to smartly serve your current and future self.</p>
+          </div> 
+          <div class="col-sm-6" >
+            <%= image_tag "pen-and-paper.png" %>
+          </div> 
         </div> 
 
 
-  </div>
+        <h2>Jumpstart your Ruby on Rails learning curve.</h2>
+        <p>All of your notes are  associated with our learning stacks.  These stacks are educationally designed to smartly serve your current and future self.</p>
 
-  <div class="row welcome-rows" id="welcome-row-2">
-    <div class="container welcome-title">
+        <h2>Jumpstart your Ruby on Rails learning curve.</h2>
+        <p>All of your notes are  associated with our learning stacks.  These stacks are educationally designed to smartly serve your current and future self.</p>
 
+
+        <h1>Become memory independent.</h1>
+        <h3>As you learn Ruby on Rails, we will remember it for you.</h3>
+      </div>
     </div>
-  </div>
 
-  <div class="row welcome-rows" id="welcome-row-3">
-    <div class="container">
+    <div class="row welcome-rows" id="welcome-row-3">
+      <div class="container">
 
+      </div>
     </div>
-  </div>
 
-</div>
+  </div>
 </div>
