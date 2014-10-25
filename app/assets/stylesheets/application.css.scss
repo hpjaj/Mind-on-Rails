@@ -165,6 +165,7 @@ button .glyphicon-font-color {
 .body-welcome-index  .navbar {
   margin-bottom: 0px;
 }
+
 #main-image-container {
   min-height: 100%;
   background: image-url("macbook-pro-desk-laptops-1200.jpg") no-repeat center center fixed;
@@ -176,12 +177,22 @@ button .glyphicon-font-color {
 
 #main-image-container-mobile {
   min-height: 100%;
-  background: image-url("macbook-pro-desk-laptops-mobile.jpg") no-repeat center center fixed;
+  background: image-url("macbook-pro-desk-laptops-1200.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+
+#main-image-container-mobile-xs {
+  min-height: 100%;
+  background: image-url("macbook-pro-desk-laptops-mobile.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 
 #main-image-text {
   z-index: 10;
@@ -195,7 +206,7 @@ button .glyphicon-font-color {
 #welcome-row-2 {
   // background-image: image-url("computer_mouse1.png");
   // background-size: cover;
-  background-color: #121314;
+  background-color: #66D9EF; 
   color: white;
   font-weight: 300;
 }
@@ -208,8 +219,39 @@ button .glyphicon-font-color {
 }
 
 #welcome-row-3 {
-  background-color: #66D9EF;
+  background-color: #F1F2F2;
 }
+
+#welcome-row-4 {
+  background-color: #222326;
+}
+
+#mor-pic {
+  margin-bottom: -50px;
+}
+
+.mor-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.about-mor {
+  padding-top: 90px;
+  padding-bottom: 40px;
+}
+
+.about-mor h2 {
+  text-align: center;
+
+  padding-bottom: 30px;
+}
+
+#welcome-row-4 h2 {
+  color: $note_font_color;
+  text-align: center;
+}
+
+
 .welcome-title {
   margin-top: 1%;
   padding: 5px 60px 10px 10%;
@@ -254,7 +296,7 @@ button .glyphicon-font-color {
 
 #welcome-page-title {
   background-color: rgba(34,35,38,.4);
-  max-width: 600px;
+  max-width: 640px;
   padding: 8px 10px 10px 35px;
 }
 
@@ -317,6 +359,47 @@ button .glyphicon-font-color {
   color: white;
   font-weight: 400;
 }
+
+.sales-points-rows {
+  padding-top: 80px;
+  // padding-bottom: 60px;
+}
+
+.sales-points-icons {
+  padding-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sales-points-descriptions {
+  max-width: 370px;
+}
+
+.sales-points-descriptions h3 {
+  margin-top: 0;
+  font-weight: 700;
+  color: #222326;
+}
+
+.sales-points-descriptions p {
+  font-weight: 400;
+  color: #222326;
+}
+
+.last-sales-row {
+  padding-bottom: 80px;
+}
+
+.icon-padding {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+
+
+
+
+
 
 
 

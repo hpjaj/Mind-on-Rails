@@ -5,12 +5,12 @@
 
 <div id="welcome-container">
   <div class="container-fluid boxy">
-    <div class="hidden-xs row welcome-rows welcome-row-1" id="main-image-container">
+    <div class="visible-lg row welcome-rows welcome-row-1" id="main-image-container">
       <%#= image_tag "macbook-pro-desk-laptops.jpg", id: "dapic" %>
       <div class="col-sm-8 welcome-title" >
         <article id="welcome-page-title">
-          <h1>Free your mind</h1>
-          <h3>As you learn Ruby on Rails, we help you <span>remember</span> it.</h3>
+          <h1>Spike your learning curve</h1>
+          <h3>You're learning Ruby on Rails, we'll help you <span>remember</span> it.</h3>
         </article>
       </div> 
       <div class="col-sm-4 welcome-sign-up">
@@ -19,56 +19,114 @@
       </div> 
     </div>
 
-    <div class="visible-xs row welcome-rows welcome-row-1" id="main-image-container-mobile">
+    <div class="visible-sm visible-md row welcome-rows welcome-row-1" id="main-image-container-mobile">
       <%#= image_tag "macbook-pro-desk-laptops.jpg", id: "dapic" %>
-      <div class="col-sm-8 welcome-title" id="welcome-page-title">
-        <h1>You learn so much through Ruby on Rails.</h1>
-        <h1>We will remember it for you.</h1>
+      <div class="col-sm-7 welcome-title" >
+        <article id="welcome-page-title">
+          <h1>Spike your learning curve</h1>
+          <h3>You're learning Ruby on Rails, we'll help you <span>remember</span> it.</h3>
+        </article>
       </div> 
-      <div class="col-sm-4 welcome-sign-up">
+      <div class="col-sm-5 welcome-sign-up">
         <%= link_to 'Sign In', new_user_session_path, class: 'sign-in-and-up-buttons', id: 'sign-in-button' %>
         <%= link_to "Sign Up", new_user_registration_path, class: 'sign-in-and-up-buttons', id: 'sign-up-button' %>
       </div> 
     </div>
 
-    <div class="row welcome-rows" id="welcome-row-2">
+    <div class="visible-xs row welcome-rows welcome-row-1" id="main-image-container-mobile-xs">
+      <%#= image_tag "macbook-pro-desk-laptops.jpg", id: "dapic" %>
+      <div class="col-sm-7 welcome-title" >
+        <article id="welcome-page-title">
+          <h1>Spike your learning curve</h1>
+          <h3>You're learning Ruby on Rails, we'll help you <span>remember</span> it.</h3>
+        </article>
+      </div> 
+      <div class="col-sm-5 welcome-sign-up">
+        <%= link_to 'Sign In', new_user_session_path, class: 'sign-in-and-up-buttons', id: 'sign-in-button' %>
+        <%= link_to "Sign Up", new_user_registration_path, class: 'sign-in-and-up-buttons', id: 'sign-up-button' %>
+      </div> 
+    </div>
+
+
+    <div class="row" id="welcome-row-2">
       <div class="container welcome-title">
-        <div class="row" >
-          <div class="col-sm-6" >
-            <%= image_tag "pen-and-paper.png" %>
-          </div> 
-          <div class="col-sm-6" >
-            <h2>Create notes for what you need to remember.</h2>
-            <p>Mind on Rails captures everything you need to remember around Ruby on Rails, with powerful, searchable, fingertip access 24/7.</p>
-          </div> 
-        </div> 
 
-        <div class="row" >
-          <div class="col-sm-6" >
-            <h2>Jumpstart your Ruby on Rails learning curve.</h2>
-            <p>All of your notes are  associated with our learning stacks.  These stacks are educationally designed to smartly serve your current and future self.</p>
+        <div class="row sales-points-rows" >
+          <div class="col-sm-6 sales-points-icons" >
+            <div class="icon-padding">
+              <%= image_tag "pen-and-paper.png" %>
+            </div>
           </div> 
-          <div class="col-sm-6" >
-            <%= image_tag "pen-and-paper.png" %>
+          <div class="col-sm-6 sales-points-descriptions" >
+            <h3>Create notes for what you need to remember.</h3>
+            <p>Mind on Rails will capture everything you need to remember around Ruby on Rails, with powerful, searchable, fingertip access 24/7.</p>
           </div> 
         </div> 
 
+        <div class="row sales-points-rows" >
+          <div class="col-sm-6 col-sm-push-6 sales-points-icons" >
+            <div class="icon-padding">
+              <%= image_tag "white-graph-icon.png" %>
+            </div>
+          </div>
+          <div class="col-sm-6 col-sm-pull-6 sales-points-descriptions" >
+            <h3>Jumpstart your learning curve.</h3>
+            <p>All of your notes are  associated with our learning stacks.  These 16 stacks are educationally designed to serve both your current and future self.</p>
+          </div> 
+        </div> 
 
-        <h2>Jumpstart your Ruby on Rails learning curve.</h2>
-        <p>All of your notes are  associated with our learning stacks.  These stacks are educationally designed to smartly serve your current and future self.</p>
+        <div class="row sales-points-rows" >
+          <div class="col-sm-6 sales-points-icons" >
+            <div class="icon-padding">
+              <%= image_tag "thumbs-up.png" %>
+            </div>
+          </div> 
+          <div class="col-sm-6 sales-points-descriptions" >
+            <h3>Draw from our curated Ruby on Rails collections.</h3>
+            <p>You can make your notes public or private.  Public notes can be voted on by members of the Mind on Rails community.</p>
+          </div> 
+        </div>
 
-        <h2>Jumpstart your Ruby on Rails learning curve.</h2>
-        <p>All of your notes are  associated with our learning stacks.  These stacks are educationally designed to smartly serve your current and future self.</p>
+        <div class="row sales-points-rows last-sales-row" >
+          <div class="col-sm-6 col-sm-push-6 sales-points-icons" >
+            <div class="icon-padding">
+              <%= image_tag "cards-2.png" %>
+            </div>
+          </div> 
+          <div class="col-sm-6 col-sm-pull-6 sales-points-descriptions" >
+            <h3>Any note can double as a flashcard.</h3>
+            <p>Some things you will want to have rote memorization around.  Any note, be it yours or a public note, can be designated as a flashcard, for you to review and learn.</p>
+          </div> 
+        </div> 
 
-
-        <h1>Become memory independent.</h1>
-        <h3>As you learn Ruby on Rails, we will remember it for you.</h3>
       </div>
     </div>
 
-    <div class="row welcome-rows" id="welcome-row-3">
-      <div class="container">
 
+
+    <div class="row" id="welcome-row-3">
+      <div class="container">
+        <div class="about-mor">
+          <h2>About Mind on Rails</h2>
+          <p>Mind on Rails is a knowledge exchange  note-taking tool.  It is a way to capture all of the multitudes of things that you learn through your journey with Ruby on Rails.  There is no way you are going to remember everything that you need to know.  But with Mind on Rails you can have them at your finger tips, so that you can feel comfortable that you do have those pieces of information in some kind of search accessible way, that is going to allow you to document it.  Share it with others.  Code samples.  Best practices.</p>  
+          <p>The coding community is all about sharing information, helping others, open source.  And so we take information in from others, we give back.  We share our information too.  So this is a way for you to document all of the things that you need to know, personally, and things that you think that you want to share with others.  That can benefit them.  You can vote those up and down and start to help build these curated lists for you now, for others, and for your future self.</p>  
+          <p>Tags can get out of hand.  They can replicate like gremlins.  The search feature will take care of all that extraneous tagging for you.  The more there are, the more their collective meanings get diluted.  This is about curating.  Ways to approach things.  Ways to think about what you learn, that will benefit both your current and future self.  Stacks that will remain relevant, regardless of your level of seasoning or expertise.  
+          </p>
+        </div>
+        <div class="mor-padding">
+          <%= image_tag "mor-2.jpg", class: "img-responsive" %>
+        </div>
+ 
+
+      </div>
+    </div>
+
+    <div class="row" id="welcome-row-4">
+      <div class="container">
+        <div class="about-mor">
+          <h2><%= link_to "SIGN UP NOW", new_user_registration_path, class: 'sign-in-and-up-buttons', id: 'sign-up-button' %></h2>
+          <br>
+        </div>
       </div>
     </div>
 
