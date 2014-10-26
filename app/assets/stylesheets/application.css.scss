@@ -47,8 +47,13 @@ html body {
   line-height: 150%;
   // letter-spacing: .9px;
 }
+
 .navbar {
   border-radius: 0px;
+}
+
+#mor-brand:hover  {
+  // color: #a87cf6;
 }
 
 .navbar-inverse {
@@ -246,8 +251,8 @@ button .glyphicon-font-color {
   padding-bottom: 30px;
 }
 
-#welcome-row-4 h2 {
-  color: $note_font_color;
+#welcome-row-4 h2, #welcome-row-4 h3 {
+  color: white;
   text-align: center;
 }
 
