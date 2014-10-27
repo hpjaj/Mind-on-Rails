@@ -5,7 +5,11 @@ describe 'User creates an account' do
   it 'Successfully' do
     visit '/'
     reset_mailer
-    click_link 'Sign Up'
+
+    within( '#main-image-container' ) do
+      click_link "Sign Up"
+    end
+
     expect( current_path ).to eq new_user_registration_path
     fill_in 'Name', with: 'John Smith'
     fill_in 'Username', with: 'jsmith'
@@ -31,7 +35,10 @@ describe 'User creates an account' do
     user = create(:user, email: 'tom@example.com')
     visit '/'
     reset_mailer
-    click_link 'Sign Up'
+    
+    within( '#main-image-container' ) do
+      click_link "Sign Up"
+    end
     expect( current_path ).to eq new_user_registration_path
     fill_in 'Name', with: 'Tom Selleck'
     fill_in 'Username', with: 'tomselleck'
@@ -46,7 +53,11 @@ describe 'User creates an account' do
     user = create(:user, username: 'tomselleck')
     visit '/'
     reset_mailer
-    click_link 'Sign Up'
+    
+    within( '#main-image-container' ) do
+      click_link "Sign Up"
+    end
+    
     expect( current_path ).to eq new_user_registration_path
     fill_in 'Name', with: 'Tom Selleck'
     fill_in 'Username', with: 'tomselleck'

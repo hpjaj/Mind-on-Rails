@@ -65,8 +65,6 @@ describe "Top navbar links" do
 
   def test_guest_access_links
     click_link "Mind on Rails"
-    click_link "About"
-    expect( current_path ).to eq about_path
     click_link "Stacks"
     expect( current_path ).to eq stacks_path
     click_link "search-icon"
