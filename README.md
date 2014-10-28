@@ -7,10 +7,13 @@ Here is the interface for creating a new note in Mind on Rails:
 
 ![Interface for creatin a note](http://hpjaj.com/web-images/mind-on-rails/creating-a-note.jpg)
 
-
 Here is a note that's been created in Mind on Rails:
 
 ![Note from Mind on Rails](http://hpjaj.com/web-images/mind-on-rails/mor-note-2.jpg)
+
+Here is the My Notes view in Mind on Rails:
+
+![My Notes view Mind on Rails](http://hpjaj.com/web-images/mind-on-rails/my-notes.jpg)
 
 Here is the list of *stacks* in Mind on Rails:
 
