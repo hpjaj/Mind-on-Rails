@@ -2,9 +2,13 @@
 
 Mind on Rails is a knowledge exchange, note-taking tool, specifically for Ruby on Rails learners. It is a way to capture what you learn through your journey with Ruby on Rails.
 
+Here is a note created in Mind on Rails:
+
+![Image of a Mid on Rails note](http://hpjaj.com/web-images/mind-on-rails/mor-note-2.jpg)
 
 
-Gems used:
+
+Gems used in Mind on Rails:
 ```ruby
 gem 'rails', '4.1.1'
 gem 'pg'
@@ -44,5 +48,4 @@ gem 'pygments.rb'
 gem 'pg_search'
 ```
 
-![Image of a Mind on Rails note](http://hpjaj.com/web-images/mind-on-rails/mor-note-2.jpg)
 
