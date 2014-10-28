@@ -1,31 +1,48 @@
 #Mind on Rails
 
-Mind on Rails empowers you to capture all of the things that need to be learned in order to create web applications with Ruby on Rails, and does so in a manner that is conducive to learning and accessing these morsels of knowledge at anytime.  It enables you to become memory independent.  
+Mind on Rails is a knowledge exchange, note-taking tool, specifically for Ruby on Rails learners. It is a way to capture what you learn through your journey with Ruby on Rails.
 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Gems used:
+```ruby
+gem 'rails', '4.1.1'
+gem 'pg'
 
-* Ruby version
+group :production do
+  gem 'rails_12factor'
+end
 
-* System dependencies
+gem 'sass-rails', '~> 4.0.3'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 2.0'
+gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'spring',        group: :development
 
-* Configuration
+group :test do
+  gem 'rspec-rails', '~> 3.1.0'
+  gem 'capybara', '~> 2.3.0'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'shoulda-matchers', require: false
+  gem 'poltergeist'
+  gem 'email_spec'
+end
 
-* Database creation
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'devise'
+gem 'figaro'
+gem 'faker'
+gem 'newrelic_rpm'
+gem 'simple_form'
+gem 'redcarpet'
+gem 'will_paginate', '~> 3.0.5'
+gem 'pygments.rb'
+gem 'pg_search'
+```
 
-* Database initialization
+![Image of a Mind on Rails note](http://hpjaj.com/web-images/mind-on-rails/note)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
