@@ -33,6 +33,7 @@ $note_font_color: #D7D7D7;    //D7D7D7   C5C8C6  F8F8F2
 $flash_card_font_color: #E6DB74;
 $search_button_green: #A6E22D;
 $sublime_purple: #a87cf6;
+$note_body_link_color: #66D9EF;
 
 
 
@@ -655,11 +656,11 @@ font-size: 14px;
   padding-bottom: 20px;
 }
 
-.note-show-body a {
-  color: #66D9EF;
+.note-show-body a, .note-preview-container a {
+  color: $note_body_link_color;
 }
 
-.note-show-body a:hover {
+.note-show-body a:hover, .note-preview-container a:hover {
   text-decoration: none;
   color: $search_button_green;
 }
