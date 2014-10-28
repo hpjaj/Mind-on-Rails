@@ -44,5 +44,5 @@ gem 'pygments.rb'
 gem 'pg_search'
 ```
 
-![Image of a Mind on Rails note](http://hpjaj.com/web-images/mind-on-rails/note)
+![Image of a Mind on Rails note](http://hpjaj.com/web-images/mind-on-rails/mor-note-2.jpg)
 
