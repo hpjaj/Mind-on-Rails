@@ -5,14 +5,20 @@ Mind on Rails is a knowledge exchange, note-taking tool, specifically for Ruby o
 
 Here is the interface for creating a new note in Mind on Rails:
 
-![Image of a Mid on Rails note](http://hpjaj.com/web-images/mind-on-rails/creating-a-note.jpg)
+![Interface for creatin a note](http://hpjaj.com/web-images/mind-on-rails/creating-a-note.jpg)
 
 
 Here is a note that's been created in Mind on Rails:
 
-![Image of a Mid on Rails note](http://hpjaj.com/web-images/mind-on-rails/mor-note-2.jpg)
+![Note from Mind on Rails](http://hpjaj.com/web-images/mind-on-rails/mor-note-2.jpg)
 
+Here is the list of *stacks* in Mind on Rails:
 
+![List of Stacks in Mind on Rails](http://hpjaj.com/web-images/mind-on-rails/stacks-mor.jpg)
+
+Here is the *trending* notes view in Mind on Rails:
+
+![Trending notes view in Mind on Rails](http://hpjaj.com/web-images/mind-on-rails/trending-mor.jpg)
 
 Additional Gems used in Mind on Rails:
 ```ruby
