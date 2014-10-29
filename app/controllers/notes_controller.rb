@@ -4,7 +4,7 @@ class NotesController < ApplicationController
     authorize Note
     # @notes = Note.paginate(page: params[:page], per_page: 5).only_this_users_notes(current_user).recently_updated_first
     # @notes = current_user.notes.recently_updated_first.paginate(page: params[:page], per_page: 5)
-    @notes = Note.perform_search(page: params[:page], user: current_user, only_user_owned_notes: true)
+    @notes = Note.perform_search(query: params[:query], page: params[:page], user: current_user, only_user_owned_notes: true)
   end
 
   def new

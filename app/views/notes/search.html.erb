@@ -3,7 +3,9 @@
 
 
 <div class="container">
-  <%= render 'common/search_window' %>
+  <% path = search_path %>
+  <% @search_placeholder_text = "Search my notes & public notes" %>
+  <%= render partial: 'common/search_window', locals: { path: @path } %>
 </div> 
 
 

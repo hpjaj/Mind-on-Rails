@@ -4,10 +4,24 @@
 
 
 <div class="container" id="notes-index">
+  <% path = notes_path %>
+  <% @search_placeholder_text = "Search my notes" %>
+
+  <%= render partial: 'common/search_window', locals: { path: @path} %>
   <%= render 'common/notes_preview' %>
-  <% if @notes.empty? %>
-    <%= content_tag :h2, link_to('Create your first note', new_note_path), id: "create-first-note-link" %>
+
+  <% if params[:query].present? %>
+    <% if @notes.empty?  %>
+      <div class="container" id="empty-search-results">
+        <p>There are not any notes that match your search criteria.</p>  
+        <p>Please try again.</p>
+      </div>
+    <% end %>
+  <% else %>
+    <% @notes.empty? %>
+      <%= content_tag :h2, link_to('Create your first note', new_note_path), id: "create-first-note-link" %>
   <% end %>
+
 </div>
 
 <div class="container">
