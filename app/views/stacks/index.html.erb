@@ -1,7 +1,27 @@
 <% @browser_tab_title = 'Stacks' %>
 <% @body_background_color = "body-black" %>
 
+<!-- Visible at small, medium and large screen sizes; not extra-small -->
+<div class="container hidden-xs">
+  <div class="container" id="stack-show-top-container-non-mobile">
+      <p class="stack-show-title-non-mobile">Stacks</p>
+      <div class="stack-show-headlines-non-mobile">16 learning stacks educationally designed to serve both your current and future self</div>
+      <div id="stack-show-description-non-mobile">Tags can get out of hand. The more tags there are, the more the each tags' meaning gets diluted. The search feature will take care of all that extraneous tagging for you.  Our approach is different. It is about curated learning stacks. Ways to approach things. Ways to think about what you learn, that will benefit both your current and future self. These stacks will remain relevant to you, and to the Ruby on Rails community at large, regardless of your level of seasoning or expertise.</div>
+  </div>
+</div>
 
+
+<!-- Visible at extra-small screen sizes only -->
+<div class="container visible-xs">
+  <div class="container" id="stack-show-top-container-mobile-only">
+      <p class="stack-show-title-mobile-only">Stacks</p>
+      <div class="stack-show-headlines-mobile-only">16 learning stacks educationally designed to serve both your current and future self</div> 
+      <div class="stack-show-description-mobile-only">Tags can get out of hand. The more tags there are, the more the each tags' meaning gets diluted. The search feature will take care of all that extraneous tagging for you.  Our approach is different. It is about curated learning stacks. Ways to approach things. Ways to think about what you learn, that will benefit both your current and future self. These stacks will remain relevant to you, and to the Ruby on Rails community at large, regardless of your level of seasoning or expertise.</div>
+  </div>
+</div>
+
+
+<!-- Visible at all sizes -->
 <% stacks_1_to_4 = @stacks[0,4] %>
 <% stacks_5_to_8 = @stacks[4,4] %>
 <% stacks_9_to_12 = @stacks[8,4] %>

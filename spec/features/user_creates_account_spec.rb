@@ -27,7 +27,7 @@ describe 'User creates an account' do
     fill_in 'Email', with: 'johnsmith@example.com'
     fill_in 'Password', with: 'password'
     click_button 'Log in'
-    expect( current_path ).to eq stacks_path
+    expect( current_path ).to eq notes_path
     expect( page ).to have_content('jsmith')
   end
 

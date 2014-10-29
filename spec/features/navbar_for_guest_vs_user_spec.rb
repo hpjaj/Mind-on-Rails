@@ -49,7 +49,7 @@ describe "Top navbar links" do
 
     it "directs the Mind on Rails link to the stacks index page" do
       click_link "Mind on Rails"
-      expect( current_path ).to eq stacks_path
+      expect( current_path ).to eq notes_path
     end
 
     it "can additionally access Create a Note, My Notes, Edit Profile, and Sign Out" do
