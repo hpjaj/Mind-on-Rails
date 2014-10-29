@@ -4,7 +4,12 @@
 
 <div class="container">
   <% path = search_path %>
-  <% @search_placeholder_text = "Search my notes & public notes" %>
+  <% if current_user %>
+    <% @search_placeholder_text = "Search my notes & public notes" %>
+  <% else %>
+    <% @search_placeholder_text = "Search public notes" %>
+  <% end %>
+
   <%= render partial: 'common/search_window', locals: { path: @path } %>
 </div> 
 
