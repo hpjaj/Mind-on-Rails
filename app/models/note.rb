@@ -16,7 +16,7 @@ class Note < ActiveRecord::Base
   validates :stacks, :presence => { :message => " - Choose at least 1 stack" }
 
   pg_search_scope :search, against: [:title, :body],
-    using: {tsearch: {dictionary: "english"}},
+    using: {tsearch: {dictionary: "english", prefix: true}},
     associated_against: {stacks: [:title]}
 
   def self.text_search(query)
