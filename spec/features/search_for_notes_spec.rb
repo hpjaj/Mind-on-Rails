@@ -76,6 +76,16 @@ describe "searching for notes from the search page" do
       #the below test confirms the correct placeholder text
       fill_in 'Search my notes & public notes', with: 'go'
     end
+
+    it "prompts user with a message if there are no matching results" do
+      fill_in('query', with: 'django')
+      click_button ('search-submit-button')
+      expect( page ).to have_content('There are not any notes that match your search criteria.')
+      expect( page ).to_not have_content('personas')
+      expect( page ).to_not have_content('things')
+      expect( page ).to_not have_content('worlds')
+      expect( page ).to_not have_content('people')
+    end
   end
 
   # context "as a logged in admin" do
