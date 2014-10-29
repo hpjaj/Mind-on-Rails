@@ -66,9 +66,9 @@ describe "searching for notes" do
     end
   end
 
-  context "as a logged in admin" do
-    xit "has access to all all users public and private notes" do
-    end
-  end
+  # context "as a logged in admin" do
+  #   it "has access to all all users public and private notes" do
+  #   end
+  # end
 
 end
