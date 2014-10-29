@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "searching for notes" do
+describe "searching for notes from the search page" do
 
   include Warden::Test::Helpers
   Warden.test_mode!
@@ -39,6 +39,12 @@ describe "searching for notes" do
       expect( page ).to_not have_content('things')
       expect( page ).to_not have_content('worlds')
     end
+
+    it "the search placeholder says 'Search public notes'" do
+      #capybara can find a field by the placeholder text; therefore,
+      #the below test confirms the correct placeholder text
+      fill_in 'Search public notes', with: 'go'
+    end
   end
 
   context "as a logged in standard user" do
@@ -63,6 +69,12 @@ describe "searching for notes" do
       expect( page ).to have_content('personas')
       expect( page ).to have_content('things')
       expect( page ).to_not have_content('worlds')
+    end
+
+    it "the search placeholder says 'Search my notes & public notes'" do
+      #capybara can find a field by the placeholder text; therefore,
+      #the below test confirms the correct placeholder text
+      fill_in 'Search my notes & public notes', with: 'go'
     end
   end
 
