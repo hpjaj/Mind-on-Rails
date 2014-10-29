@@ -8,7 +8,6 @@
   <% @search_placeholder_text = "Search my notes" %>
 
   <%= render partial: 'common/search_window', locals: { path: @path} %>
-  <%= render 'common/notes_preview' %>
 
   <% if params[:query].present? %>
     <% if @notes.empty?  %>
@@ -17,9 +16,11 @@
         <p>Please try again.</p>
       </div>
     <% end %>
-  <% else %>
+  <% elsif %>
     <% @notes.empty? %>
       <%= content_tag :h2, link_to('Create your first note', new_note_path), id: "create-first-note-link" %>
+  <% else %>
+    <%= render 'common/notes_preview' %>
   <% end %>
 
 </div>
