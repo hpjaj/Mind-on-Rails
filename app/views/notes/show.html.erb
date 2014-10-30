@@ -13,7 +13,9 @@
     </p>
     <p class="note-preview-username notes-show-LRpadding notes-head-TBpadding">
       <%= @note.user.username %>
-
+      <span class="pull-right"><% if current_user %>
+        <%= render partial: 'flashcards/flashcard', locals: { note: @note } %>
+      <% end %></span>
     </p>
   </div>
   <div class="row note-show-dates notes-show-LRpadding notes-head-TBpadding">

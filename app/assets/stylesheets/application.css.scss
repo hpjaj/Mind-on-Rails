@@ -29,11 +29,13 @@ $state-danger-text: white;
 // nav bar active state gray  2E2F33
 // search green  A6E22D
 // public dark pink  F92772
+// sign up button blue 66D9EF
 $note_font_color: #D7D7D7;    //D7D7D7   C5C8C6  F8F8F2
 $flash_card_font_color: #E6DB74;
 $search_button_green: #A6E22D;
 $sublime_purple: #a87cf6;
 $note_body_link_color: #66D9EF;
+$note_background_color: #222326;
 
 
 
@@ -656,12 +658,20 @@ font-size: 14px;
   padding-bottom: 20px;
 }
 
-.note-show-body a, .note-preview-container a {
+.note-show-body a, .note-preview-container a, .flashcard-body a {
   color: $note_body_link_color;
 }
 
-.note-show-body a:hover, .note-preview-container a:hover {
+.note-show-body a:hover, .note-preview-container a:hover, .flashcard-body a:hover {
   text-decoration: none;
+  color: $search_button_green;
+}
+
+#flashcard-checked-link {
+  color: white;
+}
+
+#flashcard-checked-link:hover {
   color: $search_button_green;
 }
 
@@ -803,7 +813,7 @@ li .navbar-form {
 }
 
 .vote-arrows-padding {
-  padding-right: 85px;
+  padding-right: 45px;
 }
 
 .note-points-guest-view {
@@ -839,6 +849,81 @@ code {
   color: #E6DB74;
   font-weight: 300px;
   font-size: 15px;
+}
+
+
+
+//FLASHCARDS
+.panel-primary {
+  border-color: #2E2F33;
+}
+
+.panel-title {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.panel-primary > .panel-heading {
+  color: white;
+  background-color: #2E2F33;
+  
+  // border-color: green;
+}
+
+.panel-primary > .panel-heading a:hover {
+  color: $search_button_green;
+  text-decoration: none;
+}
+
+.panel {
+  background-color: $note_background_color;
+  color: $note_font_color;
+}
+
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #949599
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-top:  1px solid #949599;
+}
+
+.flashcard-header {
+  padding-bottom: 10px;
+}
+
+.flashcard-body {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flashcard-stacks-username {
+  margin-bottom: 0;
+}
+
+.flashcard-view-button {
+  padding-top: 15px;
+}
+
+.flashcard a {
+  text-decoration: none;
+}
+
+.flashcard a:hover {
+  color: $search_button_green;
+}
+
+.flashcard-link-selected {
+  color: white;
+}
+
+.glyphicon-check {
+  color: $search_button_green;
+}
+
+.glyphicon-unchecked {
+  color: white;
 }
 
 

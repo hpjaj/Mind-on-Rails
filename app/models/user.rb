@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :notes, dependent: :destroy
   has_many :votes, dependent: :destroy
+  has_many :flashcards, dependent: :destroy
 
   validates :username, 
       uniqueness: {message: "- This username has already been taken", case_sensitive: false }, 
@@ -15,6 +16,10 @@ class User < ActiveRecord::Base
 
   def admin?
     role == 'admin'
+  end
+
+  def flashcarded(note)
+    flashcards.where(note_id: note.id).first
   end
   
 end

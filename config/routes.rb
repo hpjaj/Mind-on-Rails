@@ -3,10 +3,16 @@ Rails.application.routes.draw do
   resources :users, only: [:update]
   
   get 'search' => 'notes#search'
+
+  get 'flashcards' => 'flashcards#index'
   
   get 'trending' => 'notes#trending'
 
-  resources :notes, :stacks
+  resources :stacks
+
+  resources :notes do
+    resources :flashcards, only: [:create, :destroy]
+  end
   
   devise_for :users
 

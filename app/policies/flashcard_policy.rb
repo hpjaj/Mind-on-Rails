@@ -1,0 +1,3 @@
+class FlashcardPolicy < ApplicationPolicy
+  
+end

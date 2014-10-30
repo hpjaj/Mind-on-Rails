@@ -5,6 +5,7 @@ class Note < ActiveRecord::Base
   belongs_to :user
   has_and_belongs_to_many :stacks
   has_many :votes, dependent: :destroy
+  has_many :flashcards, dependent: :destroy
 
   scope :recently_updated_first, lambda { order("notes.updated_at DESC")}
   scope :only_this_users_notes, -> (user) { where(user_id: user.id) }
