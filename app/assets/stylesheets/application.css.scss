@@ -162,6 +162,37 @@ button .glyphicon-font-color {
   color: white;
 }
 
+.footer-welcome-nav {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer-welcome-nav a {
+  color: $note_background_color;
+}
+
+.footer-welcome-nav a:hover {
+  text-decoration: none;
+  color: #66D9EF;
+}
+
+.footer-nav {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.footer-nav-spans {
+  padding: 5px 20px;
+}
+
+
+
+
+
 
 
 // WELCOME views
@@ -234,6 +265,16 @@ button .glyphicon-font-color {
   background-color: #222326;
 }
 
+#welcome-row-5 {
+  background-color: #F1F2F2;
+}
+
+.padme {
+  text-align: center;
+  margin: 0 auto;
+
+}
+
 #mor-pic {
   margin-bottom: -50px;
 }
@@ -278,6 +319,7 @@ button .glyphicon-font-color {
 
 .about-page-text {
   padding: 15px 0;
+  color: $note_font_color;
 }
 
 .main-image-container > .row {
