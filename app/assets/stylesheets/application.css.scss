@@ -167,6 +167,7 @@ button .glyphicon-font-color {
   padding-top: 20px;
   padding-bottom: 10px;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 .footer-welcome-nav a {
@@ -180,8 +181,8 @@ button .glyphicon-font-color {
 
 .footer-nav {
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  // padding-top: 20px;
+  // padding-bottom: 0px;
   text-transform: uppercase;
 }
 
@@ -189,6 +190,18 @@ button .glyphicon-font-color {
   padding: 5px 20px;
 }
 
+#footer-nav-non-welcome-page {
+
+}
+
+#footer-nav-non-welcome-page a {
+  color: $note_font_color;
+}
+
+#footer-nav-non-welcome-page a:hover {
+  text-decoration: none;
+  color: $search_button_green;
+}
 
 
 
