@@ -981,7 +981,19 @@ code {
   color: white;
 }
 
+.how-to-create-flashcards {
+  padding: 5% 10%;
+  color: $note_font_color;
+  font-size: 18px;
+}
 
+.how-to-create-flashcards .glyphicon-unchecked, .flashcard-how-to-highlights {
+  color: $search_button_green;
+}
+
+.how-to-create-flashcards li {
+  padding-top: 10px;
+}
 
 // #notes-index {
 //   max-height: 45em;
