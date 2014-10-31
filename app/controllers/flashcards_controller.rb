@@ -21,7 +21,7 @@ class FlashcardsController < ApplicationController
     flashcard = current_user.flashcards.find(params[:id])
     authorize flashcard
     if flashcard.destroy
-      redirect_to @note
+      redirect_to :back
     else
       flash[:error] = "Was not able to un-flashcard this.  Please try again."
       redirect_to @note
