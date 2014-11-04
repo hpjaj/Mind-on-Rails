@@ -57,7 +57,6 @@ class Note < ActiveRecord::Base
         notes = notes.where(user: user)
       else  
         notes = notes.where("user_id = ? OR public = ?", user.id, true)
-        # notes = notes.where(user_id: user.id)
       end
     else
       notes = notes.where(public: true)

@@ -1,27 +1,23 @@
 <div class="container">
   <div class="row">
-  <div class="col-md-8" id="stack-edit-form">
-    <%= simple_form_for @stack do |f| %>
-      <div class="form-group">
+    <div class="col-md-8" id="stack-edit-form">
+      <%= simple_form_for @stack do |f| %>
+        <div class="form-group">
+          <%= f.input :title, placeholder: "Enter title", input_html: {class: 'form-control note-form-fields'} %>
+        </div>
 
-      <%= f.input :title, placeholder: "Enter title", input_html: {class: 'form-control note-form-fields'} %>
-  </div>
+        <div class="form-group">
+          <%= f.input :headline, placeholder: "Enter headline", input_html: {class: 'form-control note-form-fields'} %>
+        </div>
 
-      <div class="form-group">
+        <div class="form-group">
+          <%= f.input :description, placeholder: "Enter description", input_html: {class: 'form-control note-form-fields', rows: 10} %>
+        </div>
+        <div class="form-group">
+          <%= f.button :submit, class: 'btn search-button' %>
+        </div>
 
-      <%= f.input :headline, placeholder: "Enter headline", input_html: {class: 'form-control note-form-fields'} %>
-  </div>
-
-      <div class="form-group">
-
-      <%= f.input :description, placeholder: "Enter description", input_html: {class: 'form-control note-form-fields', rows: 10} %>
-  </div>
-      <div class="form-group">
-
-      <%= f.button :submit, class: 'btn search-button' %>
-  </div>
-
-    <% end %>
-  </div>
+      <% end %>
+    </div>
   </div>
 </div>

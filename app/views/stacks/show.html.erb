@@ -5,9 +5,9 @@
 <!-- Visible at small, medium and large screen sizes; not extra-small -->
 <div class="container hidden-xs">
   <div class="container" id="stack-show-top-container-non-mobile">
-      <p class="stack-show-title-non-mobile"><%= @stack.title %></p>
-      <div class="stack-show-headlines-non-mobile"><%= @stack.headline %></div>
-      <div id="stack-show-description-non-mobile"><%= @stack.description %></div>
+    <p class="stack-show-title-non-mobile"><%= @stack.title %></p>
+    <div class="stack-show-headlines-non-mobile"><%= @stack.headline %></div>
+    <div id="stack-show-description-non-mobile"><%= @stack.description %></div>
     <div class="row note-show-body notes-show-LRpadding">
       <% if policy(@stack).edit? %>
         <%= link_to 'Edit', edit_stack_path %>
@@ -23,9 +23,9 @@
 <!-- Visible at extra-small screen sizes only -->
 <div class="container visible-xs">
   <div class="container" id="stack-show-top-container-mobile-only">
-      <p class="stack-show-title-mobile-only"><%= @stack.title %></p>
-      <div class="stack-show-headlines-mobile-only"><%= @stack.headline %></div> 
-      <div class="stack-show-description-mobile-only"><%= @stack.description %></div>
+    <p class="stack-show-title-mobile-only"><%= @stack.title %></p>
+    <div class="stack-show-headlines-mobile-only"><%= @stack.headline %></div> 
+    <div class="stack-show-description-mobile-only"><%= @stack.description %></div>
     <div class="row note-show-body notes-show-LRpadding">
       <% if policy(@stack).edit? %>
         <%= link_to 'Edit', edit_stack_path %>

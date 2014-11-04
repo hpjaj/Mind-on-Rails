@@ -48,15 +48,10 @@ html body {
 
   font-size: 16px;
   line-height: 150%;
-  // letter-spacing: .9px;
 }
 
 .navbar {
   border-radius: 0px;
-}
-
-#mor-brand:hover  {
-  // color: #a87cf6;
 }
 
 .navbar-inverse {
@@ -66,7 +61,7 @@ html body {
 }
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
-  color: #949599;  //949599
+  color: #949599;  
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
@@ -181,8 +176,6 @@ button .glyphicon-font-color {
 
 .footer-nav {
   text-align: center;
-  // padding-top: 20px;
-  // padding-bottom: 0px;
   text-transform: uppercase;
 }
 
@@ -210,7 +203,6 @@ button .glyphicon-font-color {
 
 // WELCOME views
 .body-welcome-index {
-  // background-image: image-url("congruent_outline.png");
   background-color: #121314;
 }
 
@@ -256,17 +248,13 @@ button .glyphicon-font-color {
 }
 
 #welcome-row-2 {
-  // background-image: image-url("computer_mouse1.png");
-  // background-size: cover;
+
   background-color: #66D9EF; 
   color: white;
   font-weight: 300;
 }
 
 .welcome-row-1 {
-  // background-image: image-url("coding-curr.png");
-  // background-color: red;
-  // background-size: cover;
   color: black;
 }
 
@@ -285,7 +273,6 @@ button .glyphicon-font-color {
 .padme {
   text-align: center;
   margin: 0 auto;
-
 }
 
 #mor-pic {
@@ -317,8 +304,7 @@ button .glyphicon-font-color {
 .welcome-title {
   margin-top: 1%;
   padding: 5px 60px 10px 10%;
-  // text-align: center;
-  // font-weight: 300;
+
 }
 
 .welcome-sign-up {
@@ -326,7 +312,6 @@ button .glyphicon-font-color {
 }
 
 .boxy {
-  // background-image: image-url("congruent_outline.png");
   color: #313742;
 }
 
@@ -425,7 +410,6 @@ button .glyphicon-font-color {
 
 .sales-points-rows {
   padding-top: 80px;
-  // padding-bottom: 60px;
 }
 
 .sales-points-icons {
@@ -480,7 +464,6 @@ button .glyphicon-font-color {
   font-size: 24px;
   font-weight: lighter;
   text-align: center;
-  // font-family: Courier New, serif;
 }
 
 .stack-titles a {
@@ -502,7 +485,6 @@ button .glyphicon-font-color {
   padding: 7px 5% 0;
   margin: auto 0;
   text-align: left;
-  // font-size: 14px; 
 }
 
 .stack-headlines {
@@ -513,9 +495,6 @@ button .glyphicon-font-color {
 }
 
 .stack-descriptions {
-  // padding: 0 5% 5%;
-  // margin: auto 0;
-  // text-align: left;
   font-size: 14px; 
   color: #949599;
 }
@@ -581,31 +560,28 @@ button .glyphicon-font-color {
 
 #stacks-form label  {
   font-weight: normal;
-  color: $sublime_purple;  // purple #a87cf6 ; gray #666
+  color: $sublime_purple;  
   font-family: Courier New, serif;
   
 }
 
 #stacks-form p {
-color: #949599;  //new gray font #949599  old gray #b7b7b7
+color: #949599;  
 margin-left: -8%;
 font-size: 14px;
 }
 
 .black-box {
-  // border: 1px solid purple;
-  color: #949599;  // new gray #949599  old gray rgb(102,102,102)
+  color: #949599;  
   background: #222326;
   margin-bottom: 20px;
   min-height: 290px;
-  // text-align: center;
   padding: 4% 0;
   border-radius: 3px;
 }
 
 .black-box a {
   color: $sublime_purple;
-  // font-weight: normal;
 }
 
 
@@ -615,7 +591,7 @@ font-size: 14px;
 
 // NOTES views
 .body-notes {
-  background: #121314;  //sublime gray rgb(70,70,67)
+  background: #121314;  
   padding-bottom: 70px;
 }
 
@@ -629,14 +605,9 @@ font-size: 14px;
 }
 
 .note-form-fields {
-  // width: 100%;
   background-color: rgba(0,0,0,0);
   color: $note_font_color;
-  border-color: #777;  //old gray #777  thin border gray #393B40  new gray font #949599
-}
-
-#note-form-title-field {
-  // border-bottom: 1px solid white;
+  border-color: #777;  
 }
 
 #note-form-body-field {
@@ -666,7 +637,6 @@ font-size: 14px;
 .note-previews {
   margin-bottom: 17px;
   color: white;
-  // border-radius: 3px;
 }
 
 .notes_stacks {
@@ -705,7 +675,6 @@ font-size: 14px;
 .note-show-title {
   font-size: 22px;
   font-family: 'Oxygen', sans-serif;
-  // font-weight: lighter;
   letter-spacing: 1px;
 }
 
@@ -765,7 +734,6 @@ font-size: 14px;
 }
 
 .note-form-columns {
-  // border: 1px solid purple;
   background: #222326;
   margin-bottom: 20px;
   min-height: 568px;
@@ -774,13 +742,12 @@ font-size: 14px;
 }
 
 .note-padding {
-  // border: 1px solid red;
   padding: 0 5px;  //this narrows or widens them width of the title and body input fields.  Works with .note-form-column's padding
 }
 
 pre {
   background-color: black;
-  border: 1px solid black;  // was #393B40
+  border: 1px solid black;  
   font-size: 14px;
 }
 
@@ -922,8 +889,6 @@ code {
 .panel-primary > .panel-heading {
   color: white;
   background-color: #2E2F33;
-  
-  // border-color: green;
 }
 
 .panel-primary > .panel-heading a:hover {
@@ -1000,42 +965,3 @@ code {
   text-transform: uppercase;
 }
 
-
-// #notes-index {
-//   max-height: 45em;
-//   overflow-y: auto;
-//   overflow-x: hidden;
-// }
-
-
-// SCROLL BAR HIGHLIGHTING OPTIONS
-// #notes-index::-webkit-scrollbar-track {
-//     scrollbar-track-color: black;
-//     border-radius: 5px;
-// }
-
-// ::-webkit-scrollbar {
-//       width: 10px;
-// }
-// ::-webkit-scrollbar-track {
-//     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-//     border-radius: 10px;
-// } /* the new scrollbar will have a flat appearance with the set background color */
- 
-// ::-webkit-scrollbar-thumb {
-//     border-radius: 10px;
-//     background-color: #2E2F33;
-//     // -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.2);
-// } /* this will style the thumb, ignoring the track */
-
-// ::-webkit-scrollbar-thumb:hover {
-//     border-radius: 10px;
-//     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
-// }
- 
-// ::-webkit-scrollbar-thumb:window-inactive {
-//    /* Select the thumb when the browser window isn't in focus */
-// }
-// ::-webkit-scrollbar-button:horizontal:decrement:hover {
-//    /* Select the down or left scroll button when it's being hovered by the mouse */
-// }

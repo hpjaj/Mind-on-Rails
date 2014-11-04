@@ -1,7 +1,6 @@
 class StacksController < ApplicationController
   def index
     @stacks = Stack.all.sort_by_id
-    # authorize @stacks
   end
 
   def new
@@ -42,12 +41,6 @@ class StacksController < ApplicationController
       user: current_user,
       stack: @stack
     )
-    # viewable_notes = @stack.notes.paginate(page: params[:page], per_page: 5).recently_updated_first
-    # if current_user
-    #   @notes = viewable_notes.where(user_id: current_user.id)
-    # else
-    #   @notes = viewable_notes.where(public: true)
-    # end
   end
 
   def destroy

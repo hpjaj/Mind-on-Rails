@@ -17,17 +17,16 @@
   <div class="container">
     <div class="panel-group" id="accordion">
 
-    <% @flashcards.each do |card| %>
+      <% @flashcards.each do |card| %>
 
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%= card.note.id %>"><%= card.note.title %></a>
-          </h4>
-        </div>
-        <div id="<%= card.note.id %>" class="panel-collapse collapse">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a class="accordian-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%= card.note.id %>"><%= card.note.title %></a>
+            </h4>
+          </div>
+          <div id="<%= card.note.id %>" class="panel-collapse collapse">
             <div class="panel-body">
-
               <div class="row flashcard-header">
                 <p class="flashcard-stacks-username"><span class="notes_stacks notes-show-LRpadding notes-head-TBpadding">
                   <%= render partial: "/common/stacks_header_list", locals: { note: card.note } %>
@@ -37,18 +36,17 @@
                 <p class="note-show-dates notes-show-LRpadding notes-head-TBpadding">Updated: <%= card.note.updated_at.strftime("%b %d, %Y") %></p>
               </div>
               
-              <!-- <hr id="notes-show-horizontal-ruler"> -->
               <div class="flashcard-body">
                 <%= markdown card.note.body %>
                 <p class="flashcard-view-button pull-right"><% if current_user %>
                   <%= render partial: 'flashcards/flashcard', locals: { note: card.note } %>
                 <% end %></p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-    <% end %>
+      <% end %>
 
     </div>
 
