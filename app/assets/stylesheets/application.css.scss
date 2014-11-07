@@ -1,10 +1,3 @@
-$state-danger-text: white;
-
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "pygments";
-@import url(https://fonts.googleapis.com/css?family=Oxygen:300|Open+Sans:400,300,700);
-
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -20,6 +13,15 @@ $state-danger-text: white;
  *= require_tree .
  *= require_self
  */
+
+$state-danger-text: white;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "pygments";
+@import url(https://fonts.googleapis.com/css?family=Oxygen:300|Open+Sans:400,300,700);
+
+
 
 
 // darkest black  121314

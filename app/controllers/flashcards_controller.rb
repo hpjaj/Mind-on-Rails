@@ -1,5 +1,7 @@
 class FlashcardsController < ApplicationController
 
+  before_action :authenticate_user!
+  
   def index
     @flashcards = Flashcard.all.where(user: current_user)
   end
