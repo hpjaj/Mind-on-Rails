@@ -26,92 +26,24 @@
 
 
 <!-- Visible at all sizes -->
-<% stacks_1_to_4 = @stacks[0,4] %>
-<% stacks_5_to_8 = @stacks[4,4] %>
-<% stacks_9_to_12 = @stacks[8,4] %>
-<% stacks_13_to_16 = @stacks[12,4] %>
-<% stacks_17_to_20 = @stacks[16,4] %>
 
 <div class="container-fluid">
 
-<% if stacks_1_to_4 %>
-  <div class="row">
-    <% stacks_1_to_4.each do |stack| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="black-box">
-          <p class="stack-titles"><%= link_to stack.title, stack %></p>
-          <div class="stack-bodies">
-            <div class="stack-headlines"><%= stack.headline %></div> 
-            <div class="stack-descriptions"><%= truncate( (stack.description), length: 100 ) %></div>
+  <% stack_rows = @stacks.each_slice(4) %>
+  <% stack_rows.each do |row| %>
+      <div class="row">
+      <% row.each do |stack| %>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="black-box">
+            <p class="stack-titles"><%= link_to stack.title, stack %></p>
+            <div class="stack-bodies">
+              <div class="stack-headlines"><%= stack.headline %></div> 
+              <div class="stack-descriptions"><%= truncate( (stack.description), length: 100 ) %></div>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-
-<% if stacks_5_to_8 %>
-  <div class="row">
-    <% stacks_5_to_8.each do |stack| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="black-box">
-          <p class="stack-titles"><%= link_to stack.title, stack %></p>
-          <div class="stack-bodies">
-            <div class="stack-headlines"><%= stack.headline %></div> 
-            <div class="stack-descriptions"><%= truncate( (stack.description), length: 100 ) %></div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-
-<% if stacks_9_to_12 %>
-  <div class="row">
-    <% stacks_9_to_12.each do |stack| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="black-box">
-          <p class="stack-titles"><%= link_to stack.title, stack %></p>
-          <div class="stack-bodies">
-            <div class="stack-headlines"><%= stack.headline %></div> 
-            <div class="stack-descriptions"><%= truncate( (stack.description), length: 100 ) %></div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-
-<% if stacks_13_to_16 %>
-  <div class="row">
-    <% stacks_13_to_16.each do |stack| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="black-box">
-          <p class="stack-titles"><%= link_to stack.title, stack %></p>
-          <div class="stack-bodies">
-            <div class="stack-headlines"><%= stack.headline %></div> 
-            <div class="stack-descriptions"><%= truncate( (stack.description), length: 100 ) %></div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-
-<% if stacks_17_to_20 %>
-  <div class="row">
-    <% stacks_17_to_20.each do |stack| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="black-box">
-          <p class="stack-titles"><%= link_to stack.title, stack %></p>
-          <div class="stack-bodies">
-            <div class="stack-headlines"><%= stack.headline %></div> 
-            <div class="stack-descriptions"><%= truncate( (stack.description), length: 100 ) %></div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+      <% end %>
+    </div>
+  <% end %>
 
 </div>

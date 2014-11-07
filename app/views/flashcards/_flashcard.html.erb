@@ -1,11 +1,11 @@
-<% if policy(Flashcard.new).create? %>
+<% if user_signed_in? %>
   <span class="flashcard">
     <% if flashcard = current_user.flashcarded(note) %>
       <%= link_to [note, flashcard], class: 'flashcard-link-unselected', id: 'flashcard-checked-link', method: :delete do %>
       <i class="glyphicon glyphicon-check"> </i> &nbsp; Flashcard 
       <% end %>
     <% else %>
-      <%= link_to [note, Flashcard.new], class: 'flashcard-link-selected ', method: :post do %>
+      <%= link_to note_flashcards_path(note), class: 'flashcard-link-selected ', method: :post do %>
         <i class="glyphicon glyphicon-unchecked"> </i> &nbsp; Flashcard
       <% end %>
     <% end %>
