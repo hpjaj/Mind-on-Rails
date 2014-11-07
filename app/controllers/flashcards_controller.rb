@@ -3,7 +3,7 @@ class FlashcardsController < ApplicationController
   before_action :authenticate_user!
   
   def index
-    @flashcards = Flashcard.all.where(user: current_user)
+    @flashcards = current_user.flashcards
   end
 
   def create
