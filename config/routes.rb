@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users, only: [:update]
+  resources :users, only: [:update, :index]
   
   get 'search' => 'notes#search'
 
