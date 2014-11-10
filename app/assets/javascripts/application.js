@@ -15,3 +15,11 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+var mor = {};
+
+mor.updateLinksToOpenInNewTab = function(selector) {
+  $( document ).ready(function() {
+    $(selector + " a[href^='http']").attr('target', '_blank');   
+  });
+};
