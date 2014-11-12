@@ -1,5 +1,5 @@
 <% @users.each do |user| %>
-<p><%= user.name %></p>
-<p><%= user.name %></p>
+<p><%= link_to user.name, user %></p>
+<p><%= user.username %></p>
 <p><%= user.notes.count %></p>
 <% end %>

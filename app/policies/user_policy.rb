@@ -21,7 +21,7 @@ class UserPolicy < ApplicationPolicy
   end
 
   def index
-    true
+    create?
   end
   
 end
