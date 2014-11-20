@@ -1,5 +1,28 @@
-<% @users.each do |user| %>
-<p><%= link_to user.name, user %></p>
-<p><%= user.username %></p>
-<p><%= user.notes.count %></p>
-<% end %>
+<div class="container admin-user-views">
+  <div class="sublime-gray">
+    <p id="dashboard">Dashboard</p>
+    <p><span>Total Users:</span><%= @recent_users.count %></p>
+    <p><span>Last Registered User:</span><%= @recent_users.first.username %></p>
+    <p><span>Total Notes:</span><%= @notes.count %></p>
+    <p><span>Last Note Created:</span><%= @notes.last.created_at.strftime("%m/%d/%y at %l:%M%p") %> by <%= @notes.last.user.username %></p>
+  </div>
+    
+  <% @users.each do |user| %>
+    <p><%= link_to user.username, user %></p>
+    <% if user.role == "admin" %>
+      <p><span>Role:</span>Admin</p>
+    <% end %>
+    <p><span>Name:</span><%= user.name %></p>
+    <p><span>Note count:</span><%= user.notes.count %></p>  
+    <% if user.last_sign_in_at %>
+      <p><span>Last sign in:</span><%= user.last_sign_in_at.strftime("%m/%d/%y at %l:%M%p") %></p>  
+    <% else %>
+      <p><span>Last sign in:</span>User has not signed in yet</p>
+    <% end %>
+    <hr>
+  <% end %>
+</div>
+
+<div class="container">
+  <%= will_paginate @users %>
+</div>

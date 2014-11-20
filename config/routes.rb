@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users, only: [:update, :index]
+  resources :users, only: [:update]
   
   get 'search' => 'notes#search'
 
@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   post 'notes/:note_id/down-vote' => 'votes#down_vote', as: :note_down_vote
 
   get 'about' => 'welcome#about'
+  
+  get 'admin/users' => 'users#index'
+  get 'users/:id', to: 'users#show', as: :userShowPage
 
   root 'welcome#index'
 

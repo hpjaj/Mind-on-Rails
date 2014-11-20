@@ -875,6 +875,42 @@ code {
   font-size: 15px;
 }
 
+.admin-user-views {
+  color: $note_font_color
+}
+
+.admin-user-views span {
+  text-transform: capitalize;
+  color: #949599;
+  padding-right: 10px;
+}
+
+.admin-user-views .sublime-gray {
+  margin-bottom: 30px;
+}
+
+.admin-user-views a {
+  color: $search_button_green;
+}
+
+.admin-user-views a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#dashboard {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+
 
 
 //FLASHCARDS

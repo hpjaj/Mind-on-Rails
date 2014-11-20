@@ -1,2 +1,23 @@
-<%= @user.name %>
-<%= @user.username %>
+<div class="container sublime-gray admin-user-views ">
+  <div class="pull-right"><%= link_to 'All Users', admin_users_path %></div>
+  <% if @user.role == "admin" %>
+    <p><span>Role:</span>Admin</p>
+  <% end %>
+  <p><span>Username:</span> <%= @user.username %></p>
+  <p><span>Name:</span> <%= @user.name %></p>
+  <% if @user.notes.count > 0 %>
+    <p><span>last note:</span> <%= @user.notes.last.created_at.strftime("%m/%d/%y at %l:%M%p") %></p>
+    <p><span>Note count:</span> <%= @user.notes.count %></p>
+  <% else %>
+    <p><span>Note count:</span> 0</p>
+  <% end %>
+  <% if @user.sign_in_count > 0 %>
+    <p><span>sign in count:</span> <%= @user.sign_in_count %></p>
+    <p><span>current sign in at:</span> <%= @user.current_sign_in_at.strftime("%m/%d/%y at %l:%M%p") %></p>
+    <p><span>last sign in at:</span> <%= @user.last_sign_in_at.strftime("%m/%d/%y at %l:%M%p") %></p>
+  <% else %>
+    <p><span>User Sign In Count:</span> 0</p>
+  <% end %>
+  <p><span>created at:</span> <%= @user.created_at.strftime("%m/%d/%y at %l:%M%p") %></p>
+</div>
+

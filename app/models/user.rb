@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
   has_many :votes, dependent: :destroy
   has_many :flashcards, dependent: :destroy
 
+  scope :alphabetized_by_username, lambda { order("users.username ASC")}
+  scope :most_recently_created, lambda { order("users.created_at DESC")}
+
   validates :username, 
       uniqueness: {message: "- This username has already been taken", case_sensitive: false }, 
       presence: true, 

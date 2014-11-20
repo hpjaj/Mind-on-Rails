@@ -20,7 +20,7 @@ class UserPolicy < ApplicationPolicy
     create?
   end
 
-  def index
+  def index?
     create?
   end
   

@@ -3,8 +3,16 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @users = User.all
+    @users = User.all.alphabetized_by_username.paginate(page: params[:page], per_page: 15)
+    @recent_users = User.all.most_recently_created
     authorize @users
+    authorize @recent_users
+    @notes = Note.all 
+  end
+
+  def show
+    @user = User.find(params[:id])
+    authorize @user
   end
 
   def update
