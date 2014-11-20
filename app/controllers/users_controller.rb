@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       flash[:notice] = "User information updated"
       redirect_to edit_user_registration_path
     else
-      flash[:error] = "Invalid user information"
+      flash[:error] = "Invalid user information.  Username can only contain letters or numbers."
       redirect_to edit_user_registration_path
     end
   end
