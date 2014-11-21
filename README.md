@@ -1,6 +1,6 @@
 #Mind on Rails
 
-Mind on Rails is a knowledge exchange, note-taking tool, specifically for Ruby on Rails learners. It is a way to capture what you learn through your journey with Ruby on Rails.
+[Mind on Rails](https://mind-on-rails.herokuapp.com/) is a knowledge exchange, note-taking tool, specifically for Ruby on Rails learners. It is a way to capture what you learn through your journey with Ruby on Rails.
 
 
 Here is the interface for creating a new note in Mind on Rails:
