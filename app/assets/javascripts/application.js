@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require search-paginate
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .

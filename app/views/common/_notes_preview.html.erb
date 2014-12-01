@@ -1,10 +1,27 @@
-<% @notes.each do |note| %>
+<% @notes.each_with_index do |note, index| %>
   <div class="container sublime-gray note-previews">
     <div class="row">
       <div class="controls note-preview-container">
         <p>
-          <%= content_tag :span, link_to(note.title, note), class: "note-preview-title-links" %>
+          <span class="note-preview-title-links">
+            <%= url_for(note) %>
+            <%= 
+              link_to(
+                  note.title, url_for(note),
+                  data: { 
+                    history_target_state: { 
+                      search: { 
+                        url: "/trending",
+                        targetResult: { offset: index }
+                      }
+                    }
+                  }
+              )
+            %>
 
+          </span>
+
+          
         <p class="notes_stacks">
           <%= note.updated_at.strftime("%m/%d/%y") %>&nbsp;
           <%= render partial: "/common/stacks_header_list", locals: { note: note } %>
