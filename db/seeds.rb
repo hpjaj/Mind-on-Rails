@@ -234,18 +234,6 @@ notes = Note.all
 end
 
 
-# # Create an admin user
-admin = User.new(
-  name:       'Admin User',
-  username:   'Admin',
-  email:      'admin@example.com',
-  password:   'password',
-  role:       'admin'
-  )
-admin.skip_confirmation!
-admin.save!
-
-
 
 puts "Seed finished"
 puts "#{Stack.count} stacks created"
