@@ -693,21 +693,21 @@ font-size: 14px;
   color: $search_button_green;
 }
 
-.note-show-body h1, .note-show-body h2, .note-show-body h3, .note-show-body h4, .note-show-body h5, .note-show-body h6
-.flashcard-body h1, .flashcard-body h2, .flashcard-body h3, .flashcard-body h4, .flashcard-body h5, .flashcard-body h6
-{
-  padding: 20px 0 25px;
-  margin: 0;
-  font-weight: 700;
-}
+.note-show-body, .flashcard-body {
+  h1, h2, h3, h4, h5, h6 {
+    padding: 20px 0 25px;
+    margin: 0;
+    font-weight: 700;
+  }
 
-.note-show-body p, .flashcard-body p {
-  line-height: 175%;
-  margin-bottom: 15px;
-}
+  p {
+    line-height: 175%;
+    margin-bottom: 15px;
+  }
 
-.note-show-body .highlight, .flashcard-body .highlight {
-  padding: 5px 0 10px 0;
+  .highlight {
+    padding: 5px 0 10px 0;
+  }
 }
 
 #flashcard-checked-link {
