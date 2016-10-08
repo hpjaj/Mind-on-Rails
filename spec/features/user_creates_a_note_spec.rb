@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'User creates a new note', :js => true  do
-  
+
   include Warden::Test::Helpers
   Warden.test_mode!
 
@@ -20,7 +20,12 @@ describe 'User creates a new note', :js => true  do
     check("note_stack_ids_1")
     expect( page ).to have_content("Public")
     click_button 'Save'
-    expect( current_path ).to eq notes_path
+
+    note = Note.last
+    note_title = note.title.parameterize
+    note_title = "-".concat note_title
+
+    expect( current_path ).to eq(note_path(Note.last.id).concat(note_title))
   end
 
   it 'Unsuccessfully when title, body or stack validation is not met' do
@@ -39,7 +44,12 @@ describe 'User creates a new note', :js => true  do
     check("note_stack_ids_1")
     click_button 'Save'
     expect( page ).to_not have_content("Stacks - Choose at least 1 stack")
-    expect( current_path ).to eq notes_path
+
+    note = Note.last
+    note_title = note.title.parameterize
+    note_title = "-".concat note_title
+
+    expect( current_path ).to eq(note_path(Note.last.id).concat(note_title))
   end
 
 
