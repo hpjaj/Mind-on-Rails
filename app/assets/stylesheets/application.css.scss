@@ -63,7 +63,7 @@ html body {
 }
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
-  color: #949599;  
+  color: #949599;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
@@ -117,7 +117,7 @@ button.close:hover {
 }
 
 .search-button {
-  background-color: $search_button_green; 
+  background-color: $search_button_green;
   color: #222326;
   border-color: $search_button_green;
 }
@@ -129,12 +129,12 @@ button.close:hover {
 }
 
 .glyphicon-font-color {
-  color: #949599;  
+  color: #949599;
 }
 
 button .glyphicon-font-color {
   color: #222326;
-  font-size: 22px;   
+  font-size: 22px;
 }
 
 @media all and (min-width: 768px) {
@@ -251,7 +251,7 @@ button .glyphicon-font-color {
 
 #welcome-row-2 {
 
-  background-color: #66D9EF; 
+  background-color: #66D9EF;
   color: white;
   font-weight: 300;
 }
@@ -351,7 +351,7 @@ button .glyphicon-font-color {
 }
 
 #welcome-page-title h1 {
-  color: white; 
+  color: white;
   font-weight: 700;
   text-align: left;
   text-transform: uppercase;
@@ -360,7 +360,7 @@ button .glyphicon-font-color {
 }
 
 #welcome-page-title h3 {
-  color: white; 
+  color: white;
   font-weight: 300;
   text-align: left;
   font-size: 22px;
@@ -474,7 +474,7 @@ button .glyphicon-font-color {
   -webkit-transition: color .2s ease-out;
   -moz-transition: color .2s ease-out;
   -o-transition: color .2s ease-out;
-  transition: color .2s ease-out; 
+  transition: color .2s ease-out;
 }
 
 
@@ -497,7 +497,7 @@ button .glyphicon-font-color {
 }
 
 .stack-descriptions {
-  font-size: 14px; 
+  font-size: 14px;
   color: #949599;
 }
 
@@ -562,19 +562,19 @@ button .glyphicon-font-color {
 
 #stacks-form label  {
   font-weight: normal;
-  color: $sublime_purple;  
+  color: $sublime_purple;
   font-family: Courier New, serif;
-  
+
 }
 
 #stacks-form p {
-color: #949599;  
+color: #949599;
 margin-left: -8%;
 font-size: 14px;
 }
 
 .black-box {
-  color: #949599;  
+  color: #949599;
   background: #222326;
   margin-bottom: 20px;
   min-height: 290px;
@@ -593,7 +593,7 @@ font-size: 14px;
 
 // NOTES views
 .body-notes {
-  background: #121314;  
+  background: #121314;
   padding-bottom: 70px;
 }
 
@@ -609,7 +609,7 @@ font-size: 14px;
 .note-form-fields {
   background-color: rgba(0,0,0,0);
   color: $note_font_color;
-  border-color: #777;  
+  border-color: #777;
 }
 
 #note-form-body-field {
@@ -622,17 +622,17 @@ font-size: 14px;
 }
 
 .placeholder-text .form-control:-moz-placeholder { /* Firefox 18- */
-   color: $sublime_purple;  
+   color: $sublime_purple;
    font-family: Courier New, serif;
 }
 
 .placeholder-text .form-control::-moz-placeholder {  /* Firefox 19+ */
-   color: $sublime_purple;  
+   color: $sublime_purple;
    font-family: Courier New, serif;
 }
 
-.placeholder-text .form-control:-ms-input-placeholder {  
-   color: $sublime_purple;  
+.placeholder-text .form-control:-ms-input-placeholder {
+   color: $sublime_purple;
    font-family: Courier New, serif;
 }
 
@@ -647,7 +647,7 @@ font-size: 14px;
 
 .notes_stacks, .note-preview-username, .note-show-dates {
   font-size: 12px;
-} 
+}
 
 .notes-head-TBpadding {
   margin-bottom: 0px;
@@ -691,6 +691,11 @@ font-size: 14px;
 .note-show-body a:hover, .note-preview-container a:hover, .flashcard-body a:hover {
   text-decoration: none;
   color: $search_button_green;
+}
+
+.note-show-body h1, .note-show-body h2, .note-show-body h3, .note-show-body h4, .note-show-body h5, .note-show-body h6 {
+  padding: 20px 0 25px;
+  margin: 0;
 }
 
 #flashcard-checked-link {
@@ -749,7 +754,7 @@ font-size: 14px;
 
 pre {
   background-color: black;
-  border: 1px solid black;  
+  border: 1px solid black;
   font-size: 14px;
 }
 
@@ -766,7 +771,7 @@ li .navbar-form {
 }
 
 .public-note-indicator {
-  color: $search_button_green; 
+  color: $search_button_green;
 }
 
 .private-note-indicator {
@@ -804,7 +809,7 @@ li .navbar-form {
 
 .note-preview-title-links a:hover, #note-show-edit-delete-links a:hover, .pagination a:hover, .user-sign-in-up-edit a:hover, .note-preview-voting-arrows a:hover {
   color: $search_button_green;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 #markdown-disclaimer {
@@ -819,7 +824,7 @@ li .navbar-form {
   -webkit-transition: color .2s ease-out;
   -moz-transition: color .2s ease-out;
   -o-transition: color .2s ease-out;
-  transition: color .2s ease-out; 
+  transition: color .2s ease-out;
 }
 
 #markdown-disclaimer a:hover, #create-first-note-link a:hover {

@@ -16,7 +16,7 @@ class NotesController < ApplicationController
     authorize @note
     if @note.save
       @note.create_vote
-      redirect_to notes_path
+      redirect_to note_path @note
     else
       render :new
     end
@@ -35,7 +35,7 @@ class NotesController < ApplicationController
     else
       render :edit
     end
-    
+
   end
 
   def show
@@ -50,8 +50,8 @@ class NotesController < ApplicationController
 
   def search
     search_options = {
-      query: params[:query], 
-      page: params[:page], 
+      query: params[:query],
+      page: params[:page],
       user: current_user
     }
     @notes = Note.perform_search(search_options)
