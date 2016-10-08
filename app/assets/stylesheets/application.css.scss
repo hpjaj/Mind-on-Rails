@@ -710,6 +710,10 @@ font-size: 14px;
   }
 }
 
+.highlight pre {
+  color: $note_font_color;
+}
+
 #flashcard-checked-link {
   color: white;
 }
