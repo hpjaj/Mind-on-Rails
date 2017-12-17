@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe NotesController, :type => :controller do
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   # before do
   #   @user = create(:user)
@@ -11,19 +11,15 @@ RSpec.describe NotesController, :type => :controller do
   # end
 
   describe "GET index" do
-
     context "when anonymous user" do
-
       it "redirects to login page" do
         get :index
         expect(response).to redirect_to root_path
         expect(flash[:alert]).to eq "You are not authorized to perform this action."
       end
-
     end
 
     context "when logged in as a standard user" do
-    
       it "shows all my public and private notes, only" do
         # create user1 and user 2
         user1 = create(:user)
@@ -65,9 +61,7 @@ RSpec.describe NotesController, :type => :controller do
         get :index
         expect(assigns(:notes).length).to eq(5)
       end
-
     end
-  
   end
 
 
@@ -122,15 +116,14 @@ RSpec.describe NotesController, :type => :controller do
   # describe destroy ?
 
 
-  describe "GET search" do 
-
+  describe "GET search" do
     before do
         # create user
         # create user2
         # create stack
-        # create a public note for user 
+        # create a public note for user
         # create a private note for user
-        # create a public note for user2 
+        # create a public note for user2
         # create a private note for user2
     end
 
@@ -145,10 +138,10 @@ RSpec.describe NotesController, :type => :controller do
     context "when logged in as a standard user" do
       it "has access to all the users public and private notes" do
         # login as user 1
-        # search for note 1 - should see it 
-        # search for note 2 - should see it 
-        # search for note 3 - should not see it 
-        # search for note 4 - should not see it 
+        # search for note 1 - should see it
+        # search for note 2 - should see it
+        # search for note 3 - should not see it
+        # search for note 4 - should not see it
       end
 
       it "has access to all public notes, across all users" do
@@ -157,13 +150,12 @@ RSpec.describe NotesController, :type => :controller do
 
     context "when anonymous or logged in the results are" do
       it "orderded by most recently updated first" do
-        # need to 
+        # need to
       end
 
       it "paginated with 5 notes per page" do
       end
     end
-
   end
 
 
