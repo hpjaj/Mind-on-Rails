@@ -28,30 +28,36 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+gem 'spring', group: :development
 
 group :test do
-  gem 'rspec-rails', '~> 3.1.0'
   gem 'capybara', '~> 2.3.0'
+  gem 'chromedriver-helper'
   gem 'database_cleaner'
-  gem 'factory_girl_rails', '~> 4.0'
-  gem 'shoulda-matchers', require: false
-  gem 'poltergeist'
   gem 'email_spec'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'poltergeist'
+  gem 'rspec-rails', '~> 3.1.0'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers', require: false
+end
+
+group :development, :test do
+  gem 'awesome_print'
+  gem 'byebug', '~> 9.1'
 end
 
 gem 'bootstrap-sass', '~> 3.2.0'
-
 gem 'devise'
-gem 'figaro'
 gem 'faker'
+gem 'figaro'
 gem 'newrelic_rpm'
-gem 'simple_form'
-gem 'redcarpet'
-gem 'will_paginate', '~> 3.0.5'
-gem 'pygments.rb'
 gem 'pg_search'
 gem 'pundit'
+gem 'pygments.rb'
+gem 'redcarpet'
+gem 'simple_form'
+gem 'will_paginate', '~> 3.0.5'
