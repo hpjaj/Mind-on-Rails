@@ -1,19 +1,22 @@
 class NotesController < ApplicationController
-
   def index
     authorize Note
+
     @notes = Note.perform_search(query: params[:query], page: params[:page], user: current_user, only_user_owned_notes: true)
   end
 
   def new
     @note = Note.new
+
     authorize @note
   end
 
   def create
     @note = Note.new(notes_params)
     @note.user = current_user
+
     authorize @note
+
     if @note.save
       @note.create_vote
       redirect_to note_path @note
@@ -24,18 +27,20 @@ class NotesController < ApplicationController
 
   def edit
     @note = Note.find(params[:id])
+
     authorize @note
   end
 
   def update
     @note = Note.find(params[:id])
+
     authorize @note
+
     if @note.update_attributes(notes_params)
       redirect_to note_path
     else
       render :edit
     end
-
   end
 
   def show
@@ -58,12 +63,18 @@ class NotesController < ApplicationController
   end
 
   def trending
-    @notes = Note.all.where(public: true).rank_by_vote_count.paginate(page: params[:page], per_page: 10)
+    @notes = Note
+      .all
+      .where(public: true)
+      .rank_by_vote_count
+      .paginate(page: params[:page], per_page: 10)
   end
 
   def destroy
     @note = Note.find(params[:id])
+
     authorize @note
+
     if @note.destroy
       redirect_to notes_path
     else
@@ -71,11 +82,20 @@ class NotesController < ApplicationController
     end
   end
 
-  private
+  def hpjaj
+    @notes = Note
+      .joins(:user)
+      .where(users: { username: "harrylevine" })
+      .where(public: true)
+      .rank_by_vote_count
+      .paginate(page: params[:page], per_page: 10)
+
+    render :trending
+  end
+
+private
 
   def notes_params
     params.require(:note).permit(:title, :body, :public, stack_ids: [])
   end
-
 end
-
