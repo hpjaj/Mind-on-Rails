@@ -75,7 +75,18 @@ class NotesController < ApplicationController
     end
   end
 
-  private
+  def hpjaj
+    @notes = Note
+      .joins(:user)
+      .where(users: { username: "harrylevine" })
+      .where(public: true)
+      .rank_by_vote_count
+      .paginate(page: params[:page], per_page: 10)
+
+    render :trending
+  end
+
+private
 
   def notes_params
     params.require(:note).permit(:title, :body, :public, stack_ids: [])

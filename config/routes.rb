@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get 'search' => 'notes#search'
   get 'trending' => 'notes#trending'
+  get 'trending/harrylevine' => 'notes#hpjaj'
 
   get 'admin/users' => 'users#index'
   get 'users/:id', to: 'users#show', as: :userShowPage
